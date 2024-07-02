@@ -1,0 +1,24 @@
+= javascript_include_tag 'common-names'
+= render 'data_objects/curation_js'
+= render 'common_names_new'
+- names_by_language = common_names_by_language(@common_names, current_language.id)
+- names_by_language.each do |language_names_pair|
+  - language = language_names_pair[0]
+  - names = language_names_pair[1]
+  - next if names.blank?
+  = form_tag "/pages/#{@taxon_concept.id}/names/update", method: :put, class: 'update_common_names' do
+    = hidden_field_tag 'language_id', names[0].language.id
+    - if @taxon_page.classification_filter?
+      = hidden_field_tag "hierarchy_entry_id", @taxon_page.hierarchy_entry.id
+    %h4= language
+    %table.standard.edit_common_names
+      %thead
+        %tr
+          %th= I18n.t(:names_preferred_column_header)
+          %th= I18n.t(:names_name_column_header)
+          %th= I18n.t(:names_sources_column_header)
+          %th= I18n.t(:names_curation_column_header)
+      %tbody
+        - names.each do |name|
+          %tr
+            = render 'common_names_edit_row', { name: name, language: language }

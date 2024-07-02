@@ -1,0 +1,91 @@
+<script lang="js">
+import Records       from '@/shared/services/records';
+import Session from '@/shared/services/session';
+import Flash from '@/shared/services/flash';
+import AuthModalMixin from '@/mixins/auth_modal';
+import openModal      from '@/shared/helpers/open_modal';
+import AuthService from '@/shared/services/auth_service';
+import EventBus from '@/shared/services/event_bus';
+
+export default {
+  mixins: [AuthModalMixin],
+  props: {
+    user: Object
+  },
+  data() {
+    return {
+      attempts: 0,
+      loading: false
+    };
+  },
+  methods: {
+    submitAndSetPassword() {
+      this.loading = true;
+      AuthService.signIn(this.user).then(() => {
+        EventBus.$emit('openModal', {
+          component: 'ChangePasswordForm',
+          props: {
+            user: Session.user()
+          }
+        }
+        );
+      }).finally(() => {
+        this.attempts += 1;
+        this.loading = false;
+      });
+    },
+    submit() {
+      this.loading = true;
+      AuthService.signIn(this.user).finally(() => {
+        this.attempts += 1;
+        this.loading = false;
+      });
+    }
+  }
+};
+</script>
+<template lang="pug">
+v-card.auth-complete.text-center(@keyup.ctrl.enter="submit()" @keydown.meta.enter.stop.capture="submit()" @keydown.enter="submit()")
+  v-card-title
+    h1.text-h5(tabindex="-1" role="status" aria-live="assertive" v-t="'auth_form.check_your_email'")
+    v-spacer
+    v-btn.back-button(icon :title="$t('common.action.back')" @click='user.authForm = null')
+      common-icon(name="mdi-close")
+  v-sheet.mx-4
+    submit-overlay(:value='loading')
+    p.mb-4(v-if='user.sentLoginLink')
+      span(v-t="{ path: 'auth_form.login_link_sent', args: { email: user.email }}")
+      br
+      span(v-t="'auth_form.instructions_code'", v-if='attempts < 3')
+    .lmo-validation-error(v-t="'auth_form.too_many_attempts'", v-if='attempts >= 3')
+    p.mb-4(v-if='user.sentPasswordLink', v-t="{ path: 'auth_form.password_link_sent', args: { email: user.email }}")
+    .auth-complete__code-input.mb-4(v-if='user.sentLoginLink && attempts < 3')
+      .auth-complete__code.mx-auto(style="max-width: 256px")
+        v-text-field.text-h5.lmo-primary-form-input(
+          outlined
+          label="Code"
+          :placeholder="$t('auth_form.code')"
+          type='integer'
+          maxlength='6'
+          v-model='user.code'
+        )
+        //- validation-errors(:subject='session' field='password')
+      span(v-t="'auth_form.check_spam_folder'")
+  v-card-actions
+    v-spacer
+    v-btn(
+      v-if="!user.hasPassword"
+      :disabled='!user.code || loading'
+      @click='submitAndSetPassword()'
+      v-t="'auth_form.set_password'")
+    v-btn(
+      color="primary"
+      :loading="loading"
+      @click='submit()'
+      :disabled='!user.code || loading' v-t="'auth_form.sign_in'")
+</template>
+<style lang="sass">
+.auth-complete__code input
+  letter-spacing: 0.5em
+  text-align: center
+</style>

@@ -1,0 +1,39 @@
+= I18n.t(:curator_admin_index_help)
+= link_to I18n.t(:export_curator_csv_link), :action=>'export'
+#users
+  = form_tag({:action=>'index'}, :id=>'search', :method=>'get') do
+    = I18n.t(:search_for_curators_containing)
+    = text_field_tag(:user_search_string, @user_search_string)
+    %br
+    = check_box_tag 'only_unapproved', '1', @only_unapproved
+    = I18n.t(:only_show_unapproved_curators)
+    = submit_tag I18n.t(:go)
+    %br
+    %br
+  - if @users.nil? == false && @users.size > 0
+    = I18n.t(:matching_users_found_with_count, :count => @user_count)
+    %br
+    %form
+      = will_paginate @users
+    %table.results_table{ :cellspacing => "0" }
+      %tr
+        %th
+          = I18n.t(:username)
+        %th
+          = I18n.t(:credentials)
+        %th
+          = I18n.t(:name)
+        %th
+          = I18n.t(:curator_level)
+        %th
+          = I18n.t(:on_time_col_header)
+        %th
+          = I18n.t(:by_caps)
+      - @users.each do |user|
+        %tr
+          = render 'administrator/curator/user_row', {:column_class => cycle('odd', 'even'), :user => user}
+    %br
+    %form
+      = will_paginate @users
+  - else
+    = I18n.t(:no_users_matched_search)

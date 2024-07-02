@@ -1,0 +1,64 @@
+<div role='row' data-song-id='<%= song.id %>'>
+  <div role='cell' data-songs-target='item'>
+    <%= button_to(
+          current_playlist_songs_path(song_id: song.id, should_play: true),
+          class: "c-button c-button--link",
+          data: {"test-id" => "song_item"},
+          form: {
+            data: {
+              "delegated-action" => "turbo:submit-start-songs#checkBeforePlay click->songs-bridge#playNow",
+              "turbo-frame" => "turbo-playlist",
+              "disabled-on-native" => "true"
+            }
+          }
+        ) do %>
+      <span data-test-id='song_name'><%= song.name %></span>
+    <% end %>
+  </div>
+  <div role='cell' class='u-display-none@medium'>
+    <%= link_to song.artist.name, artist_path(song.artist) %>
+  </div>
+  <div role='cell' class='u-display-none@medium'>
+    <%= link_to song.album.name, album_path(song.album) %>
+  </div>
+  <div role='cell' class='u-display-none@small'><%= format_duration(song.duration) %></div>
+  <div role='cell'>
+    <details class='c-dropdown' data-controller='dropdown' data-test-id='song_menu'>
+      <summary class="c-button c-button--icon">
+        <%= icon_tag "more-vertical", size: "small", title: t("label.more") %>
+      </summary>
+      <div class='c-dropdown__menu' data-dropdown-target="menu">
+        <%= link_to(
+              t("label.add_to_playlist"),
+              dialog_playlists_path(song_id: song.id, referer_url: current_url),
+              data: {"turbo-frame" => ("turbo-dialog" unless native_app?)},
+              class: "c-dropdown__item"
+            ) %>
+        <%= button_to(
+              t("button.play_next"),
+              current_playlist_songs_path(song_id: song.id),
+              form_class: "c-dropdown__item",
+              form: {
+                data: {
+                  "turbo-frame" => "turbo-playlist",
+                  "delegated-action" => "turbo:submit-start->songs#checkBeforePlayNext click->songs-bridge#playNext",
+                  "disabled-on-native" => "true"
+                }
+              }
+            ) %>
+        <%= button_to(
+              t("button.play_last"),
+              current_playlist_songs_path(song_id: song.id, location: "last"),
+              form_class: "c-dropdown__item",
+              form: {
+                data: {
+                  "turbo-frame" => "turbo-playlist",
+                  "delegated-action" => "click->songs-bridge#playLast",
+                  "disabled-on-native" => "true"
+                }
+              }
+            ) %>
+      </div>
+    </details>
+  </div>
+</div>

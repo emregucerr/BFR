@@ -1,0 +1,32 @@
+.controls
+  - if @slim_container
+    %span.count
+      - info = page_entries_info comments
+      - info = info == 'No entries found' ? '' : "#{info}"
+      - if info != ''
+        = info
+        - if @title_label
+          =I18n.t("_on_")
+          %span.item
+            = @title_label
+    - if @title != ''
+      %div
+        %h2
+          = @title
+  - else
+    %h2
+      =I18n.t(:comments_on)
+      %span.item
+        = @title_label
+        = @title
+    %span.count
+      - info = page_entries_info comments
+      = info == 'No entries found' ? '' : info
+- if comments.empty?
+  %p#no-comments
+    =I18n.t("no_comments_have_been_left_yet")
+- else
+  - paginated_section(comments, opts ) do
+    %ul.comments
+      - comments.each do |comment|
+        = render 'comments/comment', {:comment => comment}

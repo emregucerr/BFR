@@ -1,0 +1,32 @@
+- # NOTE: If user is not logged in current_user.id and current_user.full_name etc will be nil, so we don't assume they exist here.
+- parent ||= @parent
+- rows ||= 3
+- cols ||= 60
+%h4.assistive= I18n.t(:comment_new_title)
+-# NOTE - the format:html is there UNTIL we get a format.js handler in the controller for the worklist. Keep it there for now.
+= form_for Comment.new, url: comments_path(format: :html), builder: ApplicationHelper::EolFormBuilder, html: { :class => 'comment' } do |f|
+  = f.hidden_field :parent_type, :value => parent.class.name
+  = f.hidden_field :parent_id, :value => parent.id
+  = f.hidden_field :reply_to_type, :value => nil
+  = f.hidden_field :reply_to_id, :value => nil
+  - if params[:worklist_return_to]
+    = hidden_field_tag :worklist_return_to, params[:force_return_to] || current_url
+    = hidden_field_tag :return_to, params[:worklist_return_to]
+  - else
+    = hidden_field_tag :return_to, current_url
+  = hidden_field_tag :submit_to, '/comments/create' unless logged_in?
+  %fieldset
+    - logo = current_user.logo_url(size: :small)
+    - if logo
+      = image_tag logo, :alt => I18n.t(:comment_new_posters_image_alt),
+        :title => I18n.t(:comment_new_posters_image_advisory_info)
+    - else
+      = image_tag 'v2/logos/user_default.png', :alt => ''
+    %div
+      = f.label :body, I18n.t(:comment_body_label), :class => 'assistive'
+      = f.text_area :body, :rows => rows, :cols => cols
+      -# TODO: uncomment this when it gets the go ahead %p= f.allowed_html_help_tip
+  %fieldset.actions
+    = submit_tag(I18n.t(:post_comment), data: { reply: I18n.t(:leave_reply), cancel: I18n.t(:cancel) })
+    - if local_assigns.has_key?(:cancel) && cancel
+      = link_to I18n.t(:cancel), current_url, :class => 'cancel'

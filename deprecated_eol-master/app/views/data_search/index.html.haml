@@ -1,0 +1,131 @@
+- if @traits.blank?
+  .empty
+    %p= data_search_results_summary
+- else
+  - if @known_uri
+    .definition
+      %ul.glossary
+        = render('known_uris/definition', { known_uri: @known_uri, attribution: true, glossary_link: true })
+  .header
+    - per_page = @traits.traits.per_page
+    - start_number = (@page - 1) * per_page + 1
+    - end_number = [ (start_number + per_page - 1), @traits.traits.total_entries ].min
+    - previous_label = (@page == 1) ? '' : I18n.t(:pagination_previous_with_count, count: per_page)
+    - next_label = (@traits.traits.count < per_page) ? '' : I18n.t(:pagination_next_with_count, count: per_page)
+    %h3= raw(I18n.t(:displaying_numerical_range_eol_records_with_count, start_number: start_number, end_number: end_number, count: @traits.traits.total_entries))
+    = will_paginate @traits.traits, previous_label: previous_label, next_label: next_label, inner_window: 2
+  #taxon_data
+    %table.standard.data.search
+      - @traits.traits.each do |trait|
+        - if trait.point.nil?
+          -# This is a "placeholder" for a hidden row.
+          %tr{id: "missing_point", class: "data hidden"}
+            %td.placeholder{colspan: 6}
+              = "Could not find a data point for #{trait.uri}"
+        - elsif trait.hidden?
+          -# This is a "placeholder" for a hidden row.
+          %tr{id: trait.anchor, class: "data hidden"}
+            %td.placeholder{colspan: 6}
+              = I18n.t(:data_search_row_hidden)
+        - else
+          - classes = []
+          - if trait.hidden?
+            - if current_user.is_curator?
+              - classes << 'hidden'
+            - else
+              - next
+          - else
+            -# TODO: need to implement something here when point is missing. Prolly re-write all anchor code.
+            - row_is_selected = (@selected_data_point_uri_id && trait.point && @selected_data_point_uri_id.to_i == trait.point.id)
+            - exemplar = trait.included?
+            - excluded = trait.excluded?
+            - taxon_link = taxon_data_path(trait.page)
+            - header_id = trait.point.anchor
+            %tr.data{ id: trait.anchor, class: (classes + ['data']).join(' '), data: { loaded: true } }
+              %td.taxon
+                .icon
+                  - if image = trait.page.exemplar_or_best_image_from_solr
+                    - if thumb = image.thumb_or_object('88_88')
+                      = link_to image_tag(thumb), taxon_link
+                  = link_to content_tag(:span, '', { title: I18n.t(:item_type_taxon_assistive) } ), taxon_link
+                .names
+                  %h4
+                    = link_to raw(truncate(trait.page.collected_name, length: 64)), taxon_link
+                  - subtitle = trait.page.preferred_common_name_in_language(current_language)
+                  - unless subtitle.blank?
+                    = link_to subtitle.firstcap, taxon_link
+              %th.predicate{ id: header_id }
+                %a.info_icon
+                  \&nbsp;
+                .term
+                  - add_exemplar_or_excluded_icon(exemplar: exemplar, excluded: excluded)
+                  = trait.predicate_name
+                  - if trait.statistical_method?
+                    %span.stat= trait.statistical_method_names.join(", ")
+                  = render(partial: 'trait_bank/definition', locals: { known_uri: trait.predicate_uri, search_link: true, glossary_link: true })
+              %td.val{ id: "#{header_id}_d" }
+                .term
+                  - add_exemplar_or_excluded_icon(exemplar: exemplar, excluded: excluded)
+                  = format_value(trait).html_safe
+                  = render(partial: 'trait_bank/definition', locals: { known_uri: trait.value_uri, search_link: true, glossary_link: true })
+              %td.source
+                %span.source
+                  - if trait.resource && trait.partner
+                    = link_to(trait.partner.name, trait.partner)
+                  - else
+                    = link_to(I18n.t(:source_url), trait.source_url)
+              %td.comment
+                %span.comments
+                  - if trait.comments.empty?
+                    &nbsp;
+                  - else
+                    = image_tag('comment_indicator.png')
+            %tr.actions{ id: "#{trait.anchor}_actions", class: (classes + ['actions']).join(' ') }
+              %td{ colspan: 5 }
+                .metadata
+                  %table.meta{ summary: I18n.t(:data_metadata_subtable_summary) }
+                    %caption.title= I18n.t(:data_about_this_record)
+                    - i = 0
+                    - trait.meta.each do |pred, vals|
+                      - i += 1
+                      - row_id = "#{trait.anchor}_meta_#{i}"
+                      %tr
+                        %th{id: "#{row_id}_h"}
+                          - if pred.is_a?(KnownUri)
+                            = pred.name
+                            = render(partial: 'trait_bank/definition', locals: { known_uri: pred, search_link: true, glossary_link: true })
+                          - else
+                            = pred
+                        %td{id: "#{row_id}_d"}
+                          - vals.each do |val|
+                            - if val.is_a?(KnownUri)
+                              = val.name
+                              = render(partial: 'trait_bank/definition', locals: { known_uri: val, search_link: true, glossary_link: true })
+                            - elsif val.is_a?(Hash)
+                              - if val[:value].is_a?(KnownUri)
+                                = val[:value].name
+                                = render(partial: 'trait_bank/definition', locals: { known_uri: val[:value], search_link: true, glossary_link: true })
+                              - else
+                                = raw val[:value].add_missing_hyperlinks
+                              - if val[:units].is_a?(KnownUri)
+                                = add_superscripts(val[:units].name).html_safe
+                              - else
+                                = add_superscripts(val[:units]).html_safe
+                            - else
+                              = raw val.add_missing_hyperlinks
+                            - if vals.size > 1
+                              %br
+                    %tr
+                      %th
+                        = I18n.t(:data_link_to_record)
+                        - info_icon
+                      - link = taxon_data_url(trait.page, anchor: trait.anchor)
+                      %td= link_to link, link
+                .actions
+                  %ul
+                    %li
+                      - if trait.partner
+                        = raw I18n.t(:data_provided_by_content_partner,
+                          whom: link_to(trait.partner.name, trait.partner))
+                      - else
+                        = I18n.t(:data_point_uri_source_missing)

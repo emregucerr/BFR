@@ -1,0 +1,64 @@
+= link_to I18n.t(:go_back),:back
+#surveys
+  %table.results_table{ :cellspacing => "0" }
+    %tr
+      %th
+        =I18n.t("response")
+      %th
+        =I18n.t("amount")
+    %tr
+      %td.odd
+        =I18n.t("yes_answer")
+      %td.odd
+        = @yes_surveys_count
+    %tr
+      %td.even
+        =I18n.t(:no)
+      %td.even
+        = @no_surveys_count
+    %tr
+      %td.odd
+        =I18n.t("done_already")
+      %td.odd
+        = @done_surveys_count
+    %tr
+      %td.even
+        =I18n.t("total")
+      %td.even
+        = @all_surveys_count
+  %br
+  - if @surveys.nil? == false && @surveys.size > 0
+    =I18n.t("the_following_users_were_prese")
+    %br
+    %br
+    %form#pagination_form
+      = will_paginate @surveys
+    %table.results_table{ :cellspacing => "0" }
+      %tr
+        %th
+          =I18n.t("user_response")
+        %th
+          =I18n.t("user_id")
+        %th
+          =I18n.t("ip_address")
+        %th
+          =I18n.t("taxon_id")
+        %th
+          =I18n.t(:date_caps)
+      - for survey in @surveys
+        - column_class=cycle('odd','even')
+        %tr
+          %td{ :class => column_class }
+            = h survey.user_response
+          %td{ :class => column_class }
+            = h survey.user_id
+          %td{ :class => column_class }
+            = h survey.ip_address
+          %td{ :class => column_class }
+            = h survey.taxon_id
+          %td{ :class => column_class }
+            = format_date_time(survey.created_at)
+    %form#pagination_form2
+      = will_paginate @surveys
+  - elsif @surveys.nil? == false && @surveys.size == 0
+    =I18n.t("no_survey_responses_are_availa")

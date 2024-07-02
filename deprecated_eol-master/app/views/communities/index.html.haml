@@ -1,0 +1,16 @@
+- # TODO: Is this file in use? If not can it be removed? If yes, remove it - styles are out of date.
+%h2=  I18n.t(:communities_index_header)
+- if @communities.blank?
+  %p.empty=  I18n.t(:communities_index_empty)
+- else
+  - paginated_section(@communities) do
+    %ul#communities_index
+      - @communities.each do |community|
+        %li= link_to(h(community.name), community)
+.communities_actions
+  %h2= I18n.t(:build_communities)
+  %ul
+    - if !logged_in?
+      - return_to = new_community_path
+      - title = I18n.t(:create_a_community_login_advisory)
+    %li.create_community= link_to( I18n.t(:create_a_community) , new_community_path(:return_to => return_to), :title => title)

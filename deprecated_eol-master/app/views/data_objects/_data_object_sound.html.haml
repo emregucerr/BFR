@@ -1,0 +1,18 @@
+- data_object ||= @data_object
+- thumbnail ||= false
+- unless data_object.blank?
+  - en_mime_type ||= data_object.mime_type.label('en')
+  - if thumbnail
+    %p= link_to data_object.best_title.truncate_html(:length => 45), data_object_path(data_object)
+  - if en_mime_type == 'audio/mpeg' || en_mime_type == 'application/ogg'
+    = render 'data_objects/jplayer', {:data_object => data_object, :en_mime_type => en_mime_type, :thumbnail => thumbnail}
+  - if en_mime_type == 'audio/x-wav'
+    .player_interface{:id => "player_interface_#{data_object.id}"}
+      - unless thumbnail
+        %embed{:height => "20", :width => "450", :src => "#{data_object.sound_url}", :autostart => "false", :pluginspace => "http://www.apple.com/quicktime/download/", :pluginurl => "http://www.apple.com/quicktime/download/"}
+        %br
+      = link_to(I18n.t(:download_wav_file), data_object.sound_url)
+-# TODO: find sound players for 3 more sound types. Not priority as we don't have partners providing such audio types.
+-# audio/x-ms-wma
+-# audio/x-pn-realaudio
+-# audio/x-realaudio

@@ -1,0 +1,393 @@
+de:
+  discussion_templates:
+    blank:
+      process_name: Leere Vorlage
+      process_subtitle: Starten Sie für jeden Zweck einen neuen Thread
+      process_introduction: "<p>Starten Sie in Ihrer Gruppe einen Thread zu einem beliebigen Thema.</p><p> Standardmäßig wird jeder in der Gruppe benachrichtigt, wenn Sie den Thread starten. Sie können dies ändern, indem Sie das Feld „Einladung“ unten bearbeiten.</p>"
+    discuss_a_topic:
+      title_placeholder: Welches Thema möchten Sie besprechen?
+      process_name: Besprechen Sie ein Thema
+      process_subtitle: Beginnen Sie eine Diskussion mit Ihrer Gruppe
+      process_introduction: "<p>Gibt es ein Thema, ein Problem oder eine Chance, die Sie mit Ihrer Gruppe ansprechen möchten?</p><p> Stellen Sie das Thema vor, verlinken Sie auf Hintergrundinformationen und bitten Sie um Kommentare, Ideen und Hilfe.</p><p> Laden Sie Menschen ein, sich zu beteiligen, indem Sie ihre Gedanken und relevanten Informationen einbringen. Verwenden Sie @mention, um die Aufmerksamkeit bestimmter Personen zu erregen.</p><p> Aktualisieren Sie den Thread-Kontext im Verlauf der Diskussion, um ein Ergebnis zu erzielen.</p><p> Warten Sie nicht, bis Sie alle Informationen haben, um einen Thread zu starten. Nutzen Sie den Thread lieber, um Leute einzuladen, die Ihnen dabei helfen, das Thema zu erkunden und eine Lösung zu finden.</p>"
+      description: <h3 id="introduce-and-describe-the-topic">Stellen Sie das Thema vor und beschreiben Sie es</h3><p></p><h3 id="why-is-this-important"> Warum ist das wichtig?</h3><p></p><h3 id="how-would-you-like-people-to-respond"> Wie möchten Sie, dass die Leute reagieren?</h3><p></p>
+    onboarding_to_loomio:
+      title: Wir verwenden Loomio für unsere Gruppe
+      process_name: Onboarding bei Loomio
+      process_subtitle: Ein Thread, der Loomio-Neulingen dabei hilft, das Schreiben von Kommentaren und das Abstimmen zu üben.
+      process_introduction: "<p>Verwenden Sie diese Vorlage, um Menschen Loomio vorzustellen.</p><p> Eine tolle Möglichkeit, Loomio zu erleben, besteht darin, eine Diskussion in Loomio zu eröffnen und eine Entscheidung zu treffen!</p><p> Beginnen Sie die Diskussion, indem Sie den Textaufforderungen unten folgen oder Ihre eigenen Worte einfügen.</p><p> Führen Sie eine Sinnüberprüfung durch, damit Ihre Gruppe abstimmen und die Ergebnisse sehen kann.</p><p> Erschließen Sie den Wert von Loomio, indem Sie Menschen in ihre erste Entscheidung einbeziehen.</p>"
+      description: <h3 id="why-are-you-interested-in-using-loomio">Warum sind Sie an der Nutzung von Loomio interessiert?</h3><p> Wir sind daran interessiert, Loomio zu nutzen, um Menschen in Entscheidungen über unsere Organisation einzubeziehen.</p><h3 id="what-are-you-asking-people-to-do"> Was verlangen Sie von den Leuten?</h3><p> Ich würde gerne Ihre Meinung hören! Hinterlassen Sie unten einen Kommentar und stimmen Sie für den Vorschlag ab.</p><p> Sie können auf den Kommentar einer anderen Person antworten, indem Sie auf das Antwortsymbol unten rechts im Kommentar klicken.</p><p> Verwenden Sie @mention, um Personen zu benachrichtigen.</p>
+      onboarding: Onboarding
+    consent_process:
+      title_placeholder: Entwicklung unserer Gesundheits- und Sicherheitsrichtlinie
+      process_name: Einwilligungsprozess
+      process_subtitle: Treffen Sie eine Entscheidung, die Sie ohne Bedenken ausprobieren können.
+      process_introduction: '<p>Holen Sie die Zustimmung zu einer Entscheidung ein, die Sie treffen müssen, sofern keine wesentlichen Einwände gegen Ihren Vorschlag bestehen, damit Sie schnell eine Entscheidung treffen können, die Sie jetzt „sicher ausprobieren“ können.</p><p> Typische Rollen:</p><ul><li><p> Antragsteller: Die Person, die ein Thema anspricht, das eine Entscheidung erfordert.</p></li><li><p> Moderator: Jemand, der dem Antragsteller helfen kann, seine Arbeit effizient zu erledigen.</p></li></ul><p> Gemeinsame Prozessschritte:</p><p> Schritt 1. Präsentieren Sie einen Vorschlag mit einem Loomio-Thread.</p><p> Schritt 2. Ermöglichen Sie eine Runde von Fragen, Reaktionen und Kommentaren, um den Vorschlag mit einer Sinnüberprüfung zu verbessern.</p><p> Schritt 3. Ändern Sie den Vorschlag mit Vorschlägen und Kommentaren.</p><p> Schritt 4: Fragen Sie mit einem Zustimmungsvorschlag, ob jemand einen sinnvollen Einwand gegen den geänderten Vorschlag hat.</p><p> Schritt 5: Integrieren Sie berechtigte Einwände, um eine geänderte Version des Vorschlags zu erstellen, von der alle zustimmen, dass sie „sicher ausprobiert“ werden kann, und geben Sie nach Abschluss das Entscheidungsergebnis an.</p><p> <a target="_blank" rel="noopener noreferrer nofollow" href="https://help.loomio.com/en/guides/consent_process/index.html">Weiterlesen: Einwilligungsprozess.</a></p>'
+      description: <h3 id="what-is-the-decision-you-need-to-make">Welche Entscheidung müssen Sie treffen?</h3><h3 id=""></h3><h3 id="why-is-this-important-and-what-impact-does-it-have"> Warum ist das wichtig und welche Auswirkungen hat es?</h3><p></p><h3 id="what-information-do-people-need-for-context"> Welche Informationen benötigen Menschen für den Kontext?</h3><p></p><h3 id="who-is-the-facilitator-for-this-process"> Wer ist der Moderator dieses Prozesses?</h3><p></p>
+      consent: Zustimmung
+    advice_process:
+      title_placeholder: Ich suche Rat zum Kauf eines neuen Computers
+      process_name: Beratungsprozess
+      process_subtitle: Lassen Sie sich bei einer Entscheidung, die Sie treffen müssen, beraten.
+      process_introduction: '<p>Treffen Sie eine Entscheidung mit dem Rat von Personen, die betroffen sind oder über Fachwissen verfügen, damit Sie eine bessere Entscheidung für Ihr Unternehmen treffen können.</p><p> Typische Rollen:</p><ul><li><p> Moderator: Die Person, die die Entscheidung trifft, oder jemanden bitten, die Entscheidung zu erleichtern.</p></li><li><p> Berater: Menschen, die betroffen sind oder über Fachwissen verfügen, die Sie einladen.</p></li></ul><p> Gemeinsame Prozessschritte:</p><p> Schritt 1: Suchen Sie nach Input, um Perspektiven auszuloten, bevor Sie Maßnahmen vorschlagen.</p><p> Schritt 2. Machen Sie einen Vorschlag und lassen Sie sich beraten – erstellen Sie einen Beratungsvorschlag.</p><p> Schritt 3. Unter Berücksichtigung der erhaltenen Ratschläge treffen Sie eine Entscheidung und informieren die Personen, die Ratschläge gegeben haben – geben Sie ein Ergebnis an.</p><p> <a target="_blank" rel="noopener noreferrer nofollow" href="https://help.loomio.com/en/guides/advice_process/index.html">Weiterlesen: Beratungsprozess.</a></p>'
+      description: <h3 id="what-is-the-decision-you-need-to-make">Welche Entscheidung müssen Sie treffen?</h3><p></p><h3 id="why-is-this-important-and-what-impact-does-it-have"> Warum ist das wichtig und welche Auswirkungen hat es?</h3><p></p><h3 id="what-advice-are-you-asking-to-help-you-make-a-good-decision"> Welchen Rat fragen Sie, um eine gute Entscheidung zu treffen?</h3><p></p><h3 id="who-is-the-facilitator-for-this-process"> Wer ist der Moderator dieses Prozesses?</h3><p></p>
+      advice: Beratung
+    pass_a_resolution:
+      title_placeholder: Beschluss zur Genehmigung der Strategie
+      process_name: Verabschieden Sie einen Beschluss
+      process_subtitle: Stellen Sie eine Resolution mit Kontext und Hintergrundinformationen vor, beantworten Sie Fragen und unterbreiten Sie einen Vorschlag zur Verabschiedung der Resolution.
+      process_introduction: '<p>Roberts Regeln sind ein Rahmenwerk, das aus einer Reihe ethischer Kodizes und Regeln besteht und Gruppen dabei hilft, geordnete Treffen abzuhalten, die es der Mehrheit ermöglichen, zu regieren, während gleichzeitig die Stimmen der Minderheiten gehört werden. <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.boardeffect.com/blog/roberts-rules-of-order-cheat-sheet/">https://www.boardeffect.com/blog/roberts-rules-of-order-cheat-sheet/</a> Ein Mitglied stellt einen Antrag, eine Aktion vorzuschlagen oder eine Entscheidung zu treffen, indem es sagt: „Ich gehe zu …“. Ein anderes Mitglied muss den Antrag unterstützen, indem es sagt: „Ich stimme dem Antrag zu.“ Sobald jemand den Antrag unterstützt, stimmt die Gruppe über den Antrag ab. Die Beschlussfassung erfolgt mit Stimmenmehrheit oder einem Quorum, abhängig von den Bestimmungen der Satzung.</p>'
+      description: "<p><strong>Geben Sie den zu fassenden Beschluss an</strong></p><p></p><p> <strong>Skizzieren Sie Kontext- und Hintergrundinformationen</strong></p><p></p><p> <strong>Bitten Sie die Mitglieder, Fragen zu stellen, Kommentare abzugeben und Informationen beizutragen, um ein gemeinsames Verständnis aufzubauen</strong></p><p></p>"
+      resolution: Auflösung
+    decision_by_consensus:
+      title_placeholder: Überarbeitung der Satzung unserer Organisation
+      process_name: Entscheidung im Konsens
+      process_subtitle: Treffen Sie mit allen Beteiligten einen Tarifvertrag.
+      process_introduction: '<p>Bauen Sie einen Konsens für eine Entscheidung auf, die Sie gemeinsam treffen müssen, um eine Einigung zu erzielen, die den Bedürfnissen und Anliegen aller Beteiligten gerecht wird.</p><p> Typische Rollen:</p><ul><li><p> Benennen Sie einen Moderator. (In Vorstandssitzungen ist dies in der Regel der Vorsitzende.)</p></li><li><p> Ein Quorum oder eine Mehrheit der Mitglieder zur Teilnahme, wie in den Statuten Ihrer Organisation festgelegt.</p></li></ul><p> Gemeinsame Prozessschritte:</p><p> Schritt 1: Schaffen Sie einen offenen Raum für die Diskussion über ein Problem oder eine vorgeschlagene Entscheidung.</p><p> Schritt 2. Testen Sie den Konsens und legen Sie Einwände mit einem Sense-Check-Vorschlag offen.</p><p> Schritt 3. Klären Sie alle Punkte, fordern Sie konstruktive Änderungen ein und ergänzen Sie den Vorschlag.</p><p> Schritt 4. Prüfen Sie mit einem Konsensvorschlag, ob eine Einigung vorliegt und ob noch Einwände bestehen.</p><p> Schritt 5. Halten Sie die Entscheidung mit Ergebnis und im offiziellen Protokoll der Organisation fest.</p><p> <a target="_blank" rel="noopener noreferrer nofollow" href="https://help.loomio.com/en/guides/consensus_process/index.html">Weiterlesen: Konsensprozess.</a></p>'
+      description: <h3 id="what-is-the-decision-you-need-to-make">Welche Entscheidung müssen Sie treffen?</h3><p></p><h3 id="why-is-this-important-and-what-impact-does-it-have"> Warum ist das wichtig und welche Auswirkungen hat es?</h3><p></p><h3 id="what-information-do-people-need-for-context"> Welche Informationen benötigen Menschen für den Kontext?</h3><p></p><h3 id="who-is-the-facilitator"> Wer ist der Moderator?</h3><p></p><h3 id="what-conditions-need-to-be-met-for-a-decision"> Welche Voraussetzungen müssen für eine Entscheidung erfüllt sein?</h3><h3 id=""></h3>
+      consensus: Konsens
+    share_links_and_info:
+      title_placeholder: Teilen Sie Links und Informationen
+      process_name: Teilen Sie Links und Informationen
+      process_subtitle: Veröffentlichen Sie Informationen, Links und Berichte, um sie für Kommentare und Diskussionen zu teilen.
+      process_introduction: "<p>Verwenden Sie einen Thread als „Pinnwand“ oder „Schwarzes Brett“ für Ihre Gruppe, um Informationen, Neuigkeiten und Ideen zu veröffentlichen, die Sie gerne miteinander teilen möchten.</p><p> Laden Sie Personen ein, die Formatierungstools „ <strong>Link einfügen</strong> “ und <strong>„Video einbetten“</strong> zu verwenden, um der Gruppe den Zugriff auf Informationen aus Loomio zu erleichtern. Verwenden Sie eine <strong>Überschrift</strong> für Kommentare, um den Kommentar an die Thread-Timeline anzuheften, damit er leicht gefunden werden kann.</p><p> <strong>Stecken Sie</strong> den Thread so fest, dass er hängen bleibt, und regen Sie <strong>Reaktionen</strong> an, um ihn aktiv zu halten und die Leute wissen zu lassen, dass Sie ihren Artikel gesehen haben.</p><p> Die Standardanzeige dieses Threads ist <strong>„Neueste“</strong> , sodass die neuesten Kommentare oben im Thread angezeigt werden.</p>"
+      description: <p>Verwenden Sie diesen Thread, um Informationen, Hinweise und Dinge zu veröffentlichen, die Sie teilen möchten – ein Ort, an dem Sie sehen können, was vor sich geht, und sich beteiligen können.</p><p data-text-align="start"> Teilen Sie Veranstaltungen, Berichte, Podcasts und andere interessante Online-Informationen.</p><p data-text-align="start"> Verwenden Sie die Formatierungstools <strong>„Link einfügen“</strong> und <strong>„Video einbetten“</strong> , um den Zugriff auf Informationen in Loomio zu erleichtern.</p>
+      information: Information
+    prepare_for_a_meeting:
+      title_placeholder: Wir bereiten uns auf unser nächstes Treffen vor
+      process_name: Bereiten Sie sich auf ein Meeting vor
+      process_subtitle: Erstellen Sie eine Tagesordnung, veröffentlichen Sie Vorstandsunterlagen und organisieren Sie Verwaltungsangelegenheiten, damit alle auf dem neuesten Stand, im Kontext und vorbereitet sind.
+      description: <p><strong>Schwerpunkt des Treffens</strong></p><p></p><p data-text-align="start"> <strong>Gliederung der Tagesordnung</strong></p><p data-text-align="start"></p><p data-text-align="start"> <strong>Aktionen vom letzten Treffen</strong></p><p data-text-align="start"></p><p data-text-align="start"> <strong>Wie sollten sich die Teilnehmer auf das Treffen vorbereiten?</strong></p><p data-text-align="start"></p><p data-text-align="start"> <strong>Liste der Unterlagen zur Sitzung</strong></p><p data-text-align="start"></p>
+      process_introduction: <p>Planen Sie ein effektives Meeting, indem Sie die Teilnehmer von Anfang an einbeziehen, sich auf die wichtigsten Themen konzentrieren und Ihre kostbare gemeinsame Zeit besser nutzen.</p><p> Verwenden Sie einen Thread als Container für Ihr Meeting, um einen Schwerpunkt für das Meeting festzulegen, die Tagesordnung festzulegen, einen geeigneten Termin zu finden, wichtige Dokumente und Berichte zu veröffentlichen, eine Diskussion über Tagesordnungspunkte zu starten und Maßnahmen und Protokolle nachzufassen.</p><p> Dies hilft allen, sich auf das Treffen vorzubereiten, indem sie die Materialien lesen und über Diskussionsthemen und zu treffende Entscheidungen nachdenken. Es ist dann wahrscheinlicher, dass die Mitglieder kontextbezogen ankommen und für das Meeting bereit sind.</p><p> Weitere Informationen zur <a target="_blank" rel="noopener noreferrer nofollow" href="https://help.loomio.com/en/guides/board_processes/meeting.html"><u>Vorbereitung auf ein Meeting</u></a> finden Sie im Good Governance Guide von Loomio.</p>
+      meeting: Treffen
+    build_a_policy:
+      title_placeholder: Überarbeitung unserer Einstellungsrichtlinien
+      process_name: Erstellen Sie eine Richtlinie
+      process_subtitle: Arbeiten Sie mit Ihrem Team zusammen, um ein Richtlinien- oder Verfahrensdokument zu erstellen und zu vereinbaren.
+      process_introduction: "<p><span>Der Thread ist der Container für Diskussionen über die Richtlinie, in dem Sie Anforderungen und Grundsätze vereinbaren und Dokumententwürfe zur Kommentierung veröffentlichen können.</span></p><p> <span>Verwenden Sie die Vorlage, um Richtlinien mit einer kleinen Gruppe von Personen zu entwickeln, oder machen Sie sie für die gesamte Organisation transparent und laden Sie zu Kommentaren zu progressiven Versionen des Dokuments ein.</span></p><p> <span>Verwenden Sie einen Sense-Check-Vorschlag, um Gruppenmitglieder darüber zu informieren, dass ein Dokumententwurf zur Überprüfung bereit ist, und laden Sie Personen ein, das Dokument zu lesen und mit Kommentaren oder Fragen zu antworten.</span></p><p> <span>Wenn ein „endgültiger“ Entwurf fertig ist, legen Sie einen Zustimmungs- oder Konsensvorschlag vor, um das Dokument zu genehmigen.</span></p>"
+      description: "<p><strong><span>Welche Richtlinie oder welches Dokument müssen Sie erstellen?</span></strong></p><p></p><p> <strong><span>Warum ist das wichtig?</span></strong></p><p></p><p> <strong><span>Was verlangen Sie von den Leuten?</span></strong></p><p></p>"
+      policy: Politik
+    elect_a_governance_position:
+      title_placeholder: Nominierung und Wahl des Rates
+      process_name: Wählen Sie eine Führungsposition
+      process_subtitle: Nominieren und wählen Sie jemanden für eine Leitungsfunktion im Rat, Ausschuss oder Vorstand.
+      process_introduction: "<p>Stellen Sie die Governance-Rolle und -Kriterien für die Position vor, um den Mitgliedern bei der Beurteilung von Kandidaten zu helfen.</p><p> Rufen Sie mit einer Opt-in-Umfrage zur Nominierung auf. Bitten Sie die Nominierten, ein Foto des Kandidaten zusammen mit seiner Biografie und Referenzen zu veröffentlichen. Betten Sie eine Videobotschaft des Kandidaten ein, damit Mitglieder den Kandidaten direkt sehen und hören können.</p><p> Wenn Sie bereit sind, einen Kandidaten zu wählen, verwenden Sie einen Zustimmungsvorschlag.</p><p> Wenn Sie mehrere Kandidaten für eine Position haben, verwenden Sie den Vorschlag „Ranked Choice“, bei dem Wähler die Kandidaten in der Reihenfolge ihrer Präferenz einordnen können.</p>"
+      description: '<h3 id="what-position-do-you-need-to-fill">Welche Position müssen Sie besetzen?</h3><p></p><h3 id="why-is-this-important"> Warum ist das wichtig?</h3><p></p><h3 id="what-qualifications-skills-and-experiences-make-a-good-cand"> Welche Qualifikationen, Fähigkeiten und Erfahrungen zeichnen einen guten Kandidaten aus?</h3><p></p><h3 id="what-is-the-election-process"> Wie läuft der Wahlprozess ab?</h3><p> Stufe 1: Nominierungen – wir laden geeignete Kandidaten zur Nominierung ein.</p><p> Stufe 2: Stellen Sie die Kandidaten vor – fügen Sie für jeden Kandidaten ein Foto, eine kurze Biografie und eine Referenz bei.</p><p> Stufe 3: Wahl – Abstimmung über die Ernennung eines Kandidaten für die Stelle.</p>'
+      election: Wahl
+    funding_decision:
+      title_placeholder: Förderantrag für die Robotics Roadshow
+      process_name: Förderentscheidung
+      process_subtitle: Bearbeiten Sie einen Zuschuss-, Darlehens- oder Investitionsantrag und treffen Sie eine Finanzierungsentscheidung.
+      process_introduction: "<p>Stellen Sie einen Förderantrag und fügen Sie Unterlagen und andere unterstützende Materialien bei.</p><p> Fassen Sie die Anwendung im Thread-Kontext zusammen.</p><p> Bitten Sie autorisierte Personen, den Antrag zu prüfen und Fragen zu stellen. Planen Sie ausreichend Zeit für die Diskussion ein.</p><p> Machen Sie einen Konsensvorschlag zur Genehmigung der Finanzierung.</p><p> Wenn jemand anderer Meinung ist, fragen Sie nach einem Grund – zum Beispiel könnten weitere Informationen erforderlich sein. Bitten Sie die Person, die nicht einverstanden ist, ihre Stimme zu ändern, wenn sie zufrieden ist.</p><p> Wenn Sie eine klare Entscheidung über den Förderantrag haben, geben Sie ein Ergebnis an, um die Entscheidung festzuhalten.</p>"
+      description: <h3 id="introduce-and-summarize-the-funding-application">Stellen Sie den Förderantrag vor und fassen Sie ihn zusammen</h3><p></p><h3 id="how-does-this-application-fit-with-funding-criteria"> Wie passt dieser Antrag zu den Förderkriterien?</h3><p></p><h3 id="who-is-authorized-to-approve-this-funding-decision"> Wer ist berechtigt, diesen Förderbescheid zu genehmigen?</h3><p></p><h3 id="invite-questions-from-decision-makers-to-process-the-applica"> Bitten Sie Entscheidungsträger um Fragen zur Bearbeitung des Antrags</h3><p></p>
+      funding: Finanzierung
+    approve_a_document:
+      title_placeholder: Entwicklung unserer Markenstrategie
+      process_name: Genehmigen Sie ein Dokument
+      process_subtitle: Ein wichtiges Dokument, eine Richtlinie oder eine Vereinbarung vorstellen, diskutieren und entwickeln.
+      process_introduction: "<p>Stellen Sie das Dokument zusammen mit etwaigen Hintergrundinformationen vor. Geben Sie den Zweck des Dokuments an, damit Sie konzentriert bleiben.</p><p> Laden Sie Personen ein, Informationen und ihr Fachwissen einzubringen, und nutzen Sie diese als Rahmen für das Dokument. Nehmen Sie Rückmeldungen und Beiträge von Menschen zur Kenntnis und berücksichtigen Sie diese.</p><p> Integrieren Sie Beiträge in einen ersten Entwurf des Dokuments und nachfolgende Entwürfe, bis es zur Genehmigung bereit ist.</p><p> Nutzen Sie eine Sense-Check-Umfrage, um Meinungen einzuholen und etwaige Probleme mit dem Entwurf zu klären.</p><p> Sobald das Feedback berücksichtigt und in das Dokument integriert wurde, fahren Sie mit der Genehmigung oder Zustimmung zu einer Einwilligung oder einem Konsensvorschlag fort.</p><p> Der Thread wird zu einer klaren Aufzeichnung des Dokumenterstellungsfortschritts und der getroffenen Entscheidungen.</p>"
+      description: <h3 id="what-is-the-purpose-of-the-document">Was ist der Zweck des Dokuments?</h3><p></p><h3 id="why-is-this-important"> Warum ist das wichtig?</h3><p></p><h3 id="what-are-you-asking-people-to-do"> Was verlangen Sie von den Leuten?</h3><p></p>
+      document: Dokumentieren
+  explore:
+    header: Öffentliche Gruppen erkunden
+  activerecord:
+    errors:
+      messages:
+        blank: Darf nicht leer sein
+        invalid: ist kein gültiger Wert
+  unauthorized:
+    manage:
+      all: "Nicht autorisiert zum %{action} %{subject}."
+    add_guests:
+      all: "Sie müssen Ihr Loomio-Abonnement aktualisieren, um Gäste zu Ihrem %{subject} hinzuzufügen. Alternativ können Sie sie einladen, Mitglieder Ihrer Gruppe zu werden."
+  errors:
+    clear_cache: "Ladeproblem erkannt. Halte die Umschalttaste gedrückt und drücke \"Neu laden\", oder leere den Browser-Cache."
+    400:
+      title: Ungültige Anforderung
+      body: Sorry, wir konnten diese Anfrage nicht verstehen
+    401:
+      title: Unauthorisiert
+      body: Du bist nicht berechtigt, auf diese Seite zuzugreifen. Möglicherweise musst du dich anmelden.
+    403:
+      title: Verboten
+      body: Du bist nicht berechtigt, auf diese Seite zuzugreifen. Möglicherweise musst du dich anmelden.
+    404:
+      title: Nicht gefunden
+      body: Die Seite, nach der du gesucht hast, existiert leider nicht. Möglicherweise hast du dich bei der Adresse vertippt oder die Seite wurde verschoben oder gelöscht.
+    410:
+      title: Gegangen
+      body: Diese Seite existiert nicht mehr
+    417:
+      title: Browser inkompatibel
+      body: |
+          Bitte <a href="https://browser-update.org/update.html?force_outdated=true">aktualisiere deinen Browser, </a>um Loomio zu benutzen
+    422:
+      title: Unverarbeitbare Entität
+      body: Die von dir gewünschte Änderung wurde abgelehnt. Vielleicht hast du versucht, etwas zu ändern, auf das du keinen Zugriff hatten.
+    429:
+      title: Zu viele Anfragen
+      body: Entschuldigung, du hast die maximal zulässige Anzahl von Anfragen pro Minute für diese Aktion überschritten. Bitte warte eine Weile und versuche es erneut.
+    500:
+      title: Interner Serverfehler
+      body: Es tut uns leid, aber es ist etwas schief gelaufen. Wir wurden über dieses Problem benachrichtigt und werden es uns in Kürze ansehen.
+    noscript: Loomio benötigt Javascript zum funktionieren! Bitte aktiviere Javascript in deinem  Browser um fortzufahren
+    upgrade_browser: |
+        Oje! Dein Webbrowser ist zu alt und Loomio funktioniert möglicherweise nicht richtig. Bitte <a href="https://browser-update.org/update.html">aktualisiere deinen Browser.</a>
+    return_home: zurück zu Home
+    not_found: 404 Datei wurde nicht gefunden.
+    messages:
+      email: das ist keine gültige E-Mail-Adresse
+      spoofed_media_type: Der Inhalt der Datei stimmt nicht mit dem Dateinamen überein
+      pwned_password: Dieses Passwort ist bereits bei einem Datenverstoß aufgetaucht und sollte niemals verwendet werden
+  group:
+    error:
+      handle_must_begin_with_parent_handle: "Muss beginnen mit %{parent_handle}-"
+      no_public_trials: "Bitte führe ein Upgrade von der Testversion durch, um die Datenschutzeinstellung der Gruppe zu ändern"
+    stats:
+      group_stats: Gruppen-Statistik
+      org_stats: Organisationsstatistiken (einschließlich Untergruppen)
+      visits: Besuche
+      members: Mitglieder
+      subgroups: Untergruppen
+      threads: Diskussionen
+      polls: Abstimmungen
+      votes: Abstimmungsbeiträge
+      comments: Kommentare
+      general: Allgemein
+      poll_types:
+        proposal: Vorschläge
+        count: Zählen
+        choose: Wählen
+        allocate: Zuweisen
+        score: Ergebnis
+        rank: Rang
+        time: Terminfindung
+  user:
+    deleted_user: "gelöschter Nutzer"
+    placeholder_name: "eingeladener Nutzer (%{hostname})"
+    error:
+      sign_in_required_html: |
+          Du musst angemeldet sein, um fortfahren zu können.
+          Bitte <a href="/dashboard" target="_blank">melde dich an</a>, dann lade diese Seite neu, um fortzufahren.
+      recaptcha: "Wir konnten leider nicht bestätigen, dass du kein Computer bist. Bitte versuche es erneut."
+      bad_login: "Sorry, das Passwort passt nicht zu dem in unserer Datei."
+      username_must_be_alphanumeric: "Nutzernamen dürfen nur aus Kleinbuchstaben und Nummern bestehen"
+  poll:
+    error:
+      cannot_add_options: Es können keine Optionen zu dieser Umfrage hinzugefügt werden.
+      cannot_remove_options: Es können keine Optionen von dieser Umfrage entfernt werden.
+      must_have_options: Es muss mindestens eine Option in dieser Umfrage geben
+      must_be_in_the_future: Muss in der Zukunft liegen
+      templates_cannot_close: Vorlagen können nicht geschlossen werden
+    export:
+      percent_voted: "%{num}/%{denom} (%{percent}) Mitglieder haben ihre Position angegeben."
+      title: Titel
+      author: Autor
+      email: E-Mail
+      user_id: Benutzer-ID
+      created_at: Hergestellt um
+      closing_at: Schließt um
+      closed_at: Geschlossen um
+      is_latest: Ist das Neueste
+      engagement: Engagement
+      stances: Standpunkte
+      participants: Teilnehmer
+      details: Details
+      group_name: Gruppen-Name
+      discussion_title: Diskussionstitel
+      outcome_author: Autor der Ergebnisse
+      outcome_created_at: Ergebnis erstellt um
+      outcome_statement: 'Ergebniserläuterung '
+      poll_url: Umfrage-URL
+      reason: Begründung
+      participant: Teilnehmer
+      also_available: Auch verfügbar in
+      total: Gesamt
+    waiting_for_votes_from: "Warten auf Stimmen von"
+  stance:
+    error:
+      too_short: Bitte triff eine Auswahl
+  invitation:
+    invitation_cancelled: Sorry, diese Einladung wurde durch den Gruppenkoordinator widerrufen. Bitte frage nach einer weiteren Einladung.
+    invitation_already_used: Diese Einladung wurde bereits verwendet. Bitte melde dich bei Loomio an, um zu deiner Gruppe zu gelangen.
+  subscriptions:
+    active: Aktiv
+    inactive: Inaktiv
+  base_mailer:
+    via_loomio: "%{name} (über %{site_name})"
+  event_mailer:
+    received_email:
+      explaination_html: |-
+          <p>Sie erhalten diese E-Mail, weil Sie Administrator der Loomio-Gruppe sind: %{group}.</p><p> Die Gruppe hat eine E-Mail von einer unbekannten E-Mail-Adresse erhalten.</p><p> Wenn die Nachricht von einem Mitglied der Gruppe stammt, überprüfen Sie bitte die E-Mail und wählen Sie das Mitglied aus.</p><p> Wenn die Nachricht unerwünscht ist, können Sie alle weiteren E-Mails von dieser Adresse blockieren.</p>
+  user_mailer:
+    group_export_ready:
+      subject: Daten für Gruppe %{group_name} exportieren
+      body_html: |
+          Daten für deine Gruppe können <a href="%{url}">hier</a> heruntergeladen werden. Bitte beachte, dass dieser link in einer Woche abläuft.
+    redacted:
+      subject: "Ihr %{site_name}-Benutzerkonto wurde gelöscht"
+      body_html: |-
+          <p>Ihr %{site_name}-Benutzerkonto wurde gelöscht.</p><p> Alle personenbezogenen Daten wurden entfernt.</p><p> Wenn Sie dies nicht angefordert haben, wenden Sie sich bitte an %{support_email}</p>
+    accounts_merged:
+      subject: "Deine %{site_name} Benutzerkonten wurden zusammengeführt."
+      body_html: |
+          Hallo %{name},
+          Deine zwei Loomio-Konten wurden zu einem gemacht.
+          Um nun auf Loomio zugreifen zu können, bitte nutze <strong>%{email}</strong> beim Einloggen.
+    merge_verification:
+      subject: "Überprüfe deine %{site_name} E-Mail-Adresse zum Zusammenführen"
+      body_html: |
+          <p>Hallo%{name},</p>
+          <p>es wurde eine Anfrage zur Zusammenführung deines Benutzerkontos unter der Adresse<strong>%{source_email}</strong> mit dem zu dieser Adresse gehörenden Konto <strong>%{target_email}</strong>.</p>
+          <p>Nachdem dieser Vorgang abgeschlossen ist, kannst du nicht mehr mit <strong>%{source_email}</strong>und nur mit <strong>%{target_email}</strong>.</p>
+          <p>Bitte bestätige, dass du dies machen möchtest.</p>
+      verify: E-Mail verifizieren und fortfahren
+      confirm_page:
+        confirm: Bestätige die Zusammenführung
+        body_html: |
+            <p>Bitte bestätige, dass du das Konto zusammenführen möchtest unter <strong>%{source_email}</strong> auf das Konto unter <strong>%{target_email}</strong>.</p>
+            <p>Dein Account unter <strong>%{source_email}</strong> wird gelöscht, und du kannst dich danach nur noch über <strong>%{target_email}</strong>.</p>
+            <p>Diese Veränderung ist unumkehrbar.</p>
+        merge: Benutzerkonten zusammenführen
+      complete_page:
+        title: Zusammenführung erfolgreich!
+        body_html: |+
+            <p>Die Zusammenführung deiner Benutzerkonten war erfolgreich. Du erhälst eine Bestätigungs-E-Mail an <strong>%{target_email}</strong> in Kürze.</p>
+            <p>Bitte <a href="/contact" target="_blank">kontaktiere uns </a> wenn du weitere Fragen hast.</p>
+
+
+  email:
+    common:
+      or_enter_code: oder gib den Code unten ein
+      resend: Diese läuft nach 24 Stunden ab und kann nur einmal verwendet werden
+    login:
+      subject: Bei %{site_name}anmelden
+      intro: Dies ist Ihr Link, um sich bei %{site_name} anzumelden
+      intro_code: Dies ist Ihr Code zum Anmelden bei %{site_name}
+      login: Als %{name} einloggen
+    reactivate:
+      subject: Dein %{site_name} Konto wieder aktivieren
+      intro: Hi %{name}, Hier ist ein Link, um deinen %{site_name}-Account zu reaktivieren
+      login: '%{name}reaktivieren'
+    contact_request:
+      subject: "%{name} möchte sich mit dir auf %{site_name} verbinden!"
+      intro: "%{name} (%{email})  hat dir eine Verbindungsanfrage gesendet."
+      footer: "Du kannst %{name} direkt antworten, indem du auf diese E-Mail antwortest."
+    reset_password:
+      greeting: |
+          Hallo %{name}
+          hier ist ein Link mit dem du dein Passwort für dein Loomio-Konto zurücksetzen kannst:
+      link_text: Dein Passwort zurücksetzen
+      signoff: |
+          Du hast diese Mail erhalten, weil deine E-Mail-Adresse in das "Passwort vergessen"-Formular auf %{hostname} eingegeben wurde.
+          Dein Passwort wird nicht verändert, solange du nicht diesem Link folgst und das entsprechende Formular vervollständigst.
+          Solltest du weiterhin Probleme beim Einloggen haben, dann antworte auf diese E-Mail um mit jemandem von unserem Support Kontakt aufzunehmen - auf Englisch bitte.
+    by_who: von %{person}
+    reply_to_this_discussion: Direkt auf diese Diskussion antworten
+    loomio_app_description: "%{site_name} ist ein Entscheidungstool für kollaborative Organisationen"
+    view_group: Gruppe ansehen
+    to_join_group:
+      subject: "%{member} hat dich eingeladen %{group_name} auf %{site_name} beizutreten"
+      invitation_text: "%{member} hat dich eingeladen, der Gruppe %{group_name} beizutreten."
+      invitation_text_html: "hat dich eingeladen, ihrer/seiner Gruppe beizutreten"
+      link_help: "Klicke auf den unteren Link, um die Einladung anzunehmen:"
+      accept_invitation: "Einladung annehmen"
+      stop_emails: "Keine E-Mails mehr erhalten von %{site_name}"
+      accepting_is_important: Es ist wichtig, dass Sie Ihre Einladung annehmen, da Sie sonst keine Benachrichtigungen über Entscheidungen erhalten, die Sie betreffen.
+    resend_to_join_group:
+      subject: "%{member} wartet darauf, dass du %{group_name} auf %{site_name} beitrittst"
+    user_added_to_group:
+      subject: "%{who} hat dich zu %{which_group} auf %{site_name} hinzugefügt"
+      content: "%{who} hat dich zu %{which_group} hinzugefügt."
+      content_html: "<strong>%{who}</strong> hat dich zu <strong>%{which_group}</strong> hinzugefügt."
+      link_help: "Klicke auf den untenstehenden Link, um der Gruppe zu betreten:"
+    unsubscribe: "Benachrichtigungen deaktivieren oder E-Mail-Einstellungen ändern:"
+    unsubscribe_html: "<a href='%{link_path}'>%{link_text}</a>, um Benachrichtigungen zu deaktivieren oder um deine E-Mail-Einstellungen zu ändern."
+    catch_up:
+      daily_subject: Gestern auf %{site_name}
+      weekly_subject: Letzte Woche auf %{site_name}
+      other_subject: Kürzlich auf %{site_name}
+      do_not_reply: Bitte nicht direkt auf diese E-Mail antworten.
+      mark_as_read: Als gelesen markieren
+      thanks_for_reading: Vielen Dank für's Lesen, wir wünschen noch einen schönen Tag!
+      marked_as_read_success: Alles aus der E-Mail wurde als gelesen markiert
+      click_here: Hier klicken
+    group_membership_approved:
+      intro: "Deine Anfrage der Gruppe %{group_name} beizutreten wurde angenommen."
+      intro_html: "Deine Anfrage der Gruppe <strong>%{group_name}</strong> beizutreten wurde angenommen."
+      link_help: "Klicke auf den untenstehenden Link, um der Gruppe %{group_name} beizutreten und loszulegen:"
+      subject: "Deine Anfrage der Gruppe %{group_name} beizutreten wurde bestätigt"
+      join_group: "Gruppe beitreten"
+    membership_request:
+      intro_html: hat um Aufnahme in eine deiner Gruppen gebeten.
+      subject: "%{who} bittet darum %{which_group} beitreten zu dürfen."
+      view_group: Du kannst die Anfrage hier annehmen oder ablehnen
+      button_text: Anfrage ansehen
+  announcement_count_emails: "%{count} E-mails"
+  email_actions:
+    unfollowed_discussion: Du hast E-Mail-Benachrichtigungen für diese Diskussion deaktiviert.
+  discussion_mailer:
+    reply_or_view_online_html: "Entweder direkt auf diese E-Mail antworten oder <a href='%{url}'>auf %{hostname} antworten</a>."
+    turn_off_notifications_html: "<a href='%{url}'>E-Mail-Benachrichtigungen</a> für diese Diskussion deaktivieren."
+    change_email_preferences_html: "<a href='%{email_preferences_url}'>E-Mail-Einstellungen</a> ändern."
+    unsubscribe_from_discussion_announced_html: "<a href='%{url}'>Abbestellen </a> von weiteren Ankündigungen in diesem Thread."
+    unsubscribe_from_new_comment_html: "Kommentare für diese Diskussion <a href='%{url}'>abbestellen</a>."
+    unsubscribe_from_comment_replied_to_html: "Dies ist eine Antwortbenachrichtigung."
+    unsubscribe_from_user_mentioned_html: "Dies ist eine Erwähnungsbenachrichtigung."
+    discussion_edited:
+      inline: "%{actor} hat den Thread-Kontext bearbeitet"
+    discussion_closed:
+      inline: "%{actor} hat den Thread geschlossen"
+  footer:
+    about: Über Loomio
+    blog: Blog
+    contact: Kontakt
+    help: Hilfe
+    privacy: Datenschutz
+    pricing: Preise
+    public_groups: Öffentliche Gruppen
+    terms: Bedingungen
+    independent_install_html: '%{hostname} benutzt eine unabhängige Kopie von Loomio: <a href="http://github.com/loomio/loomio"> Mehr erfahren</a>.'
+  password_reset:
+    change_your_password: Dein Passwort ändern
+    change_my_password: Passwort ändern
+    confirm_new_password: Passwort bestätigen
+    new_password: Neues Passwort
+    email_guidelines_html: |
+        <p> gib eine E-Mail-Adresse ein, an die der Link zum Zurücksetzen deines Passworts zugeschickt werden kann.</p>
+        <p>Wenn du dich via Facebook oder Google anmeldest, gib die E-Mail-Adresse ein die mit diesen Konto verknüpft ist.</p>
+    reset_email_timeframe: Es wird bis zu 5 Minuten dauern, bis die E-Mail ankommt. Bitte prüfe gegebenenfalls auch deinen Spam-Ordner.
+    length_restriction: Passwörter müssen mindestens 8 Zeichen enthalten.
+    forbidden_passwords: Um Dein Konto sicher zu gestalten, sind einfache Passwörter, wie "passwort" und ähnliches verboten.
+  task_mailer:
+    task_due_reminder:
+      subject: "Aufgabenerinnerung: %{name}"
+      greeting: "Hallo %{name}, die folgende Aufgabe %{due}ist fällig:"
+      view_task: "Ansehen auf %{site_name}"
+      update_or_comment: "Wenn du diese Aufgabe bereits erledigt hast, kreuze sie bitte an. Wenn es nicht vollständig ist, teile bitte ein Fortschritts-Update mit."
+      due_today: "heute"
+      due_in_count_days: "in %{count} Tagen"
+  group_mailer:
+    resend: "ERINNERUNG: %{member} wartet darauf, dass du %{group_name} beitrittst"
+    destroy_warning:
+      subject: Deine Loomio-Gruppe soll gelöscht werden.
+      body: |
+          Deine Loomio-Gruppe: ''%{group}" wurde von %{deletor} zum Löschen vorgemerkt.
+          Wenn du nicht möchtest, dass deine Gruppe gelöscht wird, antworte bitte auf diese E-Mail.
+          Wenn du die Gruppe wirklich löschen möchtest, musst du nichts unternehmen.
+          Vielen Dank.
+  poll_mailer:
+    common:
+      why_send_this: Du erhältst diese E-Mail weil %{reason}
+      view_on_loomio: Direkt auf %{site_name} lesen
+      create_outcome: Ergebnis bekanntgeben
+      your_response: "Deine Stimme:"
+      you_voted: "Du hast gewählt!"
+      not_invited: "Nicht eingeladen"
+      please_respond: Bitte beteilige dich an der Abstimmung!
+      time_zone: (Zeitangaben in %{zone})
+      undecided_members: Unentschlossene Mitglieder (%{count})
+      undecided_visitors: Unentschlossene Gäste (%{count})
+      more_undecided: "Und %{count}mehr..."
+      vote_now: Jetzt Stimme abgeben
+      you_have_until: Du kannst bis %{when} teilnehmen.
+      people_have_voted: "%{nom} von %{dnom} Leuten haben gewählt (%{pct}%)"

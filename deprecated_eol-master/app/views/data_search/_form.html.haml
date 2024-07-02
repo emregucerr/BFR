@@ -1,0 +1,128 @@
+- content_for :head do
+  = stylesheet_link_tag "data_search"
+- i18n_scope = [:helpers, :label, :data_search]
+- # NOTE altering taxon concept defaults if its not searchable but keeping
+- #      variable intact, in case it is still needed... we could just remove it
+- if @taxon_concept && ! @clade_has_no_data
+  - taxon_concept_id = @taxon_concept.id
+  - taxon_name = { value: @taxon_concept.title_canonical, data: {} }
+- else
+  - taxon_concept_id = nil
+  - taxon_name = { value: nil }
+  - if @taxon_concept
+    - if @clade_has_no_data
+      - taxon_name[:data] = { value_removed_placeholder: I18n.t(:taxon_name_placeholder_value_removed,
+        taxon_group: @taxon_concept.title_canonical,
+        scope: i18n_scope) }
+%h3.assistive= t('.header')
+- select_options = @attribute_options || []
+= form_tag data_search_path, method: 'get', class: 'copy', id: 'traitbank_search' do
+  = hidden_field_tag :taxon_concept_id, (taxon_concept_id)
+  .vital
+    %fieldset{class: "ui-widget"}
+      %dl
+        - placeholder = I18n.t(:attribute, scope: i18n_scope)
+        %dt
+          = label_tag :attribute_label, placeholder
+        %dt{id: "combobox"}
+          = select_tag :attribute, options_for_select(select_options, @attribute || placeholder), placeholder: placeholder, include_blank: placeholder
+    - if @equivalent_attributes && @equivalent_attributes.count > 0
+      %br
+      %h2{style: "display: inline;"}
+        = I18n.t("data_search.form.equivalent_attributes")
+      %h1{style: "display: inline;"}
+        = "(#{I18n.t("data_search.form.search_again_for_attributes")})"
+      %br
+      - @equivalent_attributes.each do |eq|
+        %li{style: "list-style-type: none;", id: "attr_#{eq.id}"}
+          = check_box_tag "required_equivalent_attributes[]", eq.id, @required_equivalent_attributes && @required_equivalent_attributes.include?(eq.id.to_s)
+          = eq.label
+          = display_uri(eq, define: true, data_search: true, capitalize: false, without_label: true)
+    - if @equivalent_values && @equivalent_values.count > 0
+      %br
+      %h2{style: "display: inline;"}
+        = I18n.t("data_search.form.equivalent_values")
+      %h1{style: "display: inline;"}
+        = "(#{I18n.t("data_search.form.search_again_for_values")})"
+      %br
+      - @equivalent_values.each do |eq|
+        %li{style: "list-style-type: none;", id: "attr_#{eq.id}"}
+          = check_box_tag "required_equivalent_values[]", eq.id, @required_equivalent_values && @required_equivalent_values.include?(eq.id.to_s)
+          = eq.label
+          = display_uri(eq, define: true, data_search: true, capitalize: false, without_label: true)
+      %br
+  .extras{data: { summary_intro: I18n.t("data_search.form.input_summary_intro"),
+    show: I18n.t("data_search.form.search_tools_show_link"),
+    hide: I18n.t("data_search.form.search_tools_hide_link")}}
+    .suggestions
+      %h3= t('.search_suggestions_header')
+      %h4= t('.search_suggestions_subheader_colon')
+      %ul
+        - unless @suggested_searches.blank?
+          - @suggested_searches.each do |suggestion|
+            %li= link_to t(".#{suggestion[:label_key]}"),
+              data_search_path(suggestion[:params])
+    %h3= t('.refine_search_header')
+    %fieldset
+      %h4= t('.search_within_taxon_group_header')
+      %dl
+        %dt
+          = label_tag :taxon_name, I18n.t(:taxon_name, scope: i18n_scope)
+        %dd
+          = autocomplete_field :autocomplete, 'q', autocomplete_taxon_search_path,
+            name: 'taxon_name', 'data-min-length' => 3, type: 'search',
+            update_elements: { id: '#taxon_concept_id' },
+            value: taxon_name[:value],
+            placeholder: I18n.t('helpers.label.data_search.taxon_name_placeholder'),
+            data: taxon_name[:data]
+          %p= I18n.t(:taxon_name_more, scope: i18n_scope)
+
+    %fieldset
+      %h4= #t('.search_value_or_range_header')
+      %dl
+        %dt
+          = label_tag :q, I18n.t(:q, scope: i18n_scope)
+        %dd
+          = search_field_tag :q, @querystring,
+            placeholder: I18n.t(:q_placeholder, scope: i18n_scope),
+            data: {disabled_placeholder: I18n.t(:q_placeholder_disabled,
+            scope: i18n_scope)}
+          %p= I18n.t(:q_more, scope: i18n_scope)
+      - if false # DISABLED FOR NOW.  :(
+        %h5= t('.or_range_header').html_safe
+        %dl.range
+          %dt
+            = label_tag :min, I18n.t(:min, scope: i18n_scope)
+          %dd
+            = search_field_tag :min, @min_value,
+              placeholder: I18n.t(:min_placeholder, scope: i18n_scope),
+              data: {disabled_placeholder: I18n.t(:min_placeholder_disabled,
+              scope: i18n_scope)}
+        %dl.range
+          %dt
+            = label_tag :max, I18n.t(:max, scope: i18n_scope)
+          %dd
+            = search_field_tag :max, @max_value,
+              placeholder: I18n.t(:max_placeholder, scope: i18n_scope),
+              data: {disabled_placeholder: I18n.t(:max_placeholder_disabled,
+              scope: i18n_scope)}
+        %dl.range
+          %dt
+            = label_tag :unit, I18n.t(:unit, scope: i18n_scope)
+          %dd
+            - unit_options = { I18n.t(:not_specified) => nil }.merge(Hash[ @units_for_select.collect{ |u| [ u.label, u.uri ] } ])
+            = select_tag :unit, options_for_select(unit_options, @unit)
+    - if false
+      -# DISABLED for now... sigh.
+      %fieldset.sort
+        %h4= t('.sort_header')
+        %dl
+          %dt
+            = label_tag :sort, I18n.t(:sort_by_label)
+          %dd
+            - sort_options = { I18n.t(:sort_by_value_ascending) => 'asc',
+              I18n.t(:sort_by_value_descending) => 'desc' }
+            = select_tag :sort, options_for_select(sort_options, @sort)
+  %fieldset.actions
+    = submit_tag I18n.t(:search)
+    = link_to t('.new_search_link'), data_search_path

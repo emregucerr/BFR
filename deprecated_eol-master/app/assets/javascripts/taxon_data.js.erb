@@ -1,0 +1,379 @@
+if (!EOL) { var EOL = {}; }
+
+var _TOOLTIP_OPEN = false;
+
+EOL.max_meta_rows = 10;
+
+EOL.switch_subtab = function(which, options) {
+  $('.about_subtab').hide();
+  $('.glossary_subtab').hide();
+  $('.ranges_subtab').hide();
+  $('.info').hide();
+  if (which.parent().hasClass('about') || which.parent().hasClass('glossary') || which.parent().hasClass('ranges')) {
+    EOL.hide_data_tables($('table.data'));
+    $('#taxon_data .empty').hide();
+    $('.glossary_subtab').hide();
+    $('.help_text').hide();
+    $('.filters').hide();
+    if (which.parent().hasClass('about')) {
+      $('.about_subtab').show();
+    } else if (which.parent().hasClass('glossary')) {
+      $('.glossary_subtab').show();
+      $('.glossary_subtab .help_text').show();
+    }
+    else if (which.parent().hasClass('ranges')) {
+      $('.ranges_subtab').show();
+      $('.ranges_subtab .help_text').show();
+    }
+  } else if (which.parent().hasClass('all')) { // Acts as a reset button/link
+    $('.filters').show();
+    $('#taxon_data .empty').show();
+    $('#taxon_data > .help_text').show();
+    EOL.show_data_tables($('table.data'));
+  } else {
+    $('.filters').show();
+    EOL.hide_data_tables($('table.data'));
+    EOL.show_data_tables($('table.data[data-toc-id="' + which.data('toc-id') + '"]'));
+    $('#taxon_data > .help_text').show();
+  }
+  which.parent().parent().find('li').removeClass('active');
+  which.parent().addClass('active');
+  // Reset other aspects of the table:
+  $('table.data tr.open').removeClass('open');
+  $('table.data .fold img').attr('src', '<%= asset_path "arrow_fold_right.png" %>');
+  $('table.meta').hide();
+  EOL.limit_data_rows();
+};
+
+// $('table.data tr.data .info') ...basically anything for which the "define"
+// helper method is called on... unless it's nested in a row.
+EOL.create_info_dialog = function(match) {
+  var nearest = $(match).closest('[id]').attr('id');
+  $(match).parent().children('.info_icon').remove(); // We will replace this with a definition...
+  $(match)
+    .attr('id', "info_"+nearest)
+    .before('<a id="tip_'+nearest+'" class="info_icon def" data-info="'+nearest+'">&emsp;</a>') // Spaces 'cause width doesn't work. :\
+    .addClass('tip')
+    .prepend('<a href="#" class="close">&nbsp;</a>');
+  EOL.enable_info_dialogs($('#tip_'+nearest), $('table.data tr.data, table.meta tr'));
+  EOL.enable_data_tab_glossary_links($(match));
+  $(match).appendTo(document.body);
+};
+
+EOL.create_info_ranges_dialog = function(match) {
+  var $has_id = $(match).closest('[id]');
+  var nearest = $has_id.attr('id'); // We need to remember which one is open; click again and it closes.
+  $(match)
+    .attr('id', "info_"+nearest)
+    .addClass('tip')
+    .prepend('<a href="#" class="close">&nbsp;</a>')
+    .append( $(match).parent().parent().children('ul.glossary'));
+  $(match).parent().parent().append('<a id="tip_'+nearest+'" class="info_icon def" data-info="'+nearest+'">&emsp;</a>'); // Spaces 'cause width doesn't work. :\
+  EOL.enable_info_dialogs($('#tip_'+nearest), $('table.ranges tr'));
+  EOL.enable_data_tab_glossary_links($(match));
+  $(match).parent().parent().children('ul.glossary').remove();
+  $(match).appendTo(document.body);
+};
+
+EOL.create_collection_taxon_info_dialog = function(match) {
+  var $has_id = $(match).closest('[id]');
+  var nearest = $has_id.attr('id');
+  $(match)
+    .attr('id', "info_"+nearest)
+    .addClass('tip')
+    .prepend('<a href="#" class="close">&nbsp;</a>');
+  $(match).parent().parent().append('<a id="tip_'+nearest+'" class="info_icon def" data-info="'+nearest+'">&emsp;</a>');
+  EOL.enable_collection_taxa_info_dialogs($('#tip_'+nearest), $('table.taxon_collection tr'));
+  $(match).parent().parent().children('ul.glossary').remove();
+  $(match).appendTo(document.body);
+  };
+
+EOL.enable_collection_taxa_info_dialogs = function(tip, table_row) {
+  tip.unbind('click').on('click', function(e) {
+      $('.site_column').unbind('click');
+      var $link = $(this);
+      var $info = $('#info_'+$(this).data('info'));
+      if ($info.is(':visible')) {
+        $info.hide('fast');
+      } else {
+        $('.info_icon.tip').hide('fast');
+        var pos = $(this).offset();
+		$info.css({ top: pos.top + $(this).height() + 26, left: pos.left + $(this).width() });
+        $.ajax({
+          // NOTE: this shouldn't be a hard-coded path, but it was a pain:
+        	url: "/collections/get_uri_name",
+        	type: "GET",
+        	data: {id: $(this).data('info').split(/[_]+/).pop()},
+        	complete: function() {},
+        	success: function(data, textStatus, xhr){
+        		$info.show('fast', function() {
+		            $('.site_column').on('click', function() { $('.info_icon').hide('fast'); $('.site_column').unbind('click'); });
+		        }).find('a.close').on('click', function() { $('.info_icon').hide('fast'); return(false); });
+        		$info.html('<div style="color:#616e7a; font-size:1.1em">'+data["name"] +'</div>'+ '<div style="color:#93a4b0">'+data["uri"]+'</div>');
+		    },
+		    error: function() {}
+	    });
+      }
+    });
+    EOL.info_icon_mouse_hover(table_row);
+};
+
+EOL.enable_data_tab_glossary_links = function(info) {
+  // want to enable this on the data tab, so check for some element that only exists there
+  if(info.closest('#taxon_data.main_container').length > 0) {
+    info.find('a.glossary').each(function() {
+      $(this).text($(this).data('tab-link-message'));
+    });
+    info.find('a.glossary').on('click', function(e) {
+      e.preventDefault();
+      var link_clicked = $(this);
+      link_clicked.closest('.info').hide();
+      $('#tabs_sidebar li.glossary a').trigger('click');
+      setTimeout(function() {
+        $('html,body').animate({ scrollTop: $("#" + link_clicked.data('anchor')).offset().top }, 500);
+      }, 100);
+    });
+  }
+};
+
+// $('table.data tr.data, table.meta tr')
+EOL.enable_info_dialogs = function(tip, table_row) {
+  console.log("Adding click event for: " + tip.data('info'));
+  tip.unbind('click').on('click', function(e) {
+    // This will make sure we don't open rows when clicking info icons:
+    e.stopPropagation();
+    $('.site_column').unbind('click');
+    var $link = $(this);
+    var $info = $('#info_' + $(this).data('info'));
+    console.log("Clicked on tooltip: " + $(this).data('info'));
+    if ($info.is(':visible')) {
+      $info.hide('fast');
+    } else {
+      $('.info.tip').hide('fast');
+      var pos = $(this).offset();
+      $info.css({ top: pos.top + $(this).height(), left: pos.left + $(this).width() });
+      $info.show('fast',
+        function() {
+          $('.site_column').on('click', function() { $('.info').hide('fast'); $('.site_column').unbind('click'); });
+        }
+      ).find('a.close').on('click', function() { $('.info').hide('fast'); return(false); } );
+    }
+  });
+  EOL.info_icon_mouse_hover(table_row);
+};
+
+ // making sure the info icons show when anywhere on the row is moused over
+  EOL.info_icon_mouse_hover = function (table_row){
+  	$(table_row).hover(
+    function() {
+      $(this).find('.info_icon.def').addClass('active');
+    },
+    function() {
+      $(this).find('.info_icon').removeClass('active');
+    }
+  )};
+
+EOL.enable_button = function($button) {
+  if ($button.is(':disabled')) {
+    $button.removeAttr('disabled').fadeTo(225, 1);
+  }
+};
+
+EOL.disable_button = function($button) {
+  if (!$button.is(':disabled')) {
+    $button.attr("disabled", true).fadeTo(225, 0.3);
+  }
+};
+
+EOL.hide_data_tables = function(tables) {
+  tables.hide();
+  tables.prev('div.header_underlined').hide();
+};
+
+EOL.show_data_tables = function(tables) {
+  tables.show();
+  tables.prev('div.header_underlined').show();
+  tables.find('tr.data').show();
+  tables.find('tr.actions').hide();
+  $('#curation_legend.help_text').show();
+};
+
+// NOTE: this is the method that changed with the new metadata.
+EOL.toggle_actions_row = function(data_row) {
+  var $folder = data_row.find('.fold img');
+  var $next_row = data_row.next();
+  var $next_row_data = $next_row.children('td');
+  var $table = data_row.next().find('table.meta');
+  $folder.parent().attr({
+    title: '<%= I18n.t(:data_row_additional_detail_assistive_js) %>'
+  });
+  if ($next_row.is(":visible")) {
+    $folder.attr({
+      src: '<%= asset_path "arrow_fold_right.png" %>',
+      alt: '<%= I18n.t(:data_row_additional_detail_show_alt) %>'
+    });
+    $next_row.hide();
+    $table.hide();
+  } else {
+    var data_point_id = data_row.attr('id');
+    $folder.attr({
+      src: '<%= asset_path "arrow_fold_down.png" %>',
+      alt: '<%= I18n.t(:data_row_additional_detail_hide_alt) %>'
+    });
+    $next_row.show();
+    $table.show();
+  }
+};
+
+EOL.sort_glossary = function(a, b) {
+  return ($(b).find('dt').text()) < ($(a).find('dt').text()) ? 1 : -1;
+};
+
+EOL.update_input_id_and_name = function(form, new_id) {
+  form.find('input').each(function() {
+    $(this).attr('id', $(this).attr('id').replace(/\d+/, new_id));
+    $(this).attr('name', $(this).attr('name').replace(/\d+/, new_id));
+    // these 3 fields are used in autocompleting of metadata
+    if ($(this).data('id-element')) {
+      $(this).data('id-element', $(this).data('id-element').replace(/\d+/, new_id));
+    }
+    if ($(this).data('include-predicate_known_uri_id')) {
+      $(this).data('include-predicate_known_uri_id', $(this).data('include-predicate_known_uri_id').replace(/\d+/, new_id));
+    }
+    // Using attr instead of data here because data treats the value as JSON and we want it as a string:
+    if ($(this).attr('data-update-elements')) {
+      $(this).attr('data-update-elements', $(this).attr('data-update-elements').replace(/\d+/, new_id));
+    }
+  });
+};
+
+EOL.limit_data_rows = function() {
+  $('table.data tr.more').remove();
+  $('table.data tr.data.first_of_type:visible').each(function() {
+    var type = $(this).data('type');
+    var $nested_set = $(this).closest('table').find('tr[data-type="' + type + '"]:visible');
+    if ($nested_set.length > EOL.max_meta_rows) {
+      var $index = 1;
+      $nested_set.each(function() { if ($index > EOL.max_meta_rows) $(this).hide(); $index++; });
+      $nested_set.filter(':last').after(
+        '<tr data-type="' + type + '" class="data nested more"><th></th><td><a href="#" class="more">' +
+        $('table.data').data('more').replace('NNN', ($nested_set.length-EOL.max_meta_rows)) +
+        '</a></td><td></td><td></td></tr>');
+      $('tr.more a.more').unbind('click').on('click', function() {
+        var $parent_row = $(this).closest('tr');
+        $('tr.data[data-type="' + $parent_row.data('type') +'"]').show();
+        $parent_row.remove();
+        return(false);
+      });
+    }
+  });
+};
+
+EOL.yank_glossary_terms = function($row) {
+};
+
+EOL.enable_hover_list_items = function() {
+  $('ul.glossary li').hover(
+    function() {
+      $(this).find('li.hover').show();
+    }, function() {
+      $(this).find('li.hover').hide();
+    }
+  );
+};
+
+// change the list of units based on the currently selected attribute
+EOL.update_unit_select_options = function(known_uri_id) {
+  // call the 'autocomplete' method with the given predicate ID (or no predicate ID to get back all units)
+  $.ajax({
+    url: '/known_uris/autocomplete_known_uri_units?predicate_known_uri_id=' + known_uri_id,
+    dataType: 'json',
+    success: function(response) {
+      // remove all but the first option, which is not specified
+      $('select#unit').find('option:gt(0)').remove();
+      $.each(response, function(key, unit_data) {
+        // add back the units applicable to the selected attribute
+        $('select#unit').append($('<option></option>').attr("value", unit_data.uri).text(unit_data.value));
+      });
+    }
+  });
+};
+
+$(function() {
+  // Hide metadata, add the ">" icon:
+  $('table.data tr.actions').hide().prev().find('.fold img').attr('src', '<%= asset_path "arrow_fold_right.png" %>');
+  // Clicking on the triangle in the row is effectively just clicking on the row
+  // (otherwise this would be blocked as a clickable link in the row, skipping
+  // the click on the row itself:)
+  $('table.data .fold a').on('click', function() {
+    $(this).closest('tr').click(); return(false);
+  });
+  // on click, open row:
+  $('table.data tr.data').on('click', function(e) {
+    var $targ;
+    var $orig_targ;
+    if (e.target) $targ = $(e.target);
+    else if (e.srcElement) $targ = $(e.srcElement);
+    $orig_targ = $targ;
+    // Grab the TR if they clicked on something lower. Seems odd that this happens, but it does (it's usually a TD).
+    if (! $targ.is("tr")) $targ = $targ.closest('tr');
+    // Abort if the row is hidden (and in a data search table; it's fine if it's on a data tab):
+    if ($targ.hasClass('hidden') && $targ.closest('table.search').length > 0) return;
+    // Abort if it's a legitimate link (which will handle itself):
+    if ($orig_targ.is('a')) {
+      e.stopPropagation();
+      return;
+    }
+    $targ.next().find('.info').each(function() { EOL.create_info_dialog(this); });
+    EOL.toggle_actions_row($targ);
+  });
+  // on click of metadata, close row:
+  $('table.data tr.actions td .metadata').live('click',
+    function(e) {
+      if ($(e.target).closest('a').length) return; // It's a link, don't handle the row...
+      EOL.toggle_actions_row($(this).closest('tr').prev());
+    });
+  // Subtabs:
+  $('#tabs_sidebar.data ul.subtabs a').on('click', function() {
+    EOL.switch_subtab($(this));
+    return(false);
+  });
+  // Show a "more..." link if there's a ton of data for one attribute:
+  EOL.limit_data_rows();
+  // Open rows that are in the URL:
+  if (location.hash !== "") {
+    var name  = location.hash.replace(/\?.*$/, '');
+    var $row = $(name);
+    $row.click();
+    if ($row.offset() !== undefined) {
+      var new_top = $row.offset().top - 200;
+      $("html, body").animate({ scrollTop: new_top });
+    }
+  }
+  // Remove links (on the overview) should be hidden until you hover:
+  $('#data_summary table').hover(function() {
+    $('span.remove').show();
+  }, function () {
+    $('span.remove').hide();
+  }).find('span.remove').hide();
+  // Hide hidden buttons. This isn't in the CSS for accessibility reasons.
+  $('a.button.hidden').hide();
+  // Definitions of attributes are dialogs if JS is enabled:
+  $('table.data tr.data .info').each(function() {
+    EOL.create_info_dialog(this);
+  });
+  // Some fields in the data search form have info:
+  $('form.copy .vital li .info').each(function() {
+    EOL.create_info_dialog(this);
+  });
+  // Ranges (missing at the time of this writing, but hey)
+  $('table.ranges tr .info, table.ranges.search tr .info').each(function() {
+    EOL.create_info_ranges_dialog(this);
+  });
+  // Glossary hover items:
+  EOL.enable_hover_list_items();
+  // Alert if you want to download data:
+  $('.page_actions .data_download a').on('click', function() {
+    window.alert($(this).parent().data('alert').replace(/<\/?[^>]+>/g, ''));
+  });
+});

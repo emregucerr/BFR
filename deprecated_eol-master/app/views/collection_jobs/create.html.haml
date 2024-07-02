@@ -1,0 +1,34 @@
+= javascript_include_tag 'choose_sort_type'
+= stylesheet_link_tag 'choose_sort_type'
+-# NOTE - Yes, it's definitely unusual to have a 'create' view, since that method is supposed to redirect, but... this works in the case where you must specify a taget:
+#choose_collections
+  -# NOTE - values for command can be found in CollectionJob::VALID_COMMANDS ... but only commands required a target will be used.
+  - if @collection_job.all_items?
+    %h2.label= I18n.t("collection_#{@collection_job.command}_choose_all_items_target_title", :collection => @collection_job.collection.name)
+  - else
+    %h2.label= I18n.t("collection_#{@collection_job.command}_choose_target_title_with_count", :collection => @collection_job.collection.name,
+      :count => @collection_job.collection_items.length)
+  %dt.sort_by
+    = label_tag :sort_collection_by, I18n.t(:sort_by_label)
+    = select_tag :sort_collection_by, options_for_select(@sorts, :recent), onchange: "javascript: changeList();"
+  = form_for @collection_job do |f|
+    %fieldset
+      = f.hidden_field :command
+      = f.hidden_field :collection_id
+      = f.hidden_field :all_items
+      = f.hidden_field :overwrite
+      - if @collection_job.collection_items
+        - @collection_job.collection_items.each do |collection_item|
+          = hidden_field_tag "collection_job[collection_item_ids][]", collection_item.id
+      - @item = @collection_job.collection_items.length == 1 ? @collection_job.collection_items.first.collected_item : nil
+      = render('list_collections_for_collection_job', collections: @collections_recently_updated, type: "recent" , f:f)
+      = render('list_collections_for_collection_job', collections: @collections, display: "none", type: "alpha", f:f)
+
+    %fieldset.actions
+      = link_to(I18n.t(:see_all_of_your_collections), user_collections_path(current_user), :class => 'other_actions close_and_go')
+      = submit_tag(I18n.t(@collection_job.command))
+      %span#overwrite
+        = f.check_box :overwrite
+        = f.label :overwrite
+      = link_to(I18n.t(:cancel), @collection_job.collection, :class => 'close')
+

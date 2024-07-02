@@ -1,0 +1,34 @@
+- # TODO: This has gone crazy, we should refactor and use model and/or helper methods to get supplier
+- # for different contexts.
+- association_supplied_by_user ||= nil
+- minimal = false unless local_assigns.has_key?(:minimal)
+- translation = false unless local_assigns.has_key?(:translation)
+- rel = controller_name == 'data_objects' ? :nofollow : nil
+%p
+  - if association_supplied_by_user
+    = I18n.t(:supplier_colon)
+    = link_to association_supplied_by_user.full_name, association_supplied_by_user rescue nil
+  - elsif data_object.added_by_user? && !data_object.users_data_object.blank?
+    = I18n.t(:supplier_colon)
+    = link_to data_object.users_data_object.user.full_name, data_object.users_data_object.user rescue nil
+  - elsif data_object.content_partner
+    - if data_object.source_url && data_object.source_url =~ URI::regexp
+      - if minimal
+        = I18n.t(:source_colon)
+        = link_to data_object.content_partner.name, data_object.source_url, :rel => rel rescue nil
+        %br
+      - elsif !translation
+        = link_to I18n.t(:view_source), data_object.source_url, :rel => rel rescue nil
+        %br
+    - elsif !data_object.content_partner.homepage.blank?
+      = I18n.t(:partner_web_site_colon)
+      = link_to data_object.content_partner.name, data_object.content_partner.homepage, :rel => rel rescue nil
+      %br
+    - if (data_object.source_url.blank? && data_object.content_partner.homepage.blank?) || !minimal
+      = I18n.t(:supplier_colon)
+      - partner = data_object.content_partner
+      - if current_user.can_read?(partner)
+        = link_to partner.name, partner rescue nil
+      - else
+        = partner.name rescue nil
+        = "(profile not public)"

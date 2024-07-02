@@ -1,0 +1,46 @@
+<% content_for :head do %>
+  <%= render partial: "shared/theme_meta", locals: {theme: Current.user.theme} %>
+<% end %>
+
+<% content_for :body do %>
+  <%= turbo_stream_from "media_sync" if is_admin? %>
+  <%= turbo_stream_from Current.user, :theme %>
+
+  <% if native_app? %>
+    <%= render "shared/flash" %>
+    <main class='u-p-large u-p-small@small'>
+      <%= yield %>
+    </main>
+  <% else %>
+    <div class='o-flex'>
+      <aside id='js-sidebar' class='o-flex__item o-flex__item--shrink-0 c-sidebar'>
+        <div class='o-flex o-flex--column-reverse u-position-sticky-top u-overflow-auto u-vh-100'>
+          <div class='o-flex__item o-flex__item--shrink-0'>
+            <%= render "shared/player" %>
+          </div>
+          <div class='o-flex__item o-flex__item--grow-1 u-h-0'>
+            <%= turbo_frame_tag "turbo-playlist", src: current_playlist_songs_path, class: "u-h-100 o-flex o-flex--column" %>
+          </div>
+        </div>
+      </aside>
+      <div id='js-app' class='o-flex__item o-flex__item--grow-1'>
+        <div>
+          <header class='c-nav c-nav--primary u-position-sticky-top'>
+            <%= render "shared/flash" %>
+            <%= render partial: "shared/search_bar", locals: {current_user: Current.user, current_session: Current.session, query: params[:query]} %>
+            <%= render partial: "shared/nav_bar", locals: {current_controller: controller_name} %>
+          </header>
+          <main class='o-container--wide u-m-auto u-p-large u-p-small@small u-p-narrow@extra-narrow'>
+            <%= yield %>
+          </main>
+          <footer class='u-display-none u-display-block@extra-small u-position-fixed-bottom'>
+            <%= render "shared/mini_player" %>
+          </footer>
+        </div>
+        <%= turbo_frame_tag "turbo-dialog" %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+<%= render template: "layouts/base" %>

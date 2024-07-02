@@ -1,0 +1,2383 @@
+# Messages for Basque (euskara)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+# Author: Amaia
+# Author: An13sa
+# Author: EukeneFL
+# Author: Fitoschido
+# Author: Gorkaazk
+# Author: Mikel Ibaiba
+# Author: Subi
+# Author: Theklan
+# Author: Xabier Armendaritz
+# Author: Zeabil8
+---
+eu:
+  activerecord:
+    models:
+      user: kontua
+    attributes:
+      collection:
+        name: Bildumaren izena
+        description: Bildumaren deskribapena
+        logo: Bildumako irudi nagusia
+        additional_annotation_fields: Anotazio eremu gehigarriak
+        show_references: Erreferentziak (Testua edo URLa)
+      collection_job:
+        overwrite: Bikoizketak ordezkatu
+      collection_item:
+        annotation: Anotazioa
+        sort_field: Honen arabera sailkatu
+        refs: Erreferentziak
+      comment:
+        body: Iruzkina
+      community:
+        name: Komunitate izena
+        description: Komunitate deskribapena
+        logo: Igo logotipo bat
+      contact:
+        comments: Mezua
+        contact_subject_id: Kontaktu gaia
+        email: E-posta
+        name: Izena
+      content_page:
+        page_name: Izen bakarra
+        sort_order: Sailkapen ordena
+        active: Argitaratua
+      content_partner:
+        acronym: Proiektuaren laburpena
+        auto_publish: Auto-publikatu
+        content_partner_status: Proiektuaren egoera
+        created_at: Sortua
+        description: Proiektuaren deskribapena
+        display_name: Izena erakutsi
+        full_name: Proiektuaren izena
+        homepage: Proiektuaren URLa
+        id: ID
+        notes: Proiektuaren oharrak
+        is_public: Publikoa
+        resources: Baliabideak
+        user_id: 'Kudeatzailea:'
+      content_partner_agreement:
+        created_at: 'Noiz sortua:'
+        signed_by: 'Sinatzailea:'
+        signed_on_date: 'Sinadura data:'
+      content_partner_contact:
+        email_reports_frequency_hours: Mezu elektroniko bidezko txostenen maiztasuna
+      data_object:
+        bibliographic_citation: Aipamen bibliografikoa
+        description: Testua
+        object_title: Izenburua
+        rights_holder: Eskubideen jabea
+        rights_statement: Eskubide aitormena
+        source_url: 'Jatorrizko URL-a:'
+      data_object_link:
+        description: Deskribapena
+        source_url: URL lotura
+      eol_statistic:
+        created_at: 'Noiz sortua:'
+        members_count: Kideak
+        communities_count: Komunitateak
+        collections_count: Biltegiak
+        pages_count: Orrialdeak guztira
+        pages_with_content: Edukia duten orrialdeak
+        pages_with_text: Testua duten orrialdeak
+        pages_with_image: Irudia duten orrialdeak
+        pages_with_map: Mapa duten orrialdeak
+        pages_with_video: Bideoa duten orrialdeak
+        pages_with_sound: Audioa duten orrialdeak
+        pages_without_text: Testurik ez duten orrialdeak
+        pages_without_image: Irudirik gabeko orrialdeak
+        pages_with_image_no_text: Irudia duten orrialdeak baino testurik ez
+        pages_with_text_no_image: Testua duten orrialdeak baina irudirik ez
+        base_pages: Oinarri orrialdeak
+        pages_with_at_least_a_trusted_object: Konfiantzadun objektuak dituen orrialdea
+        pages_with_at_least_a_curatorial_action: Mantentze-lana duten orriak
+        pages_with_BHL_links: BHL linkak dituen orrialdeak
+        pages_with_BHL_links_no_text: BHL loturak dituzten, baina testurik ez duten
+          orrialdeak
+        pages_with_BHL_links_only: BHL estekak diztuen orriak bakarrik
+        data_objects: Datu objektuak
+        data_objects_texts: Testu objektuak
+        data_objects_images: Irudi objektuak
+        data_objects_videos: Bideo objektuak
+        data_objects_sounds: Audio objektuak
+        data_objects_maps: Mapa objektuak
+        data_objects_trusted_or_unreviewed_but_hidden: Fidagarria edo berrikusi gabea
+          baina ezkutuan
+        udo_published: Erabiltzaileak bidalitako testua
+        udo_published_by_curators: Mantentze-lanen arduradunak bidalitako testua
+        udo_published_by_non_curators: Mantentze-lanen arduradunak bidali ez duen
+          testua
+        content_partners: Eduki kideak
+        content_partners_with_published_resources: Argitaratutako baliabideekin
+        content_partners_with_published_trusted_resources: Argitaratutako baliabide
+          fidagarriekin
+        published_resources: Argitarautako baliabideak
+        published_trusted_resources: Argitaratutako baliabide fidagarriak
+        published_unreviewed_resources: Berrikusi gabeko argitaratutako baliabideak
+        newly_published_resources_in_the_last_30_days: Azken hilabetean argitaratu
+          berria
+        hotlist_pages: Gehien eskatutako orriak
+        pages_with_score_10_to_39: 10 eta 40 arteko puntuazioa daukaten orriak
+        pages_with_score_less_than_10: 10 baino puntuazio baxuagoa daukaten orriak
+        total_taxa_with_data: Datuak dituzten orriak
+        total_triples: Hirukoitzak
+        total_occurrences: Burutazioak
+        total_measurements: Neurketak
+        total_associations: Elkarteak
+        total_measurement_types: Neurketa-motak
+        total_association_types: Elkarte motak
+        total_data_records: Datuen erregistroak
+      forum:
+        forum_category_id: Kategoria
+        name: Foroaren izena
+        description: Deskribapena <small>(aukeran)</small>
+      forum_category:
+        title: Kategoriaren izena
+        description: Deskribapena <small>(aukerazkoa)</small>
+      forum_post:
+        subject: Gaia
+        text: Testua
+      forum_topic:
+        subject: Gaia
+        text: Testua
+      harvest_event:
+        resource: Baliabidea
+      hierarchy:
+        browsable: Arakagarria
+        complete: Bukatuta
+        description: Deskribapena
+        descriptive_label: Etiketa deskribatzailea
+        label: Etiketa
+        request_publish: Argitalpena eskatu
+      known_uri:
+        description: Deskribapena
+        exclude_from_exemplars: Laburpenetik baztertu
+        name: Izena
+        toc_items: Kategoriak
+        uri_type: URI mota
+        value_is_text: Baloreak ez dira URIak izango, testua bakarrik izango da
+        value_is_verbatim: Baloreak ez dira zenbakiak izango, testua bakarrik izango
+          da
+      known_uri_relationship:
+        to_known_uri_id: Helburuko URIa
+        to_known_uri: Helburuko URIa
+      open_authentication:
+        created_at: Sortua
+        guid: GUID
+        provider: Kanpo hornitzailea
+        secret: Sekretua
+        token: Token
+        updated_at: Azken eguneratzea
+        user_id: 'Erabiltzailearen identifikazioa (ID):'
+        verified_at: Azkeneko aldiz ziurtatua
+      name:
+        string: Izena
+      news_item:
+        page_name: Izen bakarra
+        sort_order: Sailkapen ordena
+        active: Argitaratua
+      notification:
+        reply_to_comment: Zuk egindako ohar baten erantzuna
+        comment_on_my_profile: Iruzkin bat zure profilean
+        comment_on_my_collection: Iruzkin bat kudeatzen duzun bilduma batean
+        comment_on_my_community: Iruzkin bat bazkide zaren komunitate batean
+        made_me_a_manager: Bilduma edo komunitate administratzaile egin zaituzte
+        member_joined_my_community: Kide berri bat batu da zuk administratzen duzun
+          komunitate batera
+        changes_to_my_watched_collection: Aldaketak zure jarraipen zerrendako bildumetan
+        changes_to_my_watched_community: Aldaketak zure jarraipen zerrendako komunitateetan
+        member_joined_my_watched_community: Kide berri bat batu da zu kide zaren komunitate
+          batera
+        member_left_my_community: Kide bat zuk administratzen duzun komunitate batetik
+          joan da
+        new_manager_in_my_community: Beste kide bat zuk administratzen duzun komunitate
+          bateko administratzaile bihurtu da
+        i_am_being_watched: Beste kide baten jarraipen zerrendara gehitua izan zara
+        eol_newsletter: Bidali EOLen hiruilabete bakoitzeko buletina
+      resource:
+        auto_publish: Automatikoki argitaratua
+        description: Baliabidearen deskribapena
+        dwc_archive_url: Darwin Core fitxategiaren URLa
+        dataset_source_url: Datu iturri originala
+        dataset_hosted_url: Datu-iturburua (kopia lokala)
+        hierarchy: Hierarkia
+        language_id: Berezko hizkuntza
+        dataset_license_id: Lizentzia
+        dataset_rights_holder: Eskubideen jabea
+        dataset_rights_statement: Eskubide aitormena
+        license_id: Berezko lizentzia
+        rights_holder: Lehenetsitako eskubideen jabea
+        rights_statement: Lehenetsitako eskubide aitormena
+      translated_content_page:
+        active_translation: Argitaratua
+        left_content: Nabigazioa
+        main_content: Testua
+        meta_keywords: Metadatuen gako hitzak
+        meta_description: Metadatuen deskribapena
+        title: Izenburua
+      translated_known_uri:
+        definition: Definizioa
+        comment: Iruzkina
+      translated_news_item:
+        active_translation: Argitaratua
+        body: Testua
+        meta_keywords: Metadatuen gako hitzak
+        meta_description: Metadatuen deskribapena
+        title: Izenburua
+      user:
+        agreed_with_terms: Erabilera baldintzak
+        api_key: API giltza
+        bio: Bio
+        credentials: Kredentzialak
+        disable_email_notifications: Ez bidali eguneraketa BAT ERE EZ posta elektronikoz
+        email: E-posta helbidea
+        email_confirmation: E-posta helbidea berriro ere <small>(konfirmatzeko)</small>
+        entered_password: Pasahitza
+        entered_password_confirmation: Pasahitza berriro ere <small>(konfirmatzeko)</small>
+        family_name: Abizena
+        full_name: Izen osoa
+        given_name: Lehen izena
+        language_abbr: Hobetsitako hizkuntza
+        permissions: Baimenak
+        tag_line: Taglerroa
+        username: Erabiltzaile izena
+      user_added_data:
+        object: Balioa
+        user: Honek gehitua
+      user_added_data_metadata:
+        predicate: Atributoa
+        object: Balioa
+    errors:
+      format: '%{attribute} %{message}'
+      messages:
+        taken: dagoeneko erabileran dago
+        inclusion: ez dago zerrendan
+        exclusion: erreserbatua dago
+        invalid: baliogabea da
+        confirmation: ez dator bat baieztapenarekin
+        accepted: onartu egin behar da
+        empty: ezin da hutsik egon
+        blank: ezin da zuriak egon
+        wrong_length: okerreko luzera da (%{count} karakteretako izan behar da)
+        not_a_number: ez da zenbaki bat
+        not_an_integer: zenbaki osoa izan behar da
+        equal_to: 'honen berdina izan behar da: %{count}'
+        less_than_or_equal_to: 'hau baino txikiagoa edo berdina izan behar da: %{count}'
+        odd: bikoitia izan behar da
+        even: bakoitia izan behar da
+        inaccessible: ezin da sartu
+        wrong_type: okerreko mota da
+        models:
+          inaccessible: ezin da sartu
+      full_messages:
+        format: '%{attribute} %{message}'
+      models:
+        data_object:
+          attributes:
+            rights_holder:
+              blank: ezin da hutsik egon CC BY lizentzia baterako
+        known_uri:
+          attributes:
+            uri:
+              must_be_uri: Ondo formatutako <a href='https://en.wikipedia.org/wiki/Uniform_resource_identifier'>URIa</a>
+                izan behar da
+        open_authentications:
+          guid_provider_must_be_unique: kanpoko kontua dagoeneko badago EOL kontu
+            batera konektatuta
+        resource:
+          attributes:
+            accesspoint_url:
+              inaccessible: ez dago eskuragarri, URLa publikoki eskuragarri egon behar
+                da
+            dataset:
+              wrong_type: okerreko mota da, GZIP, TAR, ZIP edo XML fitxategi bat izan
+                behar da
+            dwc_archive_url:
+              inaccessible: ez dago eskuragarri, URLa publikoki eskuragarri egon behar
+                da
+        user_added_data:
+          attributes:
+            predicate:
+              namespace: izen eremu ezezaguna erabili da
+            subject:
+              namespace: izen eremu ezezaguna erabili da
+        user_added_data_metadata:
+          attributes:
+            predicate:
+              namespace: izen eremu ezezaguna erabili da
+            subject:
+              namespace: izen eremu ezezaguna erabili da
+        known_uri_relationship:
+          attributes:
+            to_known_uri_id:
+              must_be_known_uri: URI ezagun bat izan behar da
+              must_be_measurement: neurri-unitate bat izan behar da
+            relationship_uri:
+              only_one_measurement: Ez baimendua. Lehenetsitako unitate bakarra egon
+                daiteke
+  helpers:
+    label:
+      collection:
+        view_style_id: 'Lehenetsitako ikuspegia:'
+      collection_item:
+        annotation: Anotazioa
+        sort_field: Sailkatu honen arabera <small>(data UUUU.HH.EE, zenbakia edo testua)</small>
+        sort_field_show: 'Balioa antolatu:'
+      comment:
+        body_edit: Iruzkina aldatu
+      contact:
+        comments: Zure mezua
+        contact_subject_id: Gaia
+        email: Zure e-posta
+        name: Zure izena
+      content_page:
+        active: Argitaratua
+        active_more: Argitaratutako orriak publikoki ikusgai egongo dira. <em>Argitaratua</em>
+          marka kendu edozein erabiltzailek edozein hizkuntzatan orri honen bertsioak
+          ikustea saiestu nahi baduzu.
+        parent_content_page_id: Gurasoa
+      content_partner:
+        created_at: Erregistratua
+        current_agreement: Oraingo hitzarmena
+        description_of_data: Datuen deskribapena <small>(pribatua)</small>
+        last_action: Azken ekintza
+        latest_published_harvest_event: Azken argitalpena
+        logo_current: 'Oraingo logoa:'
+        logo_new: 'Logo berria igo:'
+        notes: Proiektuaren oharrak <small>(pribatuak)</small>
+        oldest_published_harvest_event: Lehen argitalpena
+        user_id: Eduki kidearen datuak kudeatu ditu
+      data_object:
+        bibliographic_citation: Aipamen bibliografikoa
+        license_id: Lizentzia
+        object_title: Izenburua
+        toc_item: Azpikapitulua
+        rights_holder: Eskubideen jabea
+        rights_statement: Eskubide aitormena
+      data_object_link:
+        description: Deskribapena <small>(HTML formatuko zerbait onartzen da)</small>
+        source_url: URL lotura
+        toc_item: Gaia
+        link_type: Kategoria
+      data_search:
+        attribute: Atributu bat aukeratu
+        max: Gehienezko balorea
+        max_with_val: 'Gehienezko balorea: %{val}'
+        max_placeholder: Sartu zenbaki bat
+        max_placeholder_disabled: Tartea desgaitua
+        min: Gutxieneko balioa
+        min_with_val: 'Gutxieneko balioa: %{val}'
+        min_placeholder: Sartu zenbaki bat
+        min_placeholder_disabled: Tartea desgaitua
+        q: Balio zehatza
+        q_with_val: 'Balio zehatza: %{val}'
+        q_placeholder: Sartu hitz, esaldi edo zenbaki bat
+        q_more: Adibidez, heterotrofoak.
+        unit: Neurri-unitatea
+      eol_statistic:
+        date_one: Data
+        date_two: Data
+        download_all: Denak <small>(orri guztietako erregistroak hartzen ditu)</small>
+      harvest_event:
+        began_at: Hasiera
+        completed_at: Bukatuta
+        first_published_at: Lehen argitalpena
+        published_at: Argitaratua
+        published_status: Egoera
+      hierarchy:
+        request_publish: Eskatutakoa argitaratu
+      known_uri_relationship:
+        from_known_uri: URI ezagunerako
+        relationship_uri: Harremana aukeratu
+        to_known_uri: Sartu eta aukeratu helburu URIa
+      news_item:
+        active: Argitaratua
+        active_more: Argitaratutako albisteak publikoki ikusgai egongo dira aukeratutako
+          data eta orduan. <em>Argitaratua</em> marka kendu edozein erabiltzailek
+          edozein hizkuntzatan albiste honen bertsioak ikustea saiestu nahi baduzu.
+      open_authentication:
+        connected: Konektatuta
+        connect: Gehitu
+      resource:
+        administration_settings: Administrazio ezarpenak <small>(EOL administratzaileentzako
+          bakarrik ikusgai)</small>
+        dataset: Datu-bilduma
+        hierarchy: Hierarkia
+        oldest_published_harvest_event: Lehen argitalpena
+        latest_published_harvest_event: Azken argitalpena
+        latest_harvest_event: Azken bilketa
+        refresh_period_hours: Frekuentzia
+        resource_status_id: Egoera
+        resource_status: Egoera
+        resource_url_or_file_upload: Baliabide fitxategia igo
+        title: Baliabidearen izena
+      session:
+        password: Pasahitza
+        remember_me: Manten nazazu izen emanda 2 astez
+        username_or_email: Erabiltzaile izena edo e-posta helbidea
+      translated_content_page:
+        active_translation: Argitaratua
+        active_translation_more: Argitaratutako itzulpenak publikoki ikusgai egongo
+          dira, orria bera argitaratu gabe egon ezean. Kendu <em>argitaratua</em>
+          marka, erabitzaileek orokorrean orriaren bertsio hau ikustea saiestu nahi
+          baduzu.
+        language_id: Hizkuntza
+      translated_news_item:
+        active_translation: Argitaratua
+        language_id: Hizkuntza
+      user:
+        agreed_with_terms: Ados nago <a href="%{terms_url}">erabilera baldintzekin</a>
+        bio: Niri buruz
+        credentials: Kredentzialak
+        email_reports_frequency_hours: Noizero gustatuko litzaizuke zure ekarpenei
+          buruzko jakinarazpenak emailez jasotzea?
+        email_settings_submit: posta elektronikoaren ezarpenak
+        email: E-posta helbidea
+        entered_password: Pasahitza <small>(4 - 16 karaketere)</small>
+        generate_api_key: Eskatu API giltza bat
+        logo: Argazki berria igo
+        new_password: Pasahitz berria <small>(4 - 16 karaktere)</small>
+        new_password_confirmation: Pasahitz berria <small>(konfirmatzeko)</small>
+        news_in_preferred_language: erakutsi albisteak nahiago duzun hizkuntzan
+        notification_settings: Jakinarazpenen ezarpenak
+        notification_settings_more: Jakinarazpenen ezarpenak konfiguratu.
+        open_authentications: Lotutako kontuak
+        open_authentications_connected_accounts: Zure lotutako kontuak
+        requested_curator_level: '%{curator_level_with_indefinite_article} bihurtzeko
+          eskaera egiteko dago.'
+        user_identities: Ni naiz
+        username: Erabiltzaile izena <small>(4 - 32 karaktere)</small>
+        username_or_email: Erabiltzaile izena edo helbide elektronikoa
+      wikipedia_queue:
+        revision_url: Berrikuspenaren URLa <small>(e.g. https://en.wikipedia.org/w/index.php?title=Giraffe&oldid=363366069)</small>
+    select:
+      prompt: Mesedez, aukeratu
+    submit:
+      cancel: Utzi
+      create: Sortu %{model}
+      filter_sort: Filtratu eta sailkatu
+      update: Eguneratu %{model}
+      submit: Gorde %{model}
+      collection_item:
+        update: Gorde
+      contact:
+        new: Feedbacka bidali
+      content_page:
+        create: Artikulua sortu
+        edit: Aldatu
+        preview: Aurreikusi
+        update: Orrialdea gaurkotu
+      content_partner:
+        create: Eduki kidea sortu
+        update: Eduki kidearen informazioa gorde
+      content_partner_agreement:
+        create: Hitzarmen berria sortu
+        update: Hitzarmena eguneratu
+      content_partner_contact:
+        create: Gehitu kontaktua
+        update: Berritu kontaktua
+        destroy: Ezabatu kontaktua
+      data_object:
+        create: Gehitu artikulua
+        create_text: Gehitu artikulua
+        update: Gorde artikulua
+      data_object_link:
+        create: Gehitu lotura
+        update: Gorde lotura
+      eol_statistic:
+        change_date: Lortu datentzako estatistikak
+        download_csv: Jaitsi CSV formatuan
+      harvest_event:
+        publish: Argitaratu
+      hierarchy:
+        update: Igo hierarkia
+      name:
+        create: Gehitu izena
+        update: Izena gaurkotu
+      news_item:
+        create: Albistea sortu
+        edit: Aldatu
+        preview: Aurreikuspena
+        update: Albistea eguneratu
+      open_authentication:
+        create: Konektatu
+        destroy: Deskonektatu
+        update: Konexioa berrikusi
+      resource:
+        create: Baliabidea gehitu
+        update: Baliabidea eguneratu
+        update_settings: Ezarpenak eguneratu
+        force_harvest: Uzta Eskatu
+      session:
+        create: Saioa hasi
+        sign_in_with_facebook: Saioa hasi Facebookekin
+        sign_in_with_google: Saioa hasi Googlekin
+        sign_in_with_twitter: Saioa hasi Twitterrekin
+        sign_in_with_yahoo: Saioa hasi Yahoorekin
+      translated_content_page:
+        create: Gehitu itzulpena
+        update: Gorde itzulpenaren aldaketak
+      translated_news_item:
+        create: Gehitu itzulpena
+        update: Gorde itzulpenaren aldaketak
+      user:
+        create: Kontua sortu
+        curation_application: Orain aplikatu
+        curation_privileges: Eskaera bidali
+        generate_api_key: Gako bat sortu
+        recover_account: E-posta bidali
+        notification_settings: Jakinarazpenen ezarpenak
+        sign_up_with_facebook: Kontua sortu Facebookekin
+        sign_up_with_google: Kontua sortu Googlekin
+        sign_up_with_twitter: Kontua sortu Twitterrekin
+        sign_up_with_yahoo: Kontua sortu Yahoorekin
+        update: Profileko informazioa gorde
+      wikipedia_queue:
+        create: Eskaera bidali
+  will_paginate:
+    next_label: Hurrengoa
+    page_gap: '&hellip;'
+    previous_label: Aurrekoa
+  datepicker:
+    day_names:
+    - Igandea
+    - Astelehena
+    - Asteartea
+    - Asteazkena
+    - Osteguna
+    - Ostirala
+    - Larunbata
+    day_names_short:
+    - Iga
+    - Asl
+    - Asr
+    - Asz
+    - Osg
+    - Osr
+    - Lar
+    day_names_min:
+    - Ig
+    - A1
+    - A2
+    - A3
+    - Og
+    - O2
+    - Lr
+    close: Itxi
+    current: Gaur
+    month_names:
+    - Urtarrila
+    - Otsaila
+    - Martxoa
+    - Apirila
+    - Maiatza
+    - Ekaina
+    - Uztaila
+    - Abuztua
+    - Iraila
+    - Urria
+    - Azaroa
+    - Abendua
+    month_names_short:
+    - Urt
+    - Ots
+    - Mar
+    - Api
+    - Mai
+    - Eka
+    - Uzt
+    - Abu
+    - Ira
+    - Urr
+    - Aza
+    - Abe
+    next: Hurrengoa
+    previous: Aurrekoa
+  admins:
+    eol_statistics:
+      content_partners:
+        menu_link: Eduki kideak
+        page_header: Eduki Kideen Estatistikak
+      index:
+        menu_link: Estatistika orokorrak
+        page_header: Estatistika orokorrak
+        page_title: 'Administrazioa: estatistika orokorrak'
+      lifedesks:
+        menu_link: LifeDesks
+        page_header: LifeDesks-en estatistikak
+        page_title: 'Administrazioa: LifeDesks-en estatistikak'
+  contacts:
+    new:
+      page_title: Mesedez utzi zure iritzia
+  collections:
+    download_taxa_data:
+      attribute_header: Atributoa
+      select_all_checkbox: Hautatu dena
+    editors:
+      show:
+        meta_keywords: '%{collection_name} bildumaren administratzaileak'
+        meta_title: '%{collection_name} bildumaren administratzaileak'
+        tweet_text: '%{collection_name} bildumaren administratzaileak'
+    newsfeeds:
+      show:
+        meta_keywords: '%{collection_name} Albisteak'
+        meta_title: '%{collection_name} Albisteak'
+        tweet_text: '%{collection_name} Albisteak'
+    inaturalists:
+      show:
+        add_observations: Oharrak gehitu
+        no_observations_added_to_this_project_yet: Proiektu honi ez zaio egunkariko
+          oharrik gehitu oraindik.
+        observation_date: 'Data: %{observed_on}'
+        observation_place: 'Lekua: %{place}'
+        recent_observations: Azkeneko Oharrak
+        some_taxon: Zerbait
+  communities:
+    collections:
+      index:
+        meta_keywords: '%{community_name}-(a)ren bildumak'
+        meta_title: '%{community_name}-(a)ren bildumak'
+        tweet_text: '%{community_name}-(a)ren bildumak'
+  content:
+    index:
+      header_news: EOL Albisteak
+      meta_keywords: Animaliak, Animalien Argazkiak, Animaliei Buruzko Informazioa,
+        Landareak, Landareen Bizitza, Landareen Argazkiak, Landareei Buruzko Argazkia,
+        Landaredia, Fauna
+      meta_title: Animaliak - Landareak - Argazkiak eta Informazioa
+  content_partners:
+    statistics:
+      show:
+        meta_title: '%{partner_name} Estatistikak'
+        tweet_text: '%{partner_name} erabilera estatistikak'
+    index:
+      meta_title: Eduki kideak
+    edit:
+      meta_title: Editatu %{partner_name}
+  data_objects:
+    show:
+      meta_description_article: Artikulua - %{dato_description}
+      meta_description_image: Irudia - %{dato_description}
+      meta_description_image_map: Mapa - %{dato_description}
+      meta_description_map: Mapa - %{dato_description}
+      meta_description_sound: Soinua - %{dato_description}
+      meta_description_video: Bideoa - %{dato_description}
+      meta_supplier_default: ekarle bat
+  eol_statistics:
+    warnings:
+      stats_unavailable_for_date: Barkatu, estatistikak ez daude %{date} datarako
+        eskuragarri. Mesedez aukeratu beste data bat.
+    content_partners:
+      menu_link: Eduki kideak
+      page_header: Eduki Kideen Estatistikak
+      page_title: Estatistikak
+    curators:
+      page_title: Estatistikak
+    data_objects:
+      page_title: Estatistikak
+    index:
+      page_title: Estatistikak
+    lifedesks:
+      page_title: Estatistikak
+    marine:
+      page_title: Estatistikak
+    page_richness:
+      page_title: Estatistikak
+    users_data_objects:
+      page_title: Estatistikak
+    data:
+      menu_link: Datuak
+      page_header: Datu-estatistikak
+      page_title: Estatistikak
+  forums:
+    forums_heading: EOL foroak
+    last_post: Azken mezuak
+    posts_heading: Mezuak
+    replies: Erantzunak
+    topics_heading: Mintzagaiak
+    views: Ikustaldiak
+    create: Foro bat sortu
+    actions: Ekintzak
+    administration: Administrazioa
+    buttons:
+      delete: ezabatu
+      edit: aldatu
+      reply: erantzun
+      link: lotura
+    categories:
+      create: Kategoria sortu
+      edit: Kategoria aldatu
+      create_successful: Kategoria arazorik gabe sortu da
+      create_failed: Barkatu, arazo bat egon da, ezin izan da kategoria gehitu
+      update_successful: Kategoria arazorik gabe eguneratu da
+      update_failed: Barkatu, arazo bat egon da, kategoria ezin izan da eguneratu
+      delete_successful: Kategoria arazorik gabe ezabatu da
+      delete_failed_not_empty: Kategoria ezin izan da ezabatu, ez dagoelako hutsik
+      move_successful: Kategoria arazorik gabe mugitu da
+      move_failed: Kategoria ezin izan da mugitu
+    posts:
+      edit: Aldatu mezua
+      create_successful: Argitalpena ondo sortu da
+      create_failed: Barkatu, arazo bat egon da, ezin izan da argitarapena gehitu
+      update_successful: Argitalpena ondo eguneratu da
+      update_failed: Barkatu, arazo bat egon da, ezin izan da argitalpena eguneratu.
+      delete_successful: Argitalpena ondo ezabatu da
+      post_has_been_deleted: Argitalpen hau ezabatua izan da
+      deleted_subject: (ezabatua)
+      no_subject: (gairik gabe)
+      permalink_to_this_post: 'Bidalketa honetarako permalinka:'
+      close_window: itxi
+      posts_with_count:
+        one: bidalketa %{count}
+        other: '%{count} bidalketa'
+    topics:
+      create: Hari berria hasi
+      no_posts: Ez dago argitalpenik hari honetan
+      create_successful: Haria ondo sortu da
+      create_failed: Barkatu, arazo bat egon da, ezin izan da haria gehitu
+      delete_successful: Haria ondo ezabatu da
+      delete_failed_not_empty: Haria ezin izan da ezabatu, hutsik ez dagoelako
+  known_uris:
+    add_a_relationship: Harreman bat gehitu
+    equivalent_to: Erlazio Baliokidetzak
+    no_results: Ez dago emaitzarik aukeratutako estatistiketarako
+    no_relationships: Ez da URI honetarako harremanik aurkitu.
+    please_select_category_for_stats: Mesedez, aukeratu kategoria bat estatistikak
+      ikusteko.
+    please_select_uris_to_import: Mesedez, URIaren inportazioa aukeratu
+    relationships: Harremanak
+    relationships_from_this_uri: Harremanak URI honetatik
+    relationships_to_this_uri: Harremanak URI honetara
+    select_a_category_to_view_stats: 'Aukeratu kategoria bat estatistikak ikusteko:'
+    unrecognized_measurement_types: URIen neurketa mota ezezaguna
+    unrecognized_measurement_values: URIen neurketa balio ezezaguna
+    unrecognized_measurement_units: URIen neurketa unitate ezezaguna
+    uri_placeholder_text: adib. http://purl.org/dc/terms/contributor
+    ontology_information_url_placeholder_text: adib. http://dublincore.org/documents/dcmi-terms/
+    ontology_source_url_placeholder_text: adib. http://dublincore.org/2012/06/14/dcterms.rdf
+    select_a_preferred_uri_for_this_group: Aukeratu nahiago duzun URI bat
+    preferred_for_equivalence_group: Nahiago duzuna
+    select: aukeratu
+  known_uri_relationships:
+    created: Harremana arazorik gabe sortu da
+    create_failed: Barkatu, arazo bat egon da, ezin izan da harremana gehitu
+    deleted: Harremana arazorik gabe ezabatu da
+  layouts:
+    application:
+      header_about: EOLi buruz
+      header_learn_more: Ikasi gehiago honi buruz
+      header_questions: Informazio gehiago
+      about_link_what_is_eol: Zer da EOL?
+      about_link_traitbank: Zer da TraitBank?
+      about_link_eol_blog: EOLen Bloga
+      about_link_discover: Hezkuntza
+      about_link_statistics: Estatistikak
+      about_link_glossary: Hiztegia
+      about_link_podcasts: Podcastak
+      about_link_donate: EOLi dohaintza egin
+      about_link_help: Laguntza
+      about_link_terms_of_use: Erabilera baldintzak
+      about_link_contact_us: Jarri harremanetan
+      learn_more_link_animals: Animaliak
+      learn_more_link_mammals: Ugaztunak
+      learn_more_link_birds: Hegaztiak
+      learn_more_link_amphibians: Anfibioak
+      learn_more_link_reptiles: Narrastiak
+      learn_more_link_fish: Arrainak
+      learn_more_link_worms: Harrak
+      learn_more_link_invertebrates: Ornogabeak
+      learn_more_link_crustaceans: Krustazeoak
+      learn_more_link_mollusks: Muluskoak
+      learn_more_link_insects: Intsektuak
+      learn_more_link_spiders: Armiarmak
+      learn_more_link_plants: Landareak
+      learn_more_link_flowering_plants: Loredun landareak
+      learn_more_link_trees: Zuhaitzak
+      learn_more_link_fungi: Onddoak
+      learn_more_link_mushrooms: Zizak
+      learn_more_link_molds: Goroldioak
+      learn_more_link_bacteria: Bakterioak
+      learn_more_link_protists: Protistak
+      learn_more_link_archaea: Archaea
+      learn_more_link_viruses: Birusak
+      learn_more_link_algae: Algak
+      questions_link_evolution: Zer da eboluzioa?
+      questions_link_biodiversity: Zer da biodibertsitatea?
+      questions_link_species: Zer da espezie bat?
+      questions_link_discovering_species: Nola aurkitzen dira espezieak?
+      questions_link_naming_species: Nola izendatzen dira espezieak?
+      questions_link_binomial_nomenclature: Zer da nomenklatura binomiala?
+      questions_link_biological_classification: Zer da sailkapen biologikoa?
+      questions_link_invasive_species: Zer dira espezie inbasiboak?
+      questions_link_indicator_species: Zer da espezie indikadorea?
+      questions_link_model_organism: Zer da organismo modeloa?
+      questions_link_contributing_to_research: Nola lagundu dezaket ikerketan?
+    data_search:
+      page_header: TraitBank-en bilatu
+      page_header_results: TraitBank-en egindako bilaketaren emaitzak
+    taxa:
+      search_traitbank: TraitBank-en bilatu
+  members:
+    index:
+      meta_keywords: '%{community_name} Kideak'
+      meta_title: '%{community_name} Kideak'
+      tweet_text: '%{community_name} Kideak'
+  news_items:
+    index:
+      page_title: EOL Albisteak
+      meta_title: EOL Albisteak
+  notifier:
+    comments_empty: Ez dago iruzkin berririk.
+    greeting_dear_name_with_comma: '%{name} maitea,'
+    contact_us_message:
+      subject: 'Mezu bat EOLentzat: %{title}'
+    contact_us_auto_response:
+      subject: Eskerrik asko Encyclopedia of Life-rekin kontaktatzeagatik
+    unsubscribed_to_notifications:
+      subject: Sentitzen dut zu joaten ikustea...
+  recent_activity:
+    intro_immediately: Kaixo %{name} —
+    contact_us_link: Arazoren bat badaukazu, mesedez <a href='http://eol.org/contact_us'
+      style='color:#195184'>jarri gurekin harremanetan</a>.
+    default_subject: Azken jarduera EOLen
+    comment_body_brief: '%{body} - %{author}'
+    reply_to_comment_body_brief: '%{reply_to_author} %{body} - %{author}'
+    collection_activity_log_title: '%{who}-(e)k bilduma bat aldatu du'
+    community_activity_log_title: '%{who}-(e)k komunitate bat aldatu du'
+    data_object_title: '%{who}-(e)k eduki berria gehitu du EOL-en'
+    collection_activity_user_watching_recipient: <b>%{user_name}</b> zuri begira dago.
+    community_activity_by_user: <b>%{user_name}</b>-(e)k %{activity_name} egin du
+      <b>%{community_name}</b> komunitatean.
+    community_activity_user_joined: <b>%{user_name}</b> erabiltzailea <b>%{community_name}<b>
+      komunitatera gehitu da.
+    community_activity_user_left: <b>%{user_name}</b> erabiltzaileak <b>%{community_name}</b>
+      komunitatea utzi du.
+    community_activity_user_made_member_a_manager: <b>%{user_name}</b> erabiltzaileak
+      <b>%{member_name}</b> kidea <b>%{community_name}</b> komunitatearen administratzaile
+      bihurtu du.
+    curator_activity_on_data_object_by_user: '<b>%{user_name}</b>-(e)k %{activity_name}
+      egin du <b>%{dato_title}</b>-(e)n (%{dato_type} #%{dato_id}).'
+    curator_activity_on_taxon_concept_by_user: <b>%{user_name}</b>-(e)k %{activity_name}
+      egin du <b>%{taxon_concept}</b>-(e)n (%{taxon_overview_url}).
+    data_object_activity_article_added_by_user: <b>%{user_name}</b>-(e)k %{dato_title}
+      izeneko artikulu bat gehitu du <b>%{taxon_concept}</b>-(e)ra (%{taxon_details_url}).
+  recent_activities:
+    index:
+      list_header: Azken 7 egunak
+      page_title: EOL komunitatearen jarduera
+      meta_title: EOL komunitatearen jarduera
+  recent_activity_mailer:
+    data_search_file_download_ready:
+      subject: Zure Eol bilaketa deskargatzeko prest dago
+      header: Zure deskarga prest dago!
+    collection_download_ready:
+      subject: Zure EOL bildumatik aukeratutako atributuak deskargatzeko prest daude
+      header: Zure bilduma deskarga pres dago!
+  sessions:
+    new:
+      login_with_facebook_assistive: EOL saioa hasi zure Facebook kredentzialak erabiliz.
+      login_with_google_assistive: EOL saioa hasi zure Google kredentzialak erabiliz.
+      login_with_twitter_assistive: EOL saioa hasi zure Twitter kredentzialak erabiliz.
+      login_with_yahoo_assistive: EOL saioa hasi zure Yahoo kredentzialak erabiliz.
+      login_with_eol_authentication_header: 'Edo hasi saioa zure EOL kredentzialekin:'
+      meta_title: Saio-hasiera
+      problems_signing_in_with_connected_accounts: Konektatutako kontuekin saioa hasteko
+        arazoak?
+      problems_signing_in_with_eol_authentication: Pasahitza ahaztu duzu?
+      tip: Existitzen den erabiltzailea? Konektatu EOL kontua Facebook, Google eta
+        beste askorekin zure profileko ezarpenetan. Behin kontuak konektatuta, EOL
+        saioa hasteko erabili ditzakezu.
+  taxa:
+    communities:
+      index:
+        hierarchy_entry:
+          meta_keywords: '%{scientific_name} komunitatea, %{hierarchy_provider}'
+        meta_keywords: '%{scientific_name} komunitatea'
+    names:
+      synonyms:
+        hierarchy_entry:
+          meta_keywords: '%{scientific_name}-(a)ren sinonimoak'
+        meta_description: '%{scientific_name}-(a)ren sinonimoak.'
+        meta_keywords: '%{scientific_name}-(a)ren sinonimoa'
+        meta_title: '%{scientific_name}-(a)ren sinonimoak.'
+        tweet_text: '%{scientific_name}-(a)ren sinonimoak.'
+  users:
+    activities:
+      show:
+        meta_title: '%{user_full_name}-(r)en jarduera'
+        tweet_text: '%{user_full_name}-(r)en jarduera'
+    collections:
+      index:
+        meta_description: '%{user_full_name}-(e)k kudeatutako bildumak'
+        meta_title: '%{user_full_name}-(r)en bildumak'
+        tweet_text: '%{user_full_name}-(r)en bildumak'
+    communities:
+      index:
+        meta_title: '%{user_full_name}-(r)en komunitateak'
+        tweet_text: '%{user_full_name}-(r)en komunitateak'
+    data_downloads:
+      index:
+        meta_title: '%{user_full_name}-(r)en datuen jaitsiera'
+        tweet_text: '%{user_full_name}-(r)en datu jaitsiera'
+      header_with_count:
+        one: Datuen jaitsiera
+        other: '%{count} datuen jaitsierak'
+      empty: Ez daukazu deskargarik. <a href='%{data_search_url}'> datuak bilatu </a>
+        eta emaitzen deskarga eskatu ditzakezu.
+      no_selected_attributes: Ez da atributurik aukeratu. Mesedez, aukeratu bat gutxienez
+      download: deskargatu
+      page_title: Datu deskarga
+      query_head: Kontsulta
+      attribute_head: Atributoa
+      created_head: Sortua
+      updated_head: Azken ekintza
+      complete_head: Bukatua?
+      actions_head: Ekintzak
+      is_complete: Bai
+      is_not_complete: Ez
+      query_empty: (iragazkirik gabe)
+      processing: prozesatzen
+      error: zerbait txarto joan da fitxategi honekin
+      refresh: Eguneratu
+      search_again: berriro bilatu
+      file_not_processed: Fitxategi hau ez da oraindik prozesatu,
+      contact_us: mesedez, jarri gurekin harremanetan laguntzeko
+    edit:
+      form_tip_account: EOL erabiltzaile izena eta pasahitza beharrezkoak dira EOL
+        saioa hasteko, edo kanpo-kontu batera konektatu zaitezke. Erabiltzaile izena
+        eta pasahitza nahitaezkoak dira konektatutako kontu bat ez badaukazu, hala
+        ere, sartu hemen pasahitz berria zure oraingo pasahitza aldatu nahi izatekotan.
+        Helbide elektronikoa eta nahiago duzun hizkuntza beharrezkoak (%{required_icon})
+        dira erabiltzaile guztietarako.
+      form_tip_account_oauth: Helbide elektronikoa eta nahiago duzun hizkuntza beharrezkoak
+        (%{required_icon}) dira erabiltzaile guztietarako.
+    new:
+      complete_registration_header: Amaiatu zure EOL erregistroa
+      create_user_with_eol_authentication_header: 'Edo sartu kredentzial berriak:'
+      meta_title: EOLera batu
+      sign_up_with_facebook_assistive: EOL-era harpidetu zure Facebook kredentzialak
+        erabiliz.
+      sign_up_with_google_assistive: EOL-era harpidetu zure Google kredentzialak erabiliz.
+      sign_up_with_twitter_assistive: EOL-era harpidetu zure Twitter kredentzialak
+        erabiliz.
+      sign_up_with_yahoo_assistive: EOL-era harpidetu zure Yahoo kredentzialak erabiliz.
+    newsfeeds:
+      activity_link: jarduera
+      comments_link: iruzkinak
+      newsfeed_link: albiste jarioa
+    notifications:
+      edit:
+        page_title: Jakinarazpenen ezarpenak
+      update:
+        notification_settings_successfully_updated: Jakinarazpenen ezarpenak arazorik
+          gabe eguneratu dira.
+        sorry_notification_settings_could_not_be_updated: Barkatu, jakinarazpenen
+          ezarpenak ezin izan dira eguneratu.
+    open_authentications:
+      errors:
+        missing_attributes: Barkatu, arazo bat egon da zure kanpo-kontuko xehetasunetara
+          sartzean.
+        not_authorized_to_add_authentication: Barkatu, ez daukagu kontu hori konektatzeko
+          baimenik.
+        not_authorized_to_login: Barkatu, ez daukagu kontu horrekin EOL saioa hasteko
+          baimenik.
+        remove_connection_failed: Barkatu, arazo bat egon da, ezin izan dugu konexioa
+          kendu.
+        facebook:
+          add_connection_failed_account_already_connected: Barkatu, ezin dugu zure
+            Facebook kontua EOL kontuarekin konektatu, dagoeneko badagoelako <a href="%{existing_eol_account_url}
+            EOL kontu batekin konektatuta</a>.
+          login_failed_not_connected: Barkatu, ezin izan dugu zure Facebook eta EOL
+            kontuen arteko konexioa aurkitu. Dagoeneko EOL kontu bat badaukazu, mesedez
+            <a href="%{login_url}"> hasi saio beste kredentzial batzuk erabiliz, zure
+            Facebook kontua EOL profileko ezarpenetan gehitzeko. Oraindik EOL konturik
+            ez badaukazu, mesedez, <a href="%{register_url}">amaitu zure EOL erregistroa</a>
+            bat sortzeko.
+          missing_attributes: Barkatu, arazo bat egon da zure Facebook xehetasunetara
+            sartzean.
+          new_authentication_not_added: Barkatu, arazo bat egon da, ezin izan dugu
+            zure Facebook kontua konektatu.
+          not_authorized_to_add_authentication: Barkatu, ez daukagu zure Facebook
+            kontua konektatzeko baimenik.
+          not_authorized_to_login: Barkatu, ez daukagu zure Facebook kontuarekin EOL
+            saioa hasteko baimenik.
+          not_authorized_to_signup: Barkatu, ez daukagu zuren Facebook kontua erabiliz
+            EOLera harpidetzeko baimenik.
+          signup_failed_account_already_connected: Barkatu, ezin zaitugu EOL kontu
+            berri batera harpidetu zure Facebook kontua erabiliz, dagoeneko <a href="%{existing_eol_account_url}">
+            EOL erabiltzaile kontu batera<a> lotuta dagoelako. Horren ordez, <a href="%{login_url}">saioa
+            hasi</a> nahi izan duzu?
+        google:
+          add_connection_failed_account_already_connected: Barkatu, ezin dugu zure
+            Google kontua EOL kontuarekin konektatu, zure Google kontua dagoeneko
+            badagoelako <a href="%{existing_eol_account_url} EOL kontu batekin konektatuta</a>.
+          login_failed_not_connected: Barkatu, ezin izan dugu zure Google eta EOL
+            kontuen arteko konexioa aurkitu. Dagoeneko EOL kontu bat badaukazu, mesedez
+            <a href="%{login_url}"> hasi saio beste kredentzial batzuk erabiliz, zure
+            Facebook kontua EOL profileko ezarpenetan gehitzeko. Oraindik EOL konturik
+            ez badaukazu, mesedez, <a href="%{register_url}">amaitu zure EOL erregistroa</a>
+            bat sortzeko.
+          missing_attributes: Barkatu, arazo bat egon da zure Google xehetasunetara
+            sartzean.
+          new_authentication_not_added: Barkatu, arazo bat egon da, ezin izan dugu
+            zure Google kontua konektatu.
+          not_authorized_to_add_authentication: Barkatu, ez daukagu zure Google kontua
+            konektatzeko baimenik.
+          not_authorized_to_login: Barkatu, ez daukagu zure Google kontuarekin EOL
+            saioa hasteko baimenik.
+          not_authorized_to_signup: Barkatu, ez daukagu zuren Google kontua erabiliz
+            EOLera harpidetzeko baimenik.
+          signup_failed_account_already_connected: Barkatu, ezin zaitugu EOL kontu
+            berri batera harpidetu zure Google kontua erabiliz, dagoeneko <a href="%{existing_eol_account_url}">
+            EOL erabiltzaile kontu batera<a> lotuta dagoelako. Horren ordez, <a href="%{login_url}">saioa
+            hasi</a> nahi izan duzu?
+        twitter:
+          add_connection_failed_account_already_connected: Barkatu, ezin dugu zure
+            Twitter kontua EOL kontuarekin konektatu, zure Twitter kontua dagoeneko
+            badagoelako <a href="%{existing_eol_account_url} EOL kontu batekin konektatuta</a>.
+          login_failed_not_connected: Barkatu, ezin izan dugu zure Twitter eta EOL
+            kontuen arteko konexioa aurkitu. Dagoeneko EOL kontu bat badaukazu, mesedez
+            <a href="%{login_url}"> hasi saio beste kredentzial batzuk erabiliz, zure
+            Facebook kontua EOL profileko ezarpenetan gehitzeko. Oraindik EOL konturik
+            ez badaukazu, mesedez, <a href="%{register_url}">amaitu zure EOL erregistroa</a>
+            bat sortzeko.
+          missing_attributes: Barkatu, arazo bat egon da zure Twitter xehetasunetara
+            sartzean.
+          new_authentication_not_added: Barkatu, arazo bat egon da, ezin izan dugu
+            zure Twitter kontua konektatu.
+          not_authorized_to_add_authentication: Barkatu, ez daukagu zure Twitter kontua
+            konektatzeko baimenik.
+          not_authorized_to_login: Barkatu, ez daukagu zure Twitter kontuarekin EOL
+            saioa hasteko baimenik.
+          not_authorized_to_signup: Barkatu, ez daukagu zuren Twitter kontua erabiliz
+            EOLera harpidetzeko baimenik.
+          signup_failed_account_already_connected: Barkatu, ezin zaitugu EOL kontu
+            berri batera harpidetu zure Twitter kontua erabiliz, dagoeneko <a href="%{existing_eol_account_url}">
+            EOL erabiltzaile kontu batera<a> lotuta dagoelako. Horren ordez, <a href="%{login_url}">saioa
+            hasi</a> nahi izan duzu?
+        yahoo:
+          add_connection_failed_account_already_connected: Barkatu, ezin dugu zure
+            Yahoo! kontua EOL kontuarekin konektatu, dagoeneko badagoelako <a href="%{existing_eol_account_url}
+            EOL kontu batekin konektatuta</a>.
+          login_failed_not_connected: Barkatu, ezin izan dugu zure Yahoo!eta EOL kontuen
+            arteko konexioa aurkitu. Dagoeneko EOL kontu bat badaukazu, mesedez <a
+            href="%{login_url}"> hasi saio beste kredentzial batzuk erabiliz, zure
+            Facebook kontua EOL profileko ezarpenetan gehitzeko. Oraindik EOL konturik
+            ez badaukazu, mesedez, <a href="%{register_url}">amaitu zure EOL erregistroa</a>
+            bat sortzeko.
+          missing_attributes: Barkatu, arazo bat egon da zure Yahoo! xehetasunetara
+            sartzean.
+          new_authentication_not_added: Barkatu, arazo bat egon da, ezin izan dugu
+            zure Yahoo! kontua konektatu.
+          not_authorized_to_add_authentication: Barkatu, ez daukagu zure Yahoo! kontua
+            konektatzeko baimenik.
+          not_authorized_to_login: Barkatu, ez daukagu zure Yahoo! kontuarekin EOL
+            saioa hasteko baimenik.
+          not_authorized_to_signup: Barkatu, ez daukagu zuren Yahoo! kontua erabiliz
+            EOLera harpidetzeko baimenik.
+          signup_failed_account_already_connected: Barkatu, ezin zaitugu EOL kontu
+            berri batera harpidetu zure Yahoo! kontua erabiliz, dagoeneko <a href="%{existing_eol_account_url}">
+            EOL erabiltzaile kontu batera<a> lotuta dagoelako. Horren ordez, <a href="%{login_url}">saioa
+            hasi</a> nahi izan duzu?
+      facebook: Facebook
+      google: Google
+      index:
+        connected_last_verified: Konektatuta; Azken egiaztapena duela %{time_passed};
+        connected_unverified: Konektatuta; Ez egiaztatua;
+        not_connected: Konektatu gabe;
+        page_title: Lotutako kontuak
+      notices:
+        yahoo:
+          new_authentication_added: Yahoo! autentifikazioa gehitu da zure kontura.
+          removed_connection: Arazorik gabe kendu dugu EOLen lotura zure Yahoo! kontuarekin.
+            Etorkizunean Yahoo! eta EOL kontuen artean egon daitezkeen elkareraginak
+            guztiz desgaitzeko Yahoo!-ra joan behar duzu eta zure kontuko ezarpenak
+            aldatu.
+      twitter: Twitter
+      warnings:
+        no_way_to_login: Dagoeneko ez daukazu konturik lotuta, ezin izango duzu EOL
+          saioa hasi, lotutako beste kontu bat gehitu edo EOL erabiltzaile eta pasahitza
+          gehitu ezean.
+      yahoo: Yahoo!
+    pending:
+      header: Eskerrik asko erregistratzeagatik!
+      verify_email_instructions: <strong>Mesedez, egiaztatu zure helbide elektronikoa</strong>.
+        egiaztapen mezu bat bidali da emandako helbide elektronikora. Erregistro prozesua
+        amaitu eta EOL kide bihurtzeko, mesedez, egin klik bidalitako mezuan agertzen
+        den estekan. Eskerrik asko!
+      verify_email_tip: Mesedez kontuan hartu kontuak aktibatzeko emailak <em>askotan</em>
+        'Spam' bezala sailkatzen direla helbide elektronikoen iragazkietan. Mesedez,
+        egiaztatu zure spam karpeta ordu betean mezua jasotzen ez baduzu.
+    recover_account:
+      errors:
+        temporary_login_user_not_found: Barkatu, ez da berreskuratu nahi duzun EOL
+          kontua aurkitu, mesedez eskatu kontua berreskuratzeko beste email bat.
+        token_expired_or_invalid: Barkatu, saioa hasteko epe laburreko esteka iraungi
+          da edo ez da baliozkoa, mesedez eskatu kontua berreskuratzeko beste email
+          bat.
+        user_not_found_by_email_address: Ezin izan da helbide elektroniko hori daukan
+          EOL kontu bat aurkitu.
+        unable_to_update_token: Barkatu, arazo bat egon da eta emaila ez bidali, mesedez
+          saiatu berriro.
+      form_header: Kontua berreskuratu
+      form_tip: Zure EOL kontua berreskuratzeko, sartu kontuarekin lotuta dagoen helbide
+        elektronikoa. Mesedez, begiratu spam atalean ordu bete igarota kontua berreskuratzeko
+        mezurik jaso ez baduzu.
+      notices:
+        temporarily_logged_in_update_authentication_details: Epe laburrerako konektatuta
+          zaude, kontua berreskuratu ahal izateko, mesedez aldatu zure pasahitza edo
+          eguneratu lotutako kontuak saioa arazorik gabe hasi dezakezula egiaztatzeko.
+      meta_title: Kontua berreskuratu
+    recover_account_choose_account:
+      errors:
+        user_not_found_choose_again: Barkatu, arazo bat egon da eta mezua ez da bidali,
+          mesedez aukeratu berreskuratu nahi duzun kontua eta saiatu berriro.
+      form_header: Kontua berreskuratu
+      form_tip: Hainbat kontu daude <em>%{email}</em> helbide elektronikoarekin erregistratuta,
+        mesedez aukeratu zein kontu berreskurtu nahi duzun.
+      legend_choose_account: Kontu bat aukeratu
+    unsubscribe_notifications:
+      already_unsubscribed: Dagoneneko ez zaude jakinarazpenetara harpidetuta.
+      unsubscribed_notifications_successfully: Arazorik gabe ezeztatu duzu jakinarazpenetarako
+        harpidetza.
+      unsubscribe_notifications_failed: Barkatu, arazo bat egon da, ezin izan da erabiltzailearen
+        jakinarazpenetarako harpidetza ezeztatu.
+  user_added_data:
+    add_data_header: Zure datu propioekin lagundu
+    additional_fields: Dokumentu honen inguruko datuak
+    edit_data_header: Zure datuak aldatu
+    add_metadata_header: Informazio Gehigarria
+    edit_metadata_header: Metadatuak aldatu
+    create_successful: Datuak arazorik gabe gehitu dira
+    create_failed: 'Ezin izan dira zure datuak gehitu: %{errors}'
+    delete_successful: Datuak arazorik gabe ezabatu dira
+    new_field: Eremu berria...
+    new_value: Balioa
+    submit_data: datuen balioa bidali
+    update_successful: Datuak arazorik gabe eguneratu dira
+    update_failed: 'Ezin izan dira zure datuak eguneratu: %{errors}'
+  data_search_files:
+    from: Gutxieneko balorea
+    to: Gehienezko balorea
+    unit_uri: Neurri-unitatea
+  this_article_is_unpublished: Artikulu hau ez da argitaratu.
+  this_image_is_unpublished: Irudi hau ez da argitaratu.
+  this_image_map_is_unpublished: Mapa hau ez da argitaratu.
+  this_link_is_unpublished: Esteka hau ez da argitaratu.
+  this_map_is_unpublished: Mapa hau ez da argitaratu.
+  this_video_is_unpublished: Bideo hau ez da argitaratu.
+  this_sound_is_unpublished: Soinu hau ez da argitaratu.
+  article_not_associated_with_any_published_entries: Artikulu hau ez dago argitaratutako
+    taxon batekin lotuta.
+  unknown_type_not_associated_with_any_published_entries: Datu hauek ez daude argitaratutako
+    taxon batekin lotuta.
+  image_not_associated_with_any_published_entries: Irudi hau ez dago argitaratutako
+    taxon batekin lotuta.
+  image_map_not_associated_with_any_published_entries: Mapa hau ez dago argitaratutako
+    taxon batekin lotuta.
+  map_not_associated_with_any_published_entries: Mapa hau ez dago argitaratutako taxon
+    batekin lotuta.
+  video_not_associated_with_any_published_entries: Bideo hau ez dago argitaratutako
+    taxon batekin lotuta.
+  sound_not_associated_with_any_published_entries: Soinu hau ez dago argitaratutako
+    taxon batekin lotuta.
+  link_not_associated_with_any_published_entries: Esteka hau ez dago argitaratutako
+    taxon batekin lotuta.
+  article_from_supplier: '%{whom}-(r)en artikulua'
+  sound_from_supplier: '%{whom}-(r)en soinua'
+  image_from_supplier: '%{whom}-(r)en irudia'
+  map_from_supplier: '%{whom}-(r)en mapa'
+  image_map_from_supplier: '%{whom}-(r)en mapa'
+  video_from_supplier: '%{whom}-(r)en bideoa'
+  article_of_taxon: '%{taxon_name}-(r)en artikulua'
+  sound_of_taxon: '%{taxon_name}-(r)en audioa'
+  image_of_taxon: '%{taxon_name}-(r)en irudia'
+  map_of_taxon: '%{taxon_name}-(r)en mapa'
+  image_map_of_taxon: '%{taxon_name}-(r)en mapa'
+  video_of_taxon: '%{taxon_name}-(r)en bideoa'
+  article_rating: Artikuluaren balorazioa
+  community_rating: Komunitatearen balorazioa
+  collection_rating: Bildumaren balorazioa
+  image_map_rating: Maparen balorazioa
+  link_rating: Loturaren balorazioa
+  image_rating: Irudiaren balorazioa
+  person_rating: Pertsonaren balorazioa
+  sound_rating: Soinuaren balorazioa
+  taxon_rating: Taxoiaren balorazioa
+  video_rating: Bideoaren balorazioa
+  map_rating: Maparen balorazioa
+  0_or_1: 0 edo 1
+  0_1_or_2: 0, 1 edo 2
+  about_eol: EOLi buruz
+  about_resources_body: Erakunde edo erakunde talde honekin lotura daukaten kanpoko
+    webguneen estekak ematera animatzen zaitugu. Adibidez, identifikazio gakoak, artikuluak,
+    blogak edo hezkuntza eta zientzia herrikoirako baliabideak esakintzen dituzten
+    webguneak.
+  account_information: Kontuaren informazioa
+  account_information_menu: Kontuaren informazioa
+  account_registered_but_not_ready_try_later: Zure kontua erregistratuta dago, baina
+    oraindik ez dago zu sartzeko prest. Mesedez, saiatu berriro bost minutu geroago.
+  action: Ekintza
+  action_not_available_error: Barka, baina ekintza hori ez dago erabilgarri.
+  actions: Ekintzak
+  active_colon: 'Aktibo:'
+  active: Aktibo
+  activity: Jarduera
+  activity_logs:
+    collection_activity_log:
+      add_editor:
+        an_unknown_user_of_an_unknown_collection: Erabiltzaile ezezagun bat bilduma
+          ezezagun baten administratzaile bezala gehitu da.
+        an_unknown_user_of_collection: Erabiltzaile ezezagun bat "%{collection}" bildumaren
+          administratzaile bezala gehitu da.
+        user_of_an_unknown_collection: <strong>%{user}</strong> erabiltzailea bilduma
+          ezezagun baten administratzaile bezala gehitu da.
+        user_of_collection: <strong>%{user}</strong> erabiltzailea "%{collection}"
+          bildumaren administratzaile bezala gehitu da.
+        an_unknown_user_of_it: Erabiltzaile ezezagun bat administratzaile bezala gehitu
+          da.
+        user_of_it: <strong>%{user}</strong> erabiltzaile aadministratzaile bezala
+          gehitu da.
+      bulk_add:
+        an_unknown_user_added_bulk_items_to_an_unknown_collection: Erabiltzaile ezezagun
+          batek elementu kantitate handia gehitu du bilduma ezezagun batean.
+        an_unknown_user_added_bulk_items_to_collection: Erabiltzaile ezezagun batek
+          elementu kantitate handia gehitu du "%{collection}" bildumara.
+        user_added_bulk_items_to_an_unknown_collection: <strong>%{user}</strong> erabiltzaileak
+          elementu kantitate handia gehitu du bilduma ezezagun batera.
+        user_added_bulk_items_to_collection: <strong>%{user}</strong> elementu kantitate
+          handia gehitu du "%{collection}" bilduman.
+        an_unknown_user_added_bulk_items_to_it: Erabiltzaile ezezagun batek elementu
+          kantitate handia gehitu du.
+        user_of_it: <strong>%{user}</strong> erabiltzaileak elementu kantitate handia
+          gehitu du.
+      create:
+        an_unknown_user_created_an_unknown_collection: Erabiltzaile ezezagun batek
+          bilduma ezezagun bat sortu du.
+        an_unknown_user_created_collection: Erabiltzaile ezezagun batek "%{collection}"
+          bilduma sortu du.
+        user_created_an_unknown_collection: <strong>%{user}</strong> erabiltzaileak
+          bilduma ezezagun bat sortu du.
+        user_created_collection: <strong>%{user}</strong> erabiltzaileak "%{collection}"
+          bilduma sortu du.
+        an_unknown_user_created_it: Erabiltzaile ezezagun batek sortu du.
+        user_created_it: <strong>%{user}</strong> erabiltzaileak sortu du.
+      remove_all:
+        an_unknown_user_cleared_an_unknown_collection: Erabiltzaile ezezagun batek
+          bilduma ezezagun bateko elementu guztiak ezabatu ditu.
+        an_unknown_user_cleared_collection: Erabiltzaile ezezagun batek "%{collection}"
+          bildumako elementu guztiak ezabatu ditu.
+        user_cleared_an_unknown_collection: <strong>%{user}</strong> erabiltzaileak
+          bilduma ezezagun bateko elementu guztiak ezabatu ditu.
+        user_cleared_collection: <strong>%{user}</strong> erabiltzaileak "%{collection}"
+          bildumako elementu guztiak ezabatu ditu.
+        an_unknown_user_cleared_it: Erabiltzaile ezezagun batek elementu guztiak ezabatu
+          ditu.
+        user_cleared_it: <strong>%{user}</strong> erabiltzaileak elementu guztiak
+          ezabatu ditu.
+      remove:
+        an_unknown_user_removed_an_unknown_item_from_an_unknown_collection: Erabiltzaile
+          ezezagun batek bilduma ezezagun bateko elementu ezezagun bat ezabatu du.
+        an_unknown_user_removed_an_unknown_item_from_collection: Erabiltzaile ezezagun
+          batek "%{collection}" bildumako elementu ezezagun bat ezabatu du.
+        an_unknown_user_removed_item_from_an_unknown_collection: Erabiltzaile ezezagun
+          batek bilduma ezezagun bateko "%{item}" elementua ezabatu du.
+        an_unknown_user_removed_item_from_collection: Erabiltzaile ezezagun batek
+          "%{collection}" bildumako "%{item}" elementua ezabatu du.
+        user_removed_an_unknown_item_from_an_unknown_collection: <strong>%{user}</strong>
+          erabiltzaileak bilduma ezezagun bateko elementu ezezagun bat ezabatu du.
+        user_removed_an_unknown_item_from_collection: <strong>%{user}</strong> erabiltzaileak
+          "%{collection}" bildumako elementu ezezagun bat ezabatu du.
+        user_removed_item_from_an_unknown_collection: <strong>%{user}</strong> erabiltzaileak
+          bilduma ezezagun bateko "%{item}" elementua ezabatu du.
+        user_removed_item_from_collection: <strong>%{user}</strong> erabiltzaileak
+          "%{collection}" bildumako "%{item}" elementua ezabatu du.
+        an_unknown_user_removed_an_unknown_item_from_it: Erabiltzaile ezezagun batek
+          elementu ezezagun bat ezabatu du.
+        an_unknown_user_removed_item_from_it: Erabiltzaile ezezagun batek "%{item}"
+          elementua ezabatu du.
+        user_removed_an_unknown_item_from_it: <strong>%{user}</strong> erabiltzaileak
+          elementu ezezagun bat ezabatu du.
+        user_removed_item_from_it: <strong>%{user}</strong> erabiltzaileak "%{item}"
+          elementua ezabatu du.
+      collect:
+        an_unknown_user_added_an_unknown_item_to_an_unknown_collection: Erabiltzaile
+          ezezagun batek elementu bat gehitu du bilduma ezezagun batean.
+        an_unknown_user_added_an_unknown_item_to_collection: Erabiltzaile ezezagun
+          batek elementu ezezagun bat gehitu du "%{collection}" bilduman.
+        an_unknown_user_added_item_to_an_unknown_collection: Erabiltzaile ezezagun
+          batek "%{item}" elementua gehitu du bilduma ezezagun batean.
+        an_unknown_user_added_item_to_collection: Erabiltzaile ezezagun batek "%{item}"
+          elementua gehitu du "%{collection}" bilduman.
+        user_added_an_unknown_item_to_an_unknown_collection: <strong>%{user}</strong>
+          erabiltzaileak elementu ezezagun bat gehitu du bilduma ezezagun batean.
+        user_added_an_unknown_item_to_collection: <strong>%{user}</strong> erabiltzaileak
+          elementu ezezagun bat gehitu du "%{collection}" bilduman.
+        user_added_item_to_an_unknown_collection: <strong>%{user}</strong> erabiltzaileak
+          "%{item}" elementua gehitu du bilduma ezezagun batean.
+        user_added_item_to_collection: <strong>%{user}</strong> erabiltzaileak "%{item}"
+          elementua gehitu du "%{collection}" bilduman.
+        an_unknown_user_added_an_unknown_item_to_it: Erabiltzaile ezezagun batek elementu
+          ezezagun bat gehitu du.
+        an_unknown_user_added_item_to_it: Erabiltzaile ezezagun batek "%{item}" elementua
+          gehitu du.
+        user_added_an_unknown_item_to_it: <strong>%{user}</strong> erabiltzaileak
+          elementu ezezagun bat gehitu du.
+        user_added_item_to_it: <strong>%{user}</strong> erabiltzaileak "%{item}" elementua
+          gehitu du.
+      other_actions:
+        an_unknown_user_modified_an_unknown_collection: Erabiltzaile ezezagun batek
+          bilduma ezezagun bat aldatu du.
+        an_unknown_user_modified_collection: Erabiltzaile ezezagun batek "%{collection}"
+          bilduma aldatu du.
+        user_modified_an_unknown_collection: <strong>%{user}</strong> erabiltzaileak
+          bilduma ezezagun bat aldatu du.
+        user_modified_collection: <strong>%{user}</strong> erabiltzaileak "%{collection}"
+          bilduma aldatu du.
+        an_unknown_user_modified_it: Erabiltzaile ezezagun batek aldatu du, eta aldaketa
+          zehatza ez da gorde.
+        user_modified_it: <strong>%{user}</strong> erabiltzailek aldatu du, eta ez
+          da aldaketa zehatza gorde.
+    community_activity_log:
+      create:
+        an_unknown_user_created_an_unknown_community: Erabiltzaile ezezagun batek
+          komunitate ezezagun bat sortu du.
+        an_unknown_user_created_community: Erabiltzaile ezezagun batek "%{community}"
+          komunitatea sortu du.
+        user_created_an_unknown_community: <strong>%{user}</strong> erabiltzaileak
+          komunitate ezezagun bat sortu du.
+        user_created_community: <strong>%{user}</strong> erabiltzaileak "%{community}"
+          komunitatea sortu du.
+      join:
+        an_unknown_user_joined_an_unknown_community: Erabiltzaile ezezagun bat komunitate
+          ezezagun batera batu da.
+        an_unknown_user_joined_community: Erabiltzaile ezezagun bat "%{community}"
+          komunitatera batu da.
+        user_joined_an_unknown_community: <strong>%{user}</strong> erabiltzailea komunitate
+          ezezagun batera batu da.
+        user_joined_community: <strong>%{user}</strong> erabiltzailea "%{community}"
+          komunitatera batu da.
+      leave:
+        an_unknown_user_left_an_unknown_community: Erabiltzaile ezezagun batek komunitate
+          ezezagun bat utzi du.
+        an_unknown_user_left_community: Erabiltzaile ezezagun batek "%{community}"
+          komunitatea utzi du.
+        user_left_an_unknown_community: <strong>%{user}</strong> erabiltzaileak komunitate
+          ezezagun bat utzi du.
+        user_left_community: <strong>%{user}</strong> erabiltzaileak "%{community}"
+          komunitatea utzi du.
+      change_description:
+        an_unknown_user_changed_the_description_of_an_unknown_community: Erabiltzaile
+          ezezagun batek komunitate ezezagun baten deskribapena aldatu du.
+        an_unknown_user_changed_the_description_of_community: Erabiltzaile ezezagun
+          batek "%{community}" komunitatearen deskribapena aldatu du.
+        user_changed_the_description_of_an_unknown_community: <strong>%{user}</strong>
+          erabiltzaileak komunitate ezezagun baten deskribapena aldatu du.
+        user_changed_the_description_of_community: <strong>%{user}</strong> erabiltzaileak
+          "%{community}" komunitatearen deskribapena aldatu du.
+      change_name:
+        an_unknown_user_changed_the_name_of_an_unknown_community: Erabiltzaile ezezagun
+          batek komunitate ezezagun baten izena aldatu du.
+        an_unknown_user_changed_the_name_of_community: Erabiltzaile ezezagun batek
+          "%{community}" komunitatearen izena aldatu du.
+        user_changed_the_name_of_an_unknown_community: <strong>%{user}</strong> erabiltzaileak
+          komunitate ezezagun baten izena aldatu du.
+        user_changed_the_name_of_community: <strong>%{user}</strong> erabiltzaileak
+          "%{community}" komunitatearen izena aldatu du.
+      change_icon:
+        an_unknown_user_changed_the_icon_of_an_unknown_community: Erabiltzaile ezezagun
+          batek komunitate ezezagun baten logoa aldatu du.
+        an_unknown_user_changed_the_icon_of_community: Erabiltzaile ezezagun batek
+          "%{community}" komunitatearen logoa aldatu du.
+        user_changed_the_icon_of_an_unknown_community: <strong>%{user}</strong> erabiltzaileak
+          komunitate ezezagun baten logoa aldatu du.
+        user_changed_the_icon_of_community: <strong>%{user}</strong> erabiltzaileak
+          "%{community}" komunitatearen logoa aldatu du.
+      add_manager:
+        an_unknown_user_added_an_unknown_manager_to_an_unknown_community: Erabiltzaile
+          ezezagun batek administratzaile ezezagun bat gehitu du komunitate ezezagun
+          batera.
+        an_unknown_user_added_an_unknown_manager_to_community: Erabiltzaile ezezagun
+          bat administratzaile ezezagun bat gehitu du "%{community}" komunitatera.
+        an_unknown_user_added_manager_to_an_unknown_community: Erabiltzaile ezezagun
+          batek "%{manager}" gehitu du komunitate ezezagun baten administratzaile
+          bezala.
+        an_unknown_user_added_manager_to_community: Erabiltzaile ezezagun batek "%{manager}"
+          gehitu du "%{community}" komunitatearen administratzaile bezala.
+        user_added_an_unknown_manager_to_an_unknown_community: <strong>%{user}</strong>
+          erabiltzaileak administratzaile ezezagun bat gehitu du komunitate ezezagun
+          batera.
+        user_added_an_unknown_manager_to_community: <strong>%{user}</strong> erabiltzaileak
+          administratzaile ezezagun bat gehitu du "%{community}" komunitatera.
+        user_added_manager_to_an_unknown_community: <strong>%{user}</strong> erabiltzaileak
+          "%{manager}" gehitu du komunitate ezezagun batera.
+        user_added_manager_to_community: <strong>%{user}</strong> erabiltzaileak "%{manager}"
+          gehitu du "%{community}" komunitatearen administratzaile bezala.
+      other_actions:
+        an_unknown_user_modified_an_unknown_community: Erabiltzaile ezezagun batek
+          komunitate ezezagun bat aldatu du.
+        an_unknown_user_modified_community: Erabiltzaile ezezagun batek "%{community}"
+          komunitatea aldatu du.
+        user_modified_an_unknown_community: <strong>%{user}</strong> erabiltzaileak
+          komunitate ezezagun bat aldatu du.
+        user_modified_community: <strong>%{user}</strong> erabiltzaileak "%{community}"
+          komunitatea aldatu du.
+    curator_activity_log:
+      reasons_to_untrust: 'Ez fidagarria bezala sailkatzeko arrazoiak: %{reasons}'
+      reasons_to_hide: 'Ezkutatzeko arrazoiak: %{reasons}'
+      trusted:
+        an_unknown_user_trusted_an_older_data_object_on_an_unknown_association: Erabiltzaile
+          ezezagun batek "%{data_object}"(ar)en bertsio zahar bat fidagarri bezala
+          markatu du testuinguru ezezagun batean.
+      untrusted:
+        an_unknown_user_untrusted_it_on_an_unknown_association: Erabiltzaile ezezagun
+          batek ez fidagarri bezala markatu du testuinguru ezezagun batean.
+        an_unknown_user_untrusted_it_on_association: Erabiltzaile ezezagun batek ez
+          fidagarri bezala markatu du "%{association}" orrian.
+        user_untrusted_it_on_an_unknown_association: <strong>%{user}</strong> erabiltzaileak
+          ez fidagarri bezala markatu du testuinguru ezezagun batean.
+      show:
+        an_unknown_user_showed_it_on_an_unknown_association: Erabiltzaile ezezagun
+          batek ikusgai bezala markatu du testuinguru ezezagun batean.
+      hide:
+        an_unknown_user_hid_it_on_an_unknown_association: Erabiltzaile ezezagun batek
+          ezkutatua bezala markatu du testuinguru ezezagun batean.
+        an_unknown_user_hid_it_on_association: Erabiltzaile ezezagun batek ezkutatua
+          bezala markatu du "%{association}" orrian.
+        user_hid_it_on_an_unknown_association: <strong>%{user}</strong> erabiltzaileak
+          ezkutatua bezala markatu du testuinguru ezezagun batean.
+        user_hid_it_on_association: <strong>%{user}</strong> erabiltzaileak ezkutatua
+          bezala markatu du "%{association}" orrian.
+      add_common_name:
+        an_unknown_user_added_an_unknown_name_in_an_unknown_language_to_an_unknown_taxon: Erabiltzaile
+          ezezagun batek izen arrunt ezezagun bat gehitu du hizkuntza ezezagun batean
+          orri ezezagun batean.
+        an_unknown_user_added_an_unknown_name_in_language_to_an_unknown_taxon: Erabiltzaile
+          ezezagun batek izen arrunt ezezagun bat gehitu du %{language} hizkuntzan
+          orri ezezagun batean.
+        an_unknown_user_added_an_unknown_name_in_an_unknown_language_to_taxon: Erabiltzaile
+          ezezagun batek izen arrunt ezezagun bat gehitu du hizkuntza ezezagun batean
+          "%{taxon}" taxonean.
+        an_unknown_user_added_an_unknown_name_in_language_to_taxon: Erabiltzaile ezezagun
+          batek izen arrunt ezezagun bat gehitu du %{language} hizkuntzan "%{taxon}"
+          taxonean.
+        an_unknown_user_added_name_in_an_unknown_language_to_an_unknown_taxon: Erabiltzaile
+          ezezagun batek "%{name}" izen arrunta gehitu du hizkuntza ezezagun batean
+          orri ezezagun batean.
+        an_unknown_user_added_name_in_language_to_an_unknown_taxon: Erabiltzaile ezezagun
+          batek "%{name}" izen arrunta gehitu du %{language} hizkuntzan orri ezezagun
+          batean.
+        an_unknown_user_added_name_in_an_unknown_language_to_taxon: Erabiltzaile ezezagun
+          batek "%{name}" izen arrunta gehitu du hizkuntza ezezagun batean "%{taxon}"
+          taxonean.
+        an_unknown_user_added_name_in_language_to_taxon: Erabiltzaile ezezagun batek
+          "%{name}" izen arrunta gehitu du %{language} hizkuntzan "%{taxon}" taxonean.
+        user_added_an_unknown_name_in_an_unknown_language_to_an_unknown_taxon: <strong>%{user}</strong>
+          erabiltzaileak izen arrunt ezezagun bat gehitu du hizkuntza ezezagun batean
+          orri ezezagun batean.
+        user_added_an_unknown_name_in_language_to_an_unknown_taxon: <strong>%{user}</strong>
+          erabiltzaileak izen arrunt ezezagun bat gehitu du %{language} hizkuntzan
+          orri ezezagun batean.
+        user_added_an_unknown_name_in_an_unknown_language_to_taxon: <strong>%{user}</strong>
+          erabiltzaileak izen arrunt ezezagun bat gehitu du hizkuntza ezezagun batean
+          "%{taxon}" taxonean.
+        user_added_an_unknown_name_in_language_to_taxon: <strong>%{user}</strong>
+          erabiltzaileak izen arrunt ezezagun bat gehitu du %{language} hizkuntzan
+          "%{taxon}" taxonean.
+        user_added_name_in_an_unknown_language_to_an_unknown_taxon: <strong>%{user}</strong>
+          erabiltzaileak "%{name}" izen arrunta gehitu du hizkuntza ezezagun batean
+          orri ezezagun batean.
+        user_added_name_in_language_to_an_unknown_taxon: <strong>%{user}</strong>
+          erabiltzaileak "%{name}" izen arrunta gehitu du %{language} hizkuntzan orri
+          ezezagun batean.
+        user_added_name_in_an_unknown_language_to_taxon: <strong>%{user}</strong>
+          erabiltzaileak "%{name}" izen arrunta gehitu du hizkuntza ezezagun batean
+          "%{taxon}" taxonean.
+        user_added_name_in_language_to_taxon: <strong>%{user}</strong> erabiltzaileak
+          "%{name}" izen arrunta gehitu du %{language} hizkuntzan "%{taxon}" taxonean.
+        an_unknown_user_added_an_unknown_name_in_an_unknown_language_to_it: Erabiltzaile
+          ezezagun batek izen arrunt ezezagun bat gehitu du hizkuntza ezezagun batean.
+        an_unknown_user_added_an_unknown_name_in_language_to_it: Erabiltzaile ezezagun
+          batek izen arrunt ezezagun bat gehitu du %{language} hizkuntzan.
+        an_unknown_user_added_name_in_an_unknown_language_to_it: Erabiltzaile ezezagun
+          batek "%{name}" izen arrunta gehitu du hizkuntza ezezagun batean.
+        an_unknown_user_added_name_in_language_to_it: Erabiltzaile ezezagun batek
+          "%{name}" izen arrunta gehitu du %{language} hizkuntzan.
+        user_added_an_unknown_name_in_an_unknown_language_to_it: <strong>%{user}</strong>
+          erabiltzaileak izen arrunt ezezagun bat gehitu du hizkuntza ezezagun batean.
+        user_added_an_unknown_name_in_language_to_it: <strong>%{user}</strong> erabiltzaileak
+          izen arrunt ezezagun bat gehitu du %{language} hizkuntzan.
+        user_added_name_in_an_unknown_language_to_it: <strong>%{user}</strong> erabiltzaileak
+          "%{name}" izen arrunta gehitu du hizkuntza ezezagun batean.
+        user_added_name_in_language_to_it: <strong>%{user}</strong> erabiltzaileak
+          "%{name}" izen arrunta gehitu du %{language} hizkuntzan.
+      remove_common_name:
+        an_unknown_user_removed_name_in_an_unknown_language_from_an_unknown_taxon: Erabiltzaile
+          ezezagun batek izen arrunt bat ezabatu du hizkuntza ezezagun batean orri
+          ezezagun batetik.
+        an_unknown_user_removed_name_in_language_from_an_unknown_taxon: Erabiltzaile
+          ezezagun batek izen arrunt bat ezabatu du %{language} hizkuntzan orri ezezagun
+          batetik.
+        an_unknown_user_removed_name_in_an_unknown_language_from_taxon: Erabiltzaile
+          ezezagun batek izen arrunt bat ezabatu du hizkuntza ezezagun batean "%{taxon}"
+          taxonetik.
+        an_unknown_user_removed_name_in_language_from_taxon: Erabiltzaile ezezagun
+          batek izen arrunt bat ezabatu du %{language} hizkuntzan "%{taxon}" taxonetik.
+        user_removed_name_in_an_unknown_language_from_an_unknown_taxon: <strong>%{user}</strong>
+          erabiltzaileak izen arrunt bat ezabatu du hizkuntza ezezagun batean orri
+          ezezagun batetik.
+        user_removed_name_in_language_from_an_unknown_taxon: <strong>%{user}</strong>
+          erabiltzaileak izen arrunt bat ezabatu du %{language} hizkuntzan orri ezezagun
+          batetik.
+        user_removed_name_in_an_unknown_language_from_taxon: <strong>%{user}</strong>
+          erabiltzaileak izen arrunt bat ezabatu du hizkuntza ezezagun batean "%{taxon}"
+          taxonetik.
+        user_removed_name_in_language_from_taxon: <strong>%{user}</strong> erabiltzaileak
+          izen arrunt bat ezabatu du %{language} hizkuntzan "%{taxon}" taxonetik.
+        an_unknown_user_removed_name_in_an_unknown_language_from_it: Erabiltzaile
+          ezezagun batek izen arrunt bat ezabatu du hizkuntza ezezagun batean.
+        an_unknown_user_removed_name_in_language_from_it: Erabiltzaile ezezagun batek
+          izen arrunt bat ezabatu du %{language} hizkuntzan.
+        user_removed_name_in_an_unknown_language_from_it: <strong>%{user}</strong>
+          erabiltzaileak izen arrunt bat ezabatu du hizkuntza ezezagun batean.
+        user_removed_name_in_language_from_it: <strong>%{user}</strong> erabiltzaileak
+          izen arrunt bat ezabatu du %{language} hizkuntzan.
+      merge:
+        an_unknown_user_merged_unknown_entry_to_it: Erabiltzaile ezezagun batek sailkapen
+          ezezagun bat gehitu du.
+        an_unknown_user_merged_unknown_entry_to_taxon: Erabiltzaile ezezagun batek
+          sailkapen ezezagun bat mugitu du "%{taxon}" taxonera.
+  add_a_comment: Gehitu iruzkina.
+  add_a_comment_colon: 'Gehitu iruzkina:'
+  add: Gehitu
+  add_a_new_common_name: Ohiko izen bat gehitu
+  add_a_new_file_brackets: '[fitxategi berri bat gehitu]'
+  add_a_new_search_suggestion: Bilaketa iradokizun berri bat gehitu
+  add_a_new_topic_area: Gai berri bat gehitu
+  add_a_new_user: Erabiltzaile berri bat gehitu
+  add_article_to_page_button: Artikulu bat gehitu
+  add_association_submit_button: elkartea gehitu
+  add_brief_summary_to_page_link_button: Orri honen laburpen motz bat gehitu
+  add_collection_to_community: Komunitatera bilduma gehitu
+  add_education_resources_to_page_link_button: Orri honetara hezkuntza baliabide bat
+    gehitu
+  add_identification_resources_to_page_link_button: Orri honetara identifikazio baliabide
+    bat gehitu
+  add_item_to_new_collection: '"%{item}" bilduma berri batera gehitu'
+  add_language: Hizkuntza gehitu
+  add_link_instead: Esteka bat gehitu leku honetan
+  add_link_to_page_button: Esteka bat gehitu
+  add_new_association_link: Elkarte berria gehitu
+  add_new_known_uri_link: URI berri bat gehitu
+  add_page: Orria gehitu
+  add_to_a_community: Komunitate batera gehitu
+  add_to_my_collection_button: Bilduma batera gehitu
+  admin_content_page_active: Argitaratua
+  admin_content_page_not_active: Ez argitaratua
+  admin_content_page_create_unsuccessful_error: Barkatu, arazo bat egon da, orria
+    ez da sortu.
+  admin_content_page_new_header: Eduki orri berria sortu
+  admin_content_page_new_link: Orri berria sortu
+  admin_content_page_sort_order_updated: Orrien ordea aldatu da.
+  admin_content_page_update_unsuccessful_error: Barkatu, arazo bat egon da, ezin izan
+    da orria eguneratu.
+  admin_content_pages_empty: Ez da eduki orririk aurkitu.
+  admin_content_pages_link: Eduki administrazioa
+  admin_content_partners_notifications_link: Jakinarazpenak
+  admin_content_partners_notifications_statistics_reminder_send_submit: Gogorarazpena
+    bidali
+  admin_content_partners_statistics_date_from_label: Igorlea
+  admin_content_partners_statistics_date_to_label: Hartzailea
+  admin_content_partners_statistics_first_published_download_csv_submit: Jaitsi CSV
+    formatuan
+  admin_content_partners_statistics_link: Estatistikak
+  admin_news_item_active: Argitaratua
+  admin_news_item_create_unsuccessful_error: Barkatu, arazo bat egon da, albiste berria
+    ez da sortu.
+  admin_news_item_new_link: Albistea sortu
+  admin_news_item_new_header: Albiste berria sortu
+  admin_news_item_not_active: Argitaratu gabea
+  admin_news_item_update_unsuccessful_error: Barkatu, arazo bat egon da, ezin izan
+    da albistea eguneratu.
+  admin_news_items_empty: Ez da albisterik aurkitu.
+  admin_news_items_index_information: Jarraian dagoen estekak EOL webgunean momentuan
+    eskuragarri dauden albiste guztiak baita etorkizunean sor daitezkeenak biltzen
+    ditu. Orri bakoitzak itzulpen bat edo gehiago ditu. Albiste bat sortzean, itzulpen
+    bat gehitzeko eskatuko zaizu. Argitaratutako itzulpen guztiak publikoki ikusgai
+    daude.
+  admin_news_items_page_title: 'Administrazioa: Albisteak'
+  admin_news_link: Albisteak
+  admin_options_warning: Hemen egindako aldaketek 10 minutu beharko dituzte eragina
+    izateko.
+  admin_option_all_users_can_see_data: Erabiltzaile guztiek ikus ditzakete datuak,
+    ez bakarrik baimena duten erabiltzaileek.
+  admin_simple_actions_header: 'Ekintza sinpleak:'
+  admin_spam_delete: Spama ezabatu
+  admin_statistics_link: Estatistikak
+  admin_translated_content_page_create_successful_notice: Itzulpena hona gehitu da
+    <a href="#%{anchor}"><em>%{page_name}</em></a>
+  admin_translated_content_page_create_unsuccessful_error: Barkatu, arazo bat egon
+    da, ezin izan da itzulpena gehitu.
+  admin_translated_content_page_delete_confirmation: Ziur zaude "%{page_name}" orriaren
+    %{language} hizkuntzako bertsioa ezabatu nahi duzula? Ezabatutako orriak ezin
+    dira berreskuratu.
+  admin_translated_content_page_delete_successful_notice: <em>%{page_name}</em> orriaren
+    %{language} itzulpena ezabatua izan da.
+  admin_translated_content_page_edit_subheader: <em>%{page_name} orriaren</em> %{language}
+    hizkuntzarako itzulpena aldatu
+  admin_translated_content_page_new_header: Hizkuntza aukeratu eta edukia gehitu
+  admin_translated_content_page_new_link: Itzulpena gehitu
+  admin_translated_content_page_new_subheader: <em>%{page_name}</em> orrirako itzulpena
+    gehitu
+  admin_translated_content_page_update_successful_notice: <a href="#%{anchor}"><em>%{page_name}</em></a>
+    orriaren %{language} hizkuntzarako itzulpena eguneratu da.
+  admin_translated_content_page_update_unsuccessful_error: Barkatu, arazo bat egon
+    da, ezin izan da itzulpena eguneratu.
+  admin_translated_news_item_active: Argitaratua
+  admin_translated_news_item_create_successful_notice: Itzulpena hona gehitu da <a
+    href="#%{anchor}"><em>%{page_name}</em></a>
+  admin_translated_news_item_create_unsuccessful_error: Barkatu, arazo bat egon da,
+    ezin izan da itzulpena gehitu.
+  admin_translated_news_item_delete_confirmation: Ziur zaude "%{page_name}" orriaren
+    %{language} hizkuntzako bertsioa ezabatu nahi duzula? Ezabatutako orriak ezin
+    dira berreskuratu.
+  admin_translated_news_item_delete_successful_notice: <em>%{page_name}</em> albistearen
+    %{language} hizkuntzarako itzulpena ezabatua izan da.
+  admin_translated_news_item_edit_subheader: <em>%{page_name} orriaren</em> %{language}
+    hizkuntzarako itzulpena aldatu
+  admin_translated_news_item_new_header: Hizkuntza aukeratu eta edukia gehitu
+  admin_translated_news_item_new_link: Gehitu itzulpena
+  admin_translated_news_item_not_active: Argitaratu gabea
+  admin_translated_news_item_update_successful_notice: <a href="#%{anchor}"><em>%{page_name}</em></a>
+    orriaren %{language} hizkuntzarako itzulpena eguneratu da.
+  admin_translated_news_item_update_unsuccessful_error: Barkatu, arazo bat egon da,
+    ezin izan da itzulpena eguneratu.
+  admin_user_delete_successful_notice: Erabiltzailea ezabatua izan da
+  admin_user_hide_successful_notice: Erabiltzailea ezkutatu da
+  admin_user_unhide_successful_notice: Erabiltzaileak ezkutatuta egoteari utzi dio
+  agent: Agentea
+  all: guztiak
+  all_articles: Artikulu guztiak
+  all_categories: Dena
+  all_changes: Aldaketa guztiak
+  all_collections: Bilduma guztiak
+  all_communities: Komunitate guztiak
+  all_count: Denak (%{count})
+  all_filter: denak
+  all_images: Irudi guztiak
+  all_information: Informazio guztia
+  all_items: Elementu guztiak
+  all_news: albiste guztiak
+  all_people: Jende guztia
+  all_sounds: Soinu guztiak
+  all_sources: Iturri guztiak
+  all_taxa: Taxon guztiak
+  all_title: Denak
+  all_user_submitted_texts_on_the_website: Jarraian erakusten dira erabiltzaileak
+    webgunean bidalitako testu guztiak, sortze orduaren arabera alderantziz antolatuta.
+  all_videos: Bideo guztiak
+  allow_user_logins: Erabiltzaileen saio hasierak baimentzen ditu
+  allowed_html_tags: 'HTML baimendua: %{comma_separated_tags}'
+  already_a_member_question: Dagoeneko kidea zara?
+  already_member_of_community: Dagoeneko bazara komunitate honen kidea?
+  alternate_classification: Bestelako sailkapena
+  alternative_name_colon: 'Bestelako izena:'
+  alternative_common_name_colon: 'Bestelako izen arrunta:'
+  amount: Kopurua
+  an_unknown_user: Erabiltzaile ezezagun bat
+  annotation_cabs_colon: 'Anotazioa:'
+  annotations_with_count:
+    one: Anotazio %{count}
+    other: '%{count} anotazio'
+  annotation_submit: Iruzkina argitaratu
+  annotation_body_default: galdera edo iruzkin bat gehitu ...
+  anonymous_user_full_name: Erabiltzaile anonimoa
+  anonymous_user_given_name: Anonimoa
+  anonymous_user_tag_line: Saioa hasi gabe
+  and: eta
+  and_between_form_items: eta
+  jsonp_by_adding_a_callback_parameter: '... eta JSONP callback parametro bat gehitzen'
+  api_cache_time_to_live_parameter: erantzuna zenbat segundutan eduki nahi duzun gordeta
+  application_version_advisory_information: Aplikazioaren bertsioa
+  are_you_sure: Ziur zaude?
+  are_you_sure_this_action_cannot_be_undone: Ziur zaude? Ekintza hau ezin da desegin.
+  article_from: honen artikulua
+  article_more_about: Artikulu honen inguruan gehiago ikasi
+  articles_with_count:
+    one: Artikulu %{count}
+    other: '%{count} artikulu'
+  assistive_overview_header: Ikuspegi orokorra
+  assistive_media_header: Multimedia
+  assistive_details_header: Xehetasunak
+  assistive_literature_header: Literatura
+  assistive_names_classifications_header: Sailkapenak
+  assistive_names_common_header: Izen arruntak
+  assistive_names_related_header: Lotutako izenak
+  assistive_names_synonyms_header: Sinonimoak
+  assistive_maps_header: Mapak
+  assistive_taxon_community_header: Komunitatea
+  assistive_updates_header: Eguneraketak
+  assistive_updates_statistics_header: Orriaren estatistikak
+  associated_with_article_header: Azken artikuluan
+  associated_with_image_header: Azken irudian
+  associated_with_image_map_header: Azken mapan
+  associated_with_link_header: Azken estekan
+  associated_with_map_header: Azken mapan
+  associated_with_sound_header: Azken audioan
+  associated_with_video_header: Azken bideoan
+  association_added_flash: Elkartea gehitua. minutu batzuk iraun dezake orri(ar)en
+    eguneratze prozesuak.
+  association_trusted_for_taxa:
+    one: 'Fidagarria honentzat:'
+    other: 'Fidagarria honentzat:'
+  association_unreviewed_for_taxa:
+    one: 'Berrikusi gabea:'
+    other: 'Berrikusi gabeak:'
+  association_untrusted_for_taxa:
+    one: 'Ez fidagarria honentzat:'
+    other: 'Ez fidagarriak honentzat:'
+  association_hidden_for_taxa:
+    one: 'Honek ezkutatua:'
+    other: 'Honek ezkutatuak:'
+  a_taxon: taxon bat
+  attribute: Atributua
+  audio_play: erreproduzitu
+  audio_pause: pausatu
+  audio_stop: gelditu
+  audio_mute: Isildu
+  available: erabilgarri
+  average_rating: batezbesteko kalifikazioa
+  back: Atzera
+  back_to_profile: Profilera itzuli
+  began: Hasi da
+  belongs_in_count_communities:
+    one: Komunitate bati dagokio
+    other: '%{count} Komunitateri dagozkio'
+  beta_warning_header: Proba bertsio bat erabiltzen ari zara
+  beta_warning_note_header: 'Oharrak:'
+  bhl: Biodiversity Heritage Library
+  bhl_partner_footer: Biodiversity Heritage Library bisitatu
+  bhl_publication: BHL argitalpena
+  bi_monthly: Hilean bi aldiz
+  biodiversity_heritage_library: Biodiversity Heritage Library
+  browse_hierarchy: hierarkiatik nabigatu
+  build_communities: Komunitateak sortu
+  call_api: API deia
+  cancel: Utzi
+  cancel_and_delete: utzi eta ezabatu
+  cancel_split: Utzi
+  cannot_be_associated_with_both_a_user_and_a_community: Ezin da erabiltzaile eta
+    komunitate batekin lotu
+  cannot_be_empty: ezin da hutsik egon.
+  cannot_create_collection_item_from_class_error: 'Ezin dugu mota honetako bilduma
+    elementu bat sortu: %{klass}'
+  cannot_create_collection_items_from_invalid_types: 'Ezin d(it)ugu mota honetako
+    bilduma elementua(k) sortu: (%{types})'
+  cannot_create_community_from_watch_collection_error: Ezin duzu komunitate bat sortu
+    jarraipen zerrendatik.
+  cannot_find_member: Ezin da identifikatzaile hau duen kiderik aurkitu.
+  categories_title: 'Aukeratu kategoria bat, gero atributu bat:'
+  change: Aldatu
+  change_rating_to_1_of_5: Kalifikazioa 5etik 1era aldatu
+  change_rating_to_2_of_5: Kalifikazioa 5etik 2ra aldatu
+  change_rating_to_3_of_5: Kalifikazioa 5etik 3ra aldatu
+  change_rating_to_4_of_5: Kalifikazioa 5etik 4ra aldatu
+  change_rating_to_5_of_5: Kalifikazioa 5etik 5era aldatu
+  choose_collection_header: Bilduma aukeratu
+  clade: Talde taxonomikoa
+  classification_preferred_for_taxon: Nahiago duzuna
+  classification_preferred_for_taxon_help_tip: '%{icon} ikonoak taxon honetarako nahiago
+    duzun sailkapena markatzen du.'
+  classification_summary_section_header: Sailkapena
+  classification_tree_header: Sailkapena
+  classifications_preferred_column_header: Nahiago duzuna
+  classifications_hierarchy_column_header: Sailkapena
+  classifications_recognized_by_column_header: Honek ezagutua
+  clear_entire_cache_store: Cache memoria erabat hustu
+  cms_available_in_languages: 'Orri hau erabilgarri dago hemen:'
+  cms_editor: CMS editorea
+  cms_missing_content_title: Itzulpena falta da
+  cms_missing_content_message: Barkatu, orri hau ez dago aukeratutako %{selected_language}
+    hizkuntzarako eskuragarri.
+  click: Klikatu
+  clicked_time: Klikaren ordua
+  click_on_an_activity_to_see_th: Klikatu ekintza batean, bost minutuko tarte batean
+    gauzatu den beste edozein ekintza ikusteko.
+  collect_item: Artikulua bildu
+  collection_create_failure: Errorea bilduma sortzerakoan.
+  collection_delete_link: Bilduma hau betirako ezabatu
+  collection_destroyed: Bilduma ezabatua izan da.
+  collection_removed: '%{collection} bilduma ezabatu da.'
+  collection_update_failure: Arazoa %{collection} bilduma eguneratzean. Egiaztatu
+    bildumako elementuetan arazorik dagoen
+  collection_not_existing: '%{collection} bilduma ez da existitzen.'
+  collection_error_no_items_selected: 'Errorea: ez da artikulurik aukeratu, ez da
+    ekintzarik burutu.'
+  collection_image: Bildumaren irudia
+  collection_is_empty: Bilduma hutsik dago.
+  collection_item_edit_page_title: <em>%{collection_name}</em> bildumako elementua
+    aldatu
+  collection_item_not_found_error: Ezin izan da bilduma elementu hori aurkitu.
+  collection_item_edit_by_javascript_not_authorized_error: Barkatu, ez daukazu bildumako
+    elementu hau aldatzeko baimenik. Bildumako jabea edo editorea bazara, mesedez
+    kargatu orria berriro eta egiaztatu saioa hasi duzula.
+  collection_items_count:
+    zero: Hutsik
+    one: Elementu %{count}
+    other: '%{count} elementu'
+  collection_items_duplicate_ids: Ezin da bildumarik sortu bikoiztutako ID bat(zu)etik
+    %{type}:(%{values})
+  collection_items_missing_values: ' collected_item_id/collected_item_type can''t
+    be nil in:%{item}'
+  collection_move_choose_all_items_target_title: 'Mugitu "%{collection}" bildumako
+    elementu guztiak hona:'
+  collection_name_cannot_be_blank: Bildumaren izena ezin da hutsik egon
+  collection_name_label: Bildumaren izena
+  collection_newsfeed: Bildumaren newsfeed-a
+  collection_not_destroyed_error: Barkatu, bilduma ez da ezabatu.
+  collection_not_found_error: Barkatu, ezin izan da bilduma aurkitu.
+  collection_created_notice: <em>%{collection_name}</em> bilduma arazorik gabe sortu
+    da.
+  collection_updated_notice: <em>%{collection_name}</em> bilduma arazorik gabe eguneratu
+    da.
+  collection_was_removed_by_owner: Bilduma hau jabeak kendu du.
+  collection_not_updated_error: Barkatu, arazo bat egon da, bilduma ezin izan da eguneratu.
+  collection_was_added_to_community: '"%{collection}" bilduma arazorik gabe gehitu
+    da komunitate honetara.'
+  community_can_now_manage_this_collection: '"%{community}" komunitateak baimena dauka
+    orain bilduma administratzeko.'
+  collections_filter: Bildumak
+  collections_link: Bildumak
+  collections_page_title: Bildumak
+  collections_summary_empty: Orri hau oraindik ez dago bilduma batean ere ez.
+  collections_with_count:
+    one: Bilduma %{count}
+    other: '%{count} bilduma'
+  comment: Iruzkina
+  comment_added_notice: Iruzkina arazorik gabe gehitu da.
+  comment_body_label: Zure iruzkina
+  comment_delete_confirm: Ziur zaude iruzkina ezabatu nahi duzula?
+  comment_edit_by_javascript_not_authorized_error: Barkatu, ez daukazu iruzkin hau
+    aldatzeko baimenik. Iruzkinaren egilea bazara, mesedez kargatu orria berriro eta
+    egiaztatu saioa hasi duzula.
+  comment_or_rate_on_this_article: artikulu hau iruzkindu edo kalifikatu
+  comment_or_rate_on_this_link: esteka hau iruzkindu edo kalifikatu
+  comment_not_added_error: Barkatu, arazo bat egon da, ezin izan da iruzkina gehitu.
+  comment_not_deleted_error: Barkatu, arazo bat egon da, ezin izan da iruzkina ezabatu.
+  comment_not_updated_error: Barkatu, arazo bat egon da, ezin izan da iruzkina eguneratu.
+  comment_new_title: Iruzkin berri bat gehitu
+  comment_new_posters_image_alt: Zure profilaren irudia, bat eman baduzu.
+  comment_new_posters_image_advisory_info: Zure profil irudia eta izena zure iruzkinaren
+    ondoan agertuko dira zerrendetan.
+  comment_show_posters_image_alt: Iruzkin hau gehitu duen %{posters_name}-(r)en profileko
+    irudia.
+  comments: Iruzkinak
+  comments_filter: Iruzkinak
+  common_activities_by_logged_in: Saioa hasi duten erabiltzaileen ekintza arruntak.
+  common_name: Izen arrunta
+  common_name_exists: <em>%{name_string}</em> izen arrunta dagoeneko existitzen da
+  common_names_with_count:
+    one: Izen arrunt%{count}
+    other: '%{count} izen arrunt'
+  common_user_activity_page_title: Erabiltzaile ekintza arrunta
+  communities_with_count:
+    one: Komunitate %{count}
+    other: '%{count} komunitate'
+  communities_filter: Komunitateak
+  communities_link: Komunitateak
+  communities_page_title: Komunitateak
+  communities_index_empty: Ez dago komunitate aktiborik.
+  communities_index_header: Komunitate aktiboak
+  communities_that_can_edit_this_collection: Bilduma hau administratu dezaketen komunitateak
+  community: Komunitatea
+  community_activity: Komunitatearen jarduera
+  community_destroyed: Komunitate hau ezabatu duzu. Ez da taxonaren orrietan edo bilaketetan
+    berriro agertuko.
+  community_description_default: Encyclopedia of Life komunitate bat.
+  community_empty_notice: komunitate honek ez dauka kiderik.
+  community_focus: Administratutako bildumak
+  community_focus_items_with_count:
+    one: Elementu %{count}
+    other: '%{count} elementu'
+  community_invitation_comment: '"%{community}" komunitatera batzera gonbidatu nahi
+    zintuzket.'
+  community_logo_alt_text: '%{community_name} komunitatearen logoa'
+  community_managers_with_count:
+    one: Komunitatearen administratzaile %{count}
+    other: Komunitatearen %{count} administratzaile
+  community_members: Komunitateko kideak
+  community_members_with_count:
+    one: Komunitateko kide %{count}
+    other: Komunitateko %{count} kide
+  community_name_label: Komunitatearen izena
+  community_newsfeed: Komunitatearen newsfeed-a
+  community_no_longer_has_manager_access_to_collection: '"%{community}" komunitateak
+    jada ez dauka administratzaile sarbiderik "%{collection}" bildumara.'
+  community_not_destroyed_error: Barkatu, arazo bat egon da eta komunitatea ez da
+    ezabatu.
+  community_tab_collections_header: Bildumak
+  community_removed_by_owner: Bilduma hau jabeak ezabatu du.
+  communities_summary_empty: Taxon hau oraindik ez du komunitate batek ere nabarmendu.
+  communities_summary_header_with_count:
+    one: Komunitate bati dagokio
+    other: '%{count} komunitateri dagokio'
+  completed: Bukatua
+  completed_colon: 'Bukatua:'
+  confirm_deactivate_user: Ziur zaude kontu hau desaktibatu nahi duzula?
+  confirm_leave: Ziur zaude komunitate hau utzi nahi duzula?
+  confirm_password_colon: 'Berretsi pasahitza:'
+  contact: Kontaktua
+  contact_information: Kontratuaren informazioa
+  contact_updated: Kontaktua eguneratua
+  contact_us: Jarri gurekin harremanetan
+  contact_us_link: Jarri gurekin harremanetan
+  containing_value: '%{value} duena.'
+  content_has_been_updated: Edukia eguneratu da.
+  content_partner_agreement_cancel_edit_agreement_link: Utzi
+  content_partner_agreement_cancel_new_agreement_link: Utzi
+  content_partner_agreement_cancel_sign_agreement_link: Utzi
+  content_partner_administration_settings_header: Administrazio ezarpenak
+  content_partner_contact_create_unsuccessful_error: Barkatu, arazo bat egon da, ez
+    da kontaktua gehitu.
+  content_partner_contact_delete_successful_notice: Kontaktua ezabatua izan da.
+  content_partner_contact_delete_unsuccessful_error: Barkatu, arazo bat egon da, ez
+    da kontaktua ezabatu.
+  content_partner_contact_edit_link: Kontaktua aldatu
+  content_partner_contact_edit_page_subheader: Kontaktua aldatu
+  content_partner_contact_new_link: Kontaktu berria gehitu
+  content_partner_contact_new_page_subheader: Kontaktua gehitu
+  content_partner_contact_new_edit_form_tip: Izena, abizena eta helbide elektronikoa
+    %{required_icon} beharrezkoak dira.
+  content_partner_contact_update_successful_notice: Kontaktua arazorik gabe eguneratu
+    da.
+  content_partner_contact_update_unsuccessful_error: Barkatu, arazo bat egon da, ez
+    da kontaktua eguneratu.
+  content_partner_contacts_header: Kontaktuak
+  content_partner_current_agreement_signed_on_with_date: 'Sinadura data: %{date}'
+  content_partner_current_agreement_view_link: Ikusi
+  content_partner_current_agreement_edit_link: Aldatu
+  content_partner_current_agreement_create_link: Berria sortu
+  content_partner_current_agreement_not_accepted: Ez da oraindik onartu
+  content_partner_data_description_header: Datuen deskribapena
+  content_partner_data_description_empty: Inork ez du emandako datuen deskribapenik
+    gehitu.
+  content_partner_filter_option_vetted_yes: Bai
+  content_partner_filter_option_vetted_no: Ez
+  content_partner_filter_option_published_latest_harvest_not_published: Azken argitaratu
+    gabeak
+  content_partner_filter_option_published_latest_harvest_pending_publish: Azken argitaratzekoak
+  content_partner_filter_option_published_latest_harvest_published: Azken argitalpenak
+  content_partner_filter_published: Argitaratua
+  content_partner_has_unpublished_content_true: Argitaratu gabeko edukia
+  content_partner_has_unpublished_content_false: Ez dago argitaratu gabeko edukirik
+  content_partner_latest_published_harvest_event_time_ago: Azken eguneraketa duela
+    %{time_passed};
+  content_partner_managed_by_header: Honek administratua
+  content_partner_new_edit_form_tip: Hemen sartu duzun informazioaren zati bat publikoki
+    ikusgai egongo da. Proiektuaren izena eta deskribapena %{required_icon} beharrezkoak
+    dira.
+  content_partner_oldest_published_harvest_event_time_ago: Lehen aldiz EOLen argitaratua
+    duela %{time_passed};
+  content_partner_overview_agreement_link: Ikusi indarrean dagoen hitzarmena
+  content_partner_public_false: Pribatua
+  content_partner_public_true: Publikoa
+  content_partner_resource_about_header: Baliabidearen inguruan
+  content_partner_resource_auto_publish_true: Bai
+  content_partner_resource_auto_publish_false: Ez
+  content_partner_resource_collection_empty: Ez da baliabide honetarako bildumarik
+    sortu.
+  content_partner_resource_collections_header: Bildumak
+  content_partner_resource_collection_header: Argitaratutako bilduma
+  content_partner_resource_collection_show_link: Argitaratutako bildumak ikusi
+  content_partner_resource_confirm_harvest_requested: Ziur zaude %{resource_title}
+    baliabidearen bilketa bortxatu nahi duzula?
+  content_partner_resource_create_unsuccessful_error: Barkatu, arazo bat egon da,
+    ez da baliabidea gehitu.
+  content_partner_resource_delete_with_type_link: Dena ezabatu
+  content_partner_resource_description_empty: Ez da baliabide honetarako deskribapenik
+    eman.
+  content_partner_resource_edit_link: Aldatu
+  content_partner_resource_edit_subheader: Baliabidea aldatu
+  content_partner_resource_edit_with_type_link: Baliabidea aldatu
+  content_partner_resource_harvest_event_current_published: Argitaratuta daudenak
+  content_partner_resource_harvest_event_not_published: Argitaratu gabe
+  content_partner_resource_harvest_event_previously_published: Lehenago argitaratua
+  content_partner_resource_harvest_event_publish_pending: Argitaratzeko
+  content_partner_resource_hierarchy_edit_link: Aldatu
+  content_partner_resource_hierarchy_edit_subheader: <em>%{resource_title}</em> baliabidearen
+    hierarkia aldatu
+  content_partner_resource_hierarchy_unknown: Ezezaguna
+  content_partner_resource_hierarchy_update_successful_notice: Hierarkia arazorik
+    gabe eguneratu da.
+  content_partner_resource_hierarchy_update_unsuccessful_error: Barkatu, arazo bat
+    egon da, ez da hierarkia eguneratu.
+  content_partner_resource_new_link: Baliabide berria gehitu
+  content_partner_resource_new_subheader: Baliabide berria gehitu
+  content_partner_resource_preview_collection_header: Bildumaren aurrebista
+  content_partner_resource_preview_collection_show_link: Bildumaren aurrebista ikusi
+  content_partner_resource_processing_header: Egoera eta ezarpenak prozesatzen
+  content_partner_resource_resource_status_new: Sortua
+  content_partner_resource_show_link_back_to: baliabidera itzuli
+  content_partner_resource_show_subheader: <em>%{resource_title}</em> baliabidearen
+    xehetasunak
+  content_partner_resource_status_update_illegal_transition_error: Barkatu, %{resource_title}
+    baliabidearen oraingo egoera %{current_resource_status} da eta ezin da %{requested_resource_status}
+    egoerara aldatu.
+  content_partner_resource_status_update_successful_notice: '%{resource_title} baliabidearen
+    egoera arazorik gabe eguneratu da %{resource_status} egoerara.'
+  content_partner_resource_status_update_unsuccessful_error: Barkatu, arazo bat egon
+    da, %{resource_title} baliabidearen egoera ezin izan da %{resource_status} egoerara
+    eguneratu.
+  content_partner_resource_update_unsuccessful_error: Barkatu, arazo bat egon da,
+    ez dira baliabidearen xehetasunak eguneratu.
+  content_partner_resource_upload_unsuccessful_error: 'Barkatu, arazo bat egon da,
+    baliabidearen xehetasunak eguneratu dira, baina baliabidea bera ez da eguneratu:
+    %{resource_status}'
+  content_partner_resource_validation_unsuccessful_error: Barkatu, baliabidearen xehetasunak
+    eguneratu dira, baina ezin izan da baliabidea baliozkotu. Ikusi azpian prozesamenduaren
+    oharrak.
+  content_partner_resource_vetted_true: Bai
+  content_partner_resource_vetted_false: Ez
+  content_partner_resource_view_link: Ikusi
+  content_partner_resources_header: Baliabideak
+  content_partner_resources_link: Baliabideak &amp; Kontaktuak
+  content_partner_statistics_column_header_statistic: '%{month_name} hilabeterako
+    neurketa estatistikoa, %{year}'
+  content_partner_statistics_column_header_provider_count: Hornitzailearen edukia
+    daukaten orriak
+  content_partner_statistics_column_header_total_count: Orri guztiak
+  content_partner_statistics_column_header_provider_proportion: Hornitzaile portzentajea
+  content_partner_statistics_empty: Ez da %{month_name} %{year} hilabeterako estatistikarik
+    aurkitu.
+  content_partner_statistics_month_label: Hilabetea
+  content_partner_statistics_year_label: Urtea
+  content_partner_statistics_summary_caption: '%{partner_name}-(e)k hornitutako edukia
+    daukaten taxon orrien erabilera estatistiken laburpena, EOL webgunearen erabilera
+    estatistikei dagokionez.'
+  content_partner_statistics_link: Erabilera estatistikak
+  content_partner_statistics_taxa_page_caption: '%{partner_name}-(e)k hornitutako
+    edukia daukaten taxon orrien erabilera estatistiken xehetasunak.'
+  content_partner_statistics_column_header_taxa_page_time_on_page_seconds: Denbora
+    orrian (segunduak)
+  content_partner_status_empty: Egoera ezezaguna
+  content_partner_vetted_false: Berrikusi gabea
+  content_servers: Eduki zerbitzariak
+  content_setting_colon: 'Eduki ezarpenak:'
+  content_summary_table_type_status_column_header: Eduki mota eta egoera
+  content_summary_table_count_column_header: Zenbatekoa
+  content_summary_table_type_trusted_images_row: Irudi fidagarrien zenbatekoa
+  content_summary_table_type_unreviewed_images_row: Berrikusi gabeko irudien zenbatekoa
+  content_summary_table_type_trusted_text_row: Testu elementu fidagarrien zenbatekoa
+  content_summary_table_type_unreviewed_text_row: Berrikusi gabeko testu elementuen
+    zenbatekoa
+  content_type: Eduki-mota
+  contribute: Lagundu
+  copy: Kopiatu
+  copy_of_name: '%{name}(r)en kopia'
+  copyright: 'COPYRIGHT:'
+  correct_donation_message_with_link: Informazio hau okerra bada, mesedez <a href='%{link}'>joan
+    atzera</a> aldaketak egiteko.
+  could_not_find_collection_error: Barkatu, ezin izan da bilduma hori aurkitu.
+  could_not_find_user: Ez zara komunitate honen kide.
+  count: Zenbatekoa
+  create_account: kontua sortu
+  create_a_new_collection: Bilduma berria sortu
+  create_community_unsuccessful_error: Barkatu, arazo bat egon da, zure komunitatea
+    ez da sortu. Mesedez egiaztatu eremu guztiak zuzen beteta daudela.
+  create_community: Komunitate bat sortu
+  create_community_about_heading: Komunitate bat sortzearen inguruan
+  create_community_around_this_collection_header: Komunitate bat sortu bilduma honen
+    inguruan
+  create_a_community: Komunitate bat sortu
+  create_a_community_login_advisory: Saioa hasteko eskatuko zaizu zure komunitatea
+    sortu baino lehen
+  create_a_collection: Bilduma bat sortu
+  create_collection_button: Bilduma sortu
+  create_community_button: Komunitate bat sortu
+  create_user_unsuccessful_error: Barkatu, arazo bat egon da, zure kontu berria ez
+    da sortu. Mesedez egiaztatu eremu guztiak zuzen beteta daudela.
+  created_by: 'Nork sortua:'
+  created_colon: 'Sortua:'
+  created_community: Komunitatea arazorik gabe sortu da
+  created: Sortua
+  creative_commons: Creative Commons
+  credentials: Kredentzialak
+  credentials_colon: 'Kredentzialak:'
+  crop_image: irudia moztu
+  curated_association_update_button: Aldaketak gorde
+  curation_error_no_hide_reasons_given: Mesedez, aukeratu aukeratu %{association}
+    orrian hau ezkutatzeko arrazoi bat, edo utzi iruzkin bat zergatik ezkutatzen duzun
+    azalduz.
+  curation_error_hide_reasons_invalid: '%{association} ezkutatzeko arrazoiak ez dira
+    baliozkoak'
+  curation_reason_placeholder: xehetasun gehigarriak (aukerakoa)
+  your_current_rating_0_of_5: 'Zure oraingo kalifikazioa: 0 5etik'
+  your_current_rating_1_of_5: 'Zure oraingo kalifikazioa: 1 5etik'
+  your_current_rating_2_of_5: 'Zure oraingo kalifikazioa: 2 5etik'
+  your_current_rating_3_of_5: 'Zure oraingo kalifikazioa: 3 5etik'
+  your_current_rating_4_of_5: 'Zure oraingo kalifikazioa: 4 5etik'
+  your_current_rating_5_of_5: 'Zure oraingo kalifikazioa: 5 5etik'
+  your_watch_collection: zure jarraipen zerrenda
+  current_language: 'Hizkuntza: %{iso_code}'
+  create_download_data_file: Fitxategia sortu
+  institutional_sponsors: Babesle instituzionala
+  currently_published: argitaratuta daudenak
+  daily: Egunero
+  darwin_core: Darwin Core
+  data: Datuak
+  data_about_this_record: Dokumentu honen inguruko datuak
+  data_column_tc_id: EOL orriaren IDa
+  data_column_sci_name: Izen zientifikoa
+  data_column_common_name: Izen arrunta
+  data_column_classification_summary: Sailkapenaren laburpena
+  data_column_measurement: Neurketa
+  data_column_value: Balioa
+  data_column_measurement_uri: URI neurketa
+  data_column_value_uri: URI balioa
+  data_column_name_uri: URI neurketa
+  data_database_colon: 'Datuak:'
+  data_glossary: Datu glosarioa
+  data_link_to_record: Lotura erregistro honetara
+  data_logging_active: Datuen erregistro aktiboa
+  data_object: Datu objektua
+  data_object_deleted: Datu objektua arazorik gabe ezabatu da
+  data_object_not_associated_with_any_hierarchies: Datu objektu hau ez dago hierarkia
+    batekin ere lotuta.
+  data_point_uri_source_missing: iturria faltan
+  data_provided_by_user: 'nork hornitua: %{whom}'
+  data_provided_by_content_partner: 'Hornitzailea: %{whom}'
+  data_ranges: Datu laburpenak
+  data_ranges_subheader: Talde taxonomiko honetarako datu laburpenak
+  data_row_additional_detail_alt: Xehetasun gehigarria
+  data_row_additional_detail_show_alt: Xehetasun gehigarria erakutsi
+  data_row_additional_detail_hide_alt: Xehetasun gehigarria ezkutatu
+  data_row_additional_detail_loading_alt: Xehetasun gehigarriak kargatzen
+  data_search:
+    form:
+      search_again_for_attributes: berriro bilatu aukeratutako atributuak gehitzeko
+      search_again_for_values: berriro bilatu aukeratutako baloreak gehitzeko
+      header_assistive: Bilaketa formularioa
+      input_summary_intro: Aukeratutako bilaketak aukerak
+      new_search_link: Bilaketa berri bat hasi
+      or_range_header: Edo <span class="assistive">zehaztu tarte bat</span>
+      search_suggestions_header: Ez dakizu nondik hasi?
+      search_suggestions_subheader_colon: 'Probatu ondoko datu bilaketaren bat:'
+      search_suggestion_whale_mass: Zein balea motak pisatzen du 10.000kg baino gehiago?
+      search_suggestion_diatom_shape: Zeintzuk dira diatomeoen forma desberdinak?
+      search_suggestion_cavity_nests: Zein espeziek egiten dituzte habiak zuloetan?
+      search_suggestion_blue_flowers: Zein landarek dauzkate lore urdinak?
+      search_tools_show_link: Bilaketa aukerak erakutsi
+      search_tools_hide_link: Bilaketa aukerak ezkutatu
+      search_value_or_range_header: Balore zehatz bat edo tarte bat bilatu
+      search_within_taxon_group_header: Taxon talde baten barruan bilatu
+      search_within_taxon_group_intro_with_count: '{{PLURAL|Taxon talde baten barruan
+        bilatzea %{count} taxon baino gutziagoko taldeetara mugatuta dago oraindik.
+        <a href="%{contact_us_tech_url}">Jarri gurekin harremanetan</a> talde handiagoetan
+        bilatzearen inguruan gehiago jakiteko.'
+      sort_header: Emaitzak ordenatu
+    notice:
+      clade_has_no_data: Inork ez du oraindik %{taxon_name} taxonerako erregistrorik
+        eman.<a href="%{contribute_path}">Ikasi nola lagundu dezakezun</a>.
+  data_search_link: Datu zientifikoen bilaketa EOLen
+  data_search_destroyed: Lan hau ez da gehiago prozesatua izango.
+  data_search_files_with_count:
+    one: Datuen jaitsiera %{count}
+    other: '%{count} datuen jaitsierak'
+  data_server_unavailable: Datuak ez dira EOLen eskuragarri egongo epe baterako. Mesedez
+    egiaztatu geroago. Barkatu eragozpenengatik.
+  data_show_n_more_rows: NNN gehiago erakutsi...
+  data_subtab_about: Honi buruz
+  data_summary_ranges_header_with_count: EOLek datu laburpen bat dauka
+  data_usage_reports: Datu erabileraren txostenak
+  date_caps: Data
+  date_uploaded: Igotze data
+  dato_create_cancel: Utzi
+  dato_edit_cancel: Utzi
+  dato_create_user_link_error: Barkatu, arazo bat egon da, ezin izan da esteka gehitu.
+  dato_create_user_text_error: Barkatu, arazo bat egon da, ezin izan da artikulua
+    gehitu.
+  dato_location_created: 'Kokapena sortua: %{loc}'
+  dato_new_edit_user_text_fieldset_content_header: Artikuluaren edukia
+  dato_new_edit_user_text_link_fieldset_content_header: Estekaren datuak
+  dato_new_edit_user_text_fieldset_information_header: Artikuluaren informazioa
+  dato_create_user_text_validation_error: Mesedez ziurtatu formularioa zuzen bete
+    duzula.
+  dato_update_users_text_not_owner_exception: Testu objejktu honen egileak bakarrik
+    alda dezake.
+  dato_edit_link_button: Esteka hau aldatu
+  dato_edit_text_button: Artikulu hau aldatu
+  dato_edit_text_title: Artikulua aldatu
+  dato_update_user_text_error: Barkatu, arazo bat egon da, ezin izan da artikulua
+    eguneratu.
+  deactivate: Desaktibatu
+  development_version_name: EOL V2 Beta
+  default: Lehenetsia
+  default_rating: kalifikazio lehenetsia
+  default_rating_value_of_total: 'Kalifikazio lehenetsia: %{rating} %{total}(e)tik'
+  default_watch_collection_name: '%{username} erabiltzailearen jarraipen zerrenda'
+  delete_community: Komunitate hau ezabatu
+  delete_data_object: Ezabatu
+  delete: ezabatu
+  deleted_colon: 'ezabatua:'
+  delete_firstcap: Ezabatu
+  description: Deskribapena
+  descriptive_label: Etiketa deskribatzailea
+  destination_inappropriate_for_logged_in_users: Saio hasi duzu.
+  destroy: Desegin
+  detail: Xehetasuna
+  details: Xehetasunak
+  details_title: Xehetasunak
+  did_you_mean: 'Hau esan nahi izan duzu: %{suggestions}?'
+  disabled_for_now: ORAINGOZ DESGAITUAK
+  discover_link: Hezkuntza
+  donate_link: Dohaintza egin
+  done_already: Dagoeneko egina
+  download_wav_file: WAV fitxategia deskargatu
+  download_data: Datuak jaitsi
+  download_collection_data: Datuak jaitsi
+  dublin_core: Dublin Core
+  duplicate_comment_warning: 'Ez da iruskina gorde: badirudi iruzkin hau lehen ere
+    argitaratu duzula... Bi aldiz klikatu duzu ''iruskina argitaratu'' botoia?'
+  duplicate_text_warning: 'Ez da testua gorde: badirudi artikulu hau lehen ere argitaratu
+    duzula... Bi aldiz klikatu duzu ''iruskina argitaratu'' botoia?'
+  edit_comment: Iruzkina aldatu
+  edit_comment_lowercase: iruzkina aldatu
+  edit_community: Komunitatea aldatu
+  edit_contact_us_topic: Kontaktuaren gaia aldatu
+  edit: aldatu
+  edited_colon: 'aldatua:'
+  edit_hierarchy: hierarkia aldatu
+  edit_collection_details: Bildumaren xehetasunak aldatu
+  edit_collection_details_header: Bildumaren xehetasunak aldatu
+  edit_my_profile: Nire profila aldatu
+  edit_news_items: albisteak aldatu
+  edit_page_contents: orriaren edukiak aldatu
+  edit_search_suggestion: Bilaketa iradokizunak aldatu
+  edit_search_suggestions: Bilaketa iradokizunak aldatu
+  edit_user_details_instructions: Erabiltzailearen xehetasunak jarraian aldatu. Mezu
+    bat bidali diezaiokezu erabiltzaile honi sistema erabiliz, 'helbide elektroniko
+    mezuen eremua erakutsi' klikatuz eta mezuaren edukia idatziz. Pasahitz berria
+    pasahitza aldatu nahi izatekotan bakarrik sartu, bestela hutsik utzi.
+  edit_the_user_s_comment_below: Erabiltzailearen iruzkina jarraian aldatu.
+  edit_username: '%{username} erabiltzaile izena aldatu'
+  edit_web_users: web erabiltzaileak aldatu
+  editors_tab_label: Administratzaileak
+  email: Helbide elektronikoa
+  email_colon: 'Emaila:'
+  email_recipients: Emailaren hartzaileak
+  eol_accepted_subjects: EOLek onartutako gaiak
+  eol_api: EOL API
+  eol_api_hierarchies: 'EOL API: Hierarkiak'
+  eol_api_pages: 'EOL API: Orriak'
+  eol_api_provider_hierarchies: 'EOL API: Hornitzaile hierarkiak'
+  eol_api_search: 'EOL API: Bilatu'
+  eol_api_collections: 'EOL API: Bildumak'
+  eol_colon: 'EOL:'
+  eol_news: EOL Albisteak
+  eol_pages: Orriak
+  error_log: Errore erregistroa
+  error_logging_active: Erroreen erregistro aktiboa
+  error_violates_tos: BAdirudi zure edukiak EOLen baldintzak bortxatzen dituela. Akatsa
+    izan dela uste baduzu, jarri gurekin harremanetan laguntza eskatzeko.
+  error_revoking_editor_on_watch_collection: Ezin dira jarraipen bildumetako editoreak
+    ezabatu
+  error_401_page_title: Ez baimendua
+  error_401_description: Barkatu, ez zaude URL horretara sartzeko baimendua.
+  error_403_page_title: Debekatuta
+  error_403_description: Barkatu, ez zaude URL horretara sartzeko baimendua.
+  error_404_page_title: Ez da aurkitu
+  error_404_description: Sentitzen dugu, ezin izan dugu orria URL horretan aurkitu.
+  error_500_description: Sentitzen dugu, arazo bat aurkitu dugu. Arazoak badirau,
+    mesedez bidali email bat helbide elektroniko honetara <a href="mailto:%{email_address}?subject=%{error}">%{email_address}</a>
+  error_default_description: Sentitzen dugu, arazo bat aurkitu dugu. Arazoak badirau,
+    mesedez bidali email bat helbide elektroniko honetara <a href="mailto:%{email_address}?subject=%{error}">%{email_address}</a>
+  example_colon: 'Adibidea:'
+  exceptions:
+    security_violations:
+      default: Sarbide ukatua.
+      admins_and_joined_only_can_read: Barkatu, bildumetara batu behar zara ikusi
+        ahal izateko
+      owner_and_managers_only_can_edit: Barkatu, bakarrik bildumaren jabe eta administratzaileek
+        aldatu dezakete
+  explore: Esploratu
+  flickr: Flickr
+  go: Joan
+  hello_user: Kaixo %{user}
+  help: Laguntza
+  here: hemen
+  images: Irudiak
+  language: 'Hizkuntza:'
+  languages: Hizkuntzak
+  learn_more_lowercase: gehiago ikasi
+  license: Lizentzia
+  license_public_domain: Domeinu Askea
+  literature: Literatura
+  location: Kokapena
+  login: saioa hasi
+  my_info: Nire info
+  names_status_column_header: Egoera
+  mobile:
+    taxa:
+      details: Xehetasunak
+      maps: Mapak
+      nomenclature: Nomenklatura
+      literature: Literatura
+      community: Komunitatea
+      images: Irudiak
+      sounds: Soinuak
+      videos: Bideoak
+    search:
+      suggestions: Iradokizunak
+      no_results_found: Ez da emaitzarik aurkitu
+      results: Emaitzak
+  no_answer: Ez
+  pagination_next: Hurrengoa
+  pagination_previous: Aurrekoa
+  parameters: Parametroak
+  password_colon: 'Pasahitza:'
+  press_room: Prentsa Aretoa
+  profile: Profila
+  public_domain: jabetza publikoa
+  punctuation_comma: ','
+  reply: Erantzun
+  required: Nahitaezkoa
+  resources: Baliabidea
+  results: Emaitzak
+  search_field_synonym: Sinonimoa
+  send: Bidali
+  server_ip_address: Zerbitzariaren IP helbidea
+  show_more_row_data_link: gehiago
+  sign_in: Hasi saioa
+  sign_out: Saioa itxi
+  sort_by_button: Sailkatu
+  sort_by_label: Honen arabera sailkatu
+  sort_by_newest_option: Berrienak
+  sort_by_oldest_option: Zaharrenak
+  sort_by_status_option: Egoera
+  sounds_with_count:
+    one: soinu %{count}
+    other: '%{count} soinu'
+  stats: Estatistikak
+  table_column_header_actions: Ekintzak
+  table_of_contents: Eduki-taula
+  terms_agreement_form_submit: Ados nago
+  truncated_news_item_omission: '... <a href=''%{link}''>gehiago</a>'
+  tumblr: Tumblr
+  twitter: Twitter
+  username_colon: 'Erabiltzaile izena:'
+  username: Erabiltzaile izena
+  user_says_colon: '%{users_name}(e)k dio:'
+  user: Erabiltzailea
+  users_about_me_header: Niri buruz
+  users_form_account_header: Zure kontua
+  welcome: Ongi etorri
+  what_is_this_question: Zer da hau?
+  yahoo: Yahoo
+  year: Urtea
+  yes_answer: Bai
+  your_email_address: Zure helbide elektronikoa
+  your_ip_address: Zure IP Helbidea
+  youtube: YouTube
+...

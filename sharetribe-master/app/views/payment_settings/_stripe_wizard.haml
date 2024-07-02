@@ -1,0 +1,20 @@
+= javascript_include_tag "#{STRIPE_JS_HOST}/v3/"
+
+- if presenter.stripe_connect_onboarding
+  - if presenter.stripe_account_ready
+    = render 'payment_settings/stripe_wizard/stripe_account_onboarding_ready', presenter: presenter
+  - else
+    = render "payment_settings/stripe_wizard/new_stripe_account_onboarding", presenter: presenter
+- else
+  - if presenter.stripe_account_ready
+    = render "payment_settings/stripe_wizard/stripe_account_ready", presenter: presenter
+  - else
+    = render "payment_settings/stripe_wizard/new_stripe_account", presenter: presenter
+  - stripe_data = stripe_default_data2.dup
+  - stripe_data = stripe_data.merge(update: true) if presenter.stripe_account_ready
+  - content_for :extra_javascript do
+    :javascript
+      $(function() {
+        window.ST.StripeBankForm3.init(#{stripe_data.to_json.html_safe});
+      });
+

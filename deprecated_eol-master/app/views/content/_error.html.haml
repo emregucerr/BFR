@@ -1,0 +1,16 @@
+- status_code ||= ''
+- error ||= "EOL Error #{status_code}"
+- fallback_description = "We're sorry, we have encountered a problem."
+%p
+  - begin
+    = raw(I18n.t("error_#{status_code}_description", :email_address => $ERROR_EMAIL_ADDRESS,
+      :error => error, :default => [:error_default_description, fallback_description]))
+  - rescue
+    = fallback_description
+- if @modal
+  %p
+    %a.close{:href => "#"}= I18n.t(:go_back)
+- elsif status_code == 404
+  %p
+    = raw(I18n.t(:error_homepage_or_search_option))
+    = render "/layouts/search"

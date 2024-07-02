@@ -1,0 +1,32 @@
+# Minimum listing price (minimum commissions), in cents
+# The amount should be the highest between one base unit OR https://stripe.com/docs/payouts#cbp-minimum-payout-amounts OR a bit more than $0.50.
+
+ARS: 10000 # a bit more than USD 0.50 on 2022-11-08
+AUD: 100 # one base unit of the local currency
+BRL: 500 # minimum payout based on Stripe's
+BGN: 100 # a bit more than USD 0.50 on 2022-11-08
+CAD: 100 # one base unit of the local currency
+CHF: 100 # one base unit of the local currency
+CZK: 3000 # minimum payout based on Stripe's
+DKK: 2000 # minimum payout based on Stripe's
+EUR: 100 # one base unit of the local currency
+GBP: 100 # one base unit of the local currency
+HKD: 1000 # minimum payout based on Stripe's
+HUF: 360 # equals 360.00, as HUF Hungarian Forint has no cents
+ILS: 200 # a bit more than USD 0.50 on 2022-11-08
+INR: 5000 # a bit more than USD 0.50 on 2022-11-08
+JPY: 1000 # equals 1000.00, as JPY Japanese Yen has no cents
+MXN: 1000 # minimum payout based on Stripe's
+MYR: 500 # minimum payout based on Stripe's
+NOK: 2000 # minimum payout based on Stripe's
+NZD: 100 # one base unit of the local currency
+PHP: 2000 # minimum payout based on Stripe's
+PLN: 500 # minimum payout based on Stripe's
+RON: 500 # minimum payout based on Stripe's
+RUB: 1500 # minimum payout based on PayPal's
+SEK: 2000 # minimum payout based on Stripe's
+SGD: 100 # one base unit of the local currency
+THB: 2000 # a bit more than USD 0.50 on 2022-11-08
+TRY: 500 # minimum payout based on Stripe's
+TWD: 2000 # a bit more than USD 0.50 on 2022-11-08
+USD: 100 # one base unit of the local currency

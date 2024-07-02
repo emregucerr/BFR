@@ -1,0 +1,13 @@
+#content_partner_show.site_column
+  .main_content
+    - if current_user.is_admin?
+      = form_for [@partner, @agreement], :url => content_partner_agreement_path do |form|
+        %fieldset
+          = render 'modify_agreement', { :form => form }
+        %fieldset.actions
+          = form.submit I18n.t('helpers.submit.content_partner_agreement.update')
+          = link_to I18n.t(:content_partner_agreement_cancel_edit_agreement_link), @partner
+    - else
+      .copy
+        %p= raw I18n.t(:content_partner_resources_policy_information)
+        = render 'sign_agreement'

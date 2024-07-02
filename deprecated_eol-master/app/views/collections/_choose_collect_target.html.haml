@@ -1,0 +1,60 @@
+= javascript_include_tag 'choose_sort_type'
+= stylesheet_link_tag 'choose_collect_target'
+#choose_collections
+  - if @items
+    -# NOTE - @for can either be 'copy' or 'move'.
+    %h2= I18n.t("#{@for}_items_to_a_new_collection_with_count", :count => @items.count)
+  - else
+    %h2= raw(I18n.t(:add_item_to_new_collection, :item => sanitize(@item.summary_name)))
+  = form_for Collection.new do |collection_form|
+    - if @selected_collection_items
+      - @selected_collection_items.each do |collection_item_id|
+        = hidden_field_tag "collection_items[]", collection_item_id, :id => "collection_item_#{collection_item_id}"
+    - if @items
+      = hidden_field_tag :for, @for
+      = hidden_field_tag :source_collection_id, @collection.id
+      = hidden_field_tag :scope, @scope
+    - else
+      = hidden_field_tag :item_id, @item.id
+      = hidden_field_tag :item_type, @item.class.name
+    %fieldset.new_collection
+      - # TODO: Refactor this. This is not accessible and also not using the activerecord error handling.
+      %p.collection_name_error= I18n.t(:collection_name_cannot_be_blank)
+      = collection_form.label :name, I18n.t(:collection_name_label), {:class => 'assistive'}
+      = collection_form.text_field :name
+      = submit_tag I18n.t(:create_collection_button), :class => 'button'
+  - @collections ||= []
+  -# Note the reject simply disallows you from collecting a collection in itself:
+  - collections = @collections.reject {|c| @collection && c.id == @collection.id }
+  - collections_sorted = @collections_recently_updated && @collections_recently_updated.reject {|c| @collection && c.id == @collection.id }
+  - unless collections.blank?
+    - form_target = @items ? @collection : CollectionItem.new(:collected_item => @item)
+    = form_for(form_target) do |f|
+      - if @selected_collection_items
+        - @selected_collection_items.each do |collection_item_id|
+          = hidden_field_tag "collection_items[]", collection_item_id, :id => "collection_item_#{collection_item_id}"
+      - if @items
+        = hidden_field_tag :for, @for
+        = hidden_field_tag :source_collection_id, @collection.id
+        = hidden_field_tag :scope, @scope
+      - else
+        = f.hidden_field :collected_item_id
+        = f.hidden_field :collected_item_type
+      - if @items
+        %h2= I18n.t("or_#{@for}_them_to_existing_collection")
+      - else
+        %fieldset
+          %dl
+            %h2.label
+              = I18n.t(:or_add_it_to_an_existing_collection)
+            %dt.sort_by
+              = label_tag :sort_collection_by, I18n.t(:sort_by_label)
+              = select_tag :sort_collection_by, options_for_select(@sorts, :recent) , onchange: "javascript: changeList();"
+      - unless collections_sorted.blank?
+        = render 'list_collections_to_choose', collections: collections_sorted , type: "recent"
+      = render 'list_collections_to_choose', collections: collections , display: "none" , type: "alpha"
+      %fieldset.actions
+        = link_to(I18n.t(:see_all_of_your_collections), user_collections_path(current_user), :class => 'other_actions close_and_go')
+        = submit_tag(params[:for] ? I18n.t(params[:for]) : I18n.t(:collect_item))
+        - if @item || params[:return_to]
+          = link_to(I18n.t(:go_back), params[:return_to] || link_to_item(@item), :class => 'close')

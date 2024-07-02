@@ -1,0 +1,6 @@
+- display ||= "block"
+%fieldset{id: "collections_#{type}" , style: "display: #{display}; margin-top: 10px"}
+  %ul
+    - collections.each do |collection|
+      - @one_available = true
+      = render 'collections_list_item', { :collection => collection }

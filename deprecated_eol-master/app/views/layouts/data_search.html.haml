@@ -1,0 +1,25 @@
+- content_for :head do
+  = javascript_include_tag 'data_search'
+- content_for :main do
+  #page_heading
+    .site_column
+      .hgroup
+        - if @attribute.blank?
+          %h1= t('.page_header')
+        - else
+          %h1= t('.page_header_results')
+          %h2= data_search_results_summary
+          - if @querystring_uri
+            %h2.greyedout="(#{@querystring_uri})"
+      .page_actions
+        %ul
+      = render 'shared/flash_messages'
+  #content
+    .site_column
+      #data_search{ data: { results_total: @results.blank? ? 0 : @results.total_entries } }
+        = render 'data_search/form'
+        #search_results
+          #main
+            = yield
+
+= render file: 'layouts/application'

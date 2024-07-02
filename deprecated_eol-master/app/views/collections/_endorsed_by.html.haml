@@ -1,0 +1,7 @@
+%h3= I18n.t(:endorsed_by)
+%ul
+  - collection.featuring_communities.each do |community|
+    %li
+      = link_to image_tag(community.logo_url(size: :small), :alt => ''), community
+      %h4= link_to community.name, community
+      %p= I18n.t(:members_with_count, :count => community.members.count)

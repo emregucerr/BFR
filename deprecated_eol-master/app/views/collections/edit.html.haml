@@ -1,0 +1,42 @@
+- # commenting out because its inconsistent with other layouts and HR mockups - we have cancel or go back links at end of form but not in header
+- # content_for :additional_page_actions do
+- #  %li
+- #   = link_to I18n.t(:go_back), collection_path(@collection)
+%h2= I18n.t(:edit_collection_details_header)
+= form_for @collection, :builder => ApplicationHelper::EolFormBuilder, :html => { :class => 'standard', :multipart => true } do |f|
+  = validation_errors_for(@collection)
+  %fieldset
+    %dl
+      %dt
+        = f.label :name
+      %dd
+        - if @collection.watch_collection?
+          %p= f.label :watch_collection_name, @collection.name
+        -else
+          = f.text_field :name, :value => @collection.name
+      %dt
+        = f.label :description
+      %dd
+        = f.text_area :description, :value => sanitize(@collection.description.balance_tags), :rows => 3, :cols => 60
+        %p= f.allowed_html_help_tip
+      %dt
+        = f.label :additional_annotation_fields
+      %dd
+        = f.check_box :show_references
+        = f.label :show_references
+      %dt
+        = f.label :sort_style_id
+      %dd
+        = f.select :sort_style_id, @sort_options.map {|so| [so.name, so.id]}
+      %dt
+        = f.label :view_style_id
+      %dd
+        - vs_id = @collection.view_style_id || @collection.view_style_or_default.id
+        = f.select :view_style_id, options_from_collection_for_select(@view_as_options, :id, :name, vs_id)
+      %dt
+        = f.label :logo
+      %dd
+        = f.file_field :logo, :size=>10
+  %fieldset.actions
+    = submit_tag I18n.t(:update_collection_submit_button), :class => 'button'
+    = link_to I18n.t(:go_back), collection_path(@collection)

@@ -1,0 +1,13 @@
+#content
+  .site_column
+    .article.copy
+      - alphabet = ('A'..'Z').to_a
+      - alphabet.each do |letter|
+        %h2= letter
+        - all_terms = GlossaryTerm.all(:conditions => "term like '#{letter}%'", :order => 'term')
+        %dl
+        - all_terms.each do |glossary_term|
+          %dt
+            = glossary_term.term.firstcap
+          %dd
+            = glossary_term.definition

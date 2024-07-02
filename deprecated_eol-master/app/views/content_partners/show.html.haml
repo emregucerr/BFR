@@ -1,0 +1,74 @@
+-# EXEMPLAR
+
+- content_for :social_sharing do
+  = render "shared/social_sharing"
+
+= content_for :page_actions do
+  - if current_user.can_update?(@partner)
+    %li= link_to I18n.t(:content_partner_edit_link), [:edit, @partner],
+      class: "button"
+
+#content_partner_show.site_column
+  #sidebar
+    .content_partner_managers
+      = render "managed_by"
+
+    .collection_list
+      %h3= I18n.t(:collections_with_count, count: @partner.collections.size)
+      - if @partner.collections.blank?
+        .empty
+          %p= I18n.t(:content_partner_collections_empty)
+      - else
+        %ul.collection.list
+          - @partner.collections.each do |collection|
+            = render "collections/collection_summary",
+              collection: collection, show_description: false
+
+    - if current_user.can_update?(@partner)
+      %h3= I18n.t(:content_partner_notes_header)
+      - if @partner.notes.blank?
+        .empty
+          %p= I18n.t(:content_partner_notes_empty)
+      - else
+        .copy
+          %p= @partner.notes
+
+    - if current_user.is_admin?
+      %h3= I18n.t(:content_partner_administration_notes_header)
+      - if @partner.admin_notes.blank?
+        .empty
+          %p= I18n.t(:content_partner_administration_notes_empty)
+      - else
+        .copy
+          %p= @partner.admin_notes
+
+  .main_container.copy
+    %h3= I18n.t(:content_partner_about_header, partner_name: @partner.name)
+    %p= sanitize @partner.description.balance_tags
+    - unless @partner.homepage.blank?
+      %p= link_to I18n.t(:content_partner_homepage_link),
+        @partner.homepage, rel: :nofollow
+
+    - if current_user.can_read?(@partner.agreement)
+      %h3= I18n.t(:content_partner_overview_agreement_header)
+      %p= link_to I18n.t(:content_partner_overview_agreement_link), agreement
+      %dl.agreement
+        %dt= field_name(:signed_by)
+        %dd= field_value(@partner.agreement.signed_by)
+        %dt= field_name(:signed_on_date)
+        %dd= field_value(@partner.agreement.signed_on_date)
+        %dt= field_name(:created_at)
+        %dd= field_value(@partner.agreement.created_at)
+
+    %h3= I18n.t(:content_partner_resources_header)
+    %ul.links
+      - @partner.resources.each do |resource|
+        %li= link_to resource.title, [@partner, resource]
+
+    - if current_user.can_update?(@partner)
+      %h3= I18n.t(:content_partner_data_description_header)
+      - if @partner.description_of_data.blank?
+        .empty
+          %p= I18n.t(:content_partner_data_description_empty)
+      - else
+        %p= sanitize @partner.description_of_data.balance_tags

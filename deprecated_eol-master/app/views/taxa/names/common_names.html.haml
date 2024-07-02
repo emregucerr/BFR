@@ -1,0 +1,12 @@
+- content_for :social_sharing do
+  = render 'shared/social_sharing'
+#taxon_names
+  .article
+    .copy
+      %p= I18n.t(:taxon_common_names_subtab_explanation)
+  = render 'menu'
+  .main_container
+    - if current_user.min_curator_level?(:assistant)
+      = render 'common_names_edit'
+    - else
+      = render 'common_names'

@@ -1,0 +1,13 @@
+admin:
+  email: 'admin@blackcandy.com'
+  is_admin: true
+  password_digest: <%= BCrypt::Password.create('foobar') %>
+
+visitor1:
+  email: 'visitor1@blackcandy.com'
+  deprecated_password_salt: 'salt_for_test'
+  password_digest: <%= BCrypt::Password.create('foobar' + 'salt_for_test') %>
+
+visitor2:
+  email: 'visitor2@blackcandy.com'
+  password_digest: <%= BCrypt::Password.create('foobar') %>

@@ -1,0 +1,56 @@
+= form_for @content_upload,:url => {:action=>'update',:id=>params[:id]},:html=>{ :method => :post, :multipart => true,:id=>'page_form'} do |f|
+  = eol_lang_error_messages_for :content_upload
+  %br
+  %table
+    %tr
+      %td
+        %strong
+          =I18n.t(:file_id)
+      %td
+        = @content_upload.id
+    = render 'form', {:f=>f}
+    %tr
+      %td
+        %strong
+          =I18n.t(:friendly_url)
+        %br
+        =I18n.t(:for_pdfs_and_docs_parens)
+      %td
+        = link_to(I18n.t(:content_upload_url, :domain => request.domain, :upload_attachment => @content_upload.attachment_url), @content_upload.attachment_url)
+    %tr
+      %td
+        %strong
+          =I18n.t(:content_server_full_url)
+        %br
+        =I18n.t(:for_images_to_reference_parens)
+      %td
+        = link_to(@content_upload.content_server_url,@content_upload.content_server_url)
+    %tr
+      %td
+        %strong
+          =I18n.t(:content_type)
+      %td
+        = @content_upload.attachment_content_type
+    %tr
+      %td
+        %strong
+          =I18n.t(:file_size)
+      %td
+        = "#{(@content_upload.attachment_file_size / 1024.0).round} kb" unless @content_upload.attachment_file_size.blank?
+    %tr
+      %td
+        %strong
+          =I18n.t(:uploaded_by)
+      %td
+        = "#{@content_upload.user.full_name} (#{@content_upload.user.username})"
+    %tr
+      %td
+        %strong
+          =I18n.t(:date_uploaded)
+      %td
+        = @content_upload.created_at
+  %br
+  %br
+  = cancel_button_goes_back(url_for(:action=>'index'))
+  &#124;
+  = f.submit I18n.t(:update)

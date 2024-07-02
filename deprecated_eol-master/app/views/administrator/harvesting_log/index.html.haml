@@ -1,0 +1,38 @@
+#logs
+  %form#page-form
+    =I18n.t(:filter_by_day)
+    - default_select = (@date == 'all') ? 'all' : @date.strftime("%d-%b-%Y")
+    = select_tag :date, options_for_select([['--all--', 'all']] + @distinct_dates, default_select), {:onchange=>"javascript:$('#page-form').submit();"}
+  %br
+  - unless @date.blank?
+    = @date == "all" ? I18n.t(:showing_all_harvest_logs).html_safe : I18n.t(:showing_harvest_logs_from_date, :date => I18n.l(@date)).html_safe
+  %br
+  - if @logs.nil? == false && @logs.size > 0
+    = will_paginate @logs, :params => {:date => @date}
+    %table.results_table{ :cellspacing => "0", :width => "100%" }
+      %tr
+        %th
+          =I18n.t("id")
+        %th
+          =I18n.t("process_name")
+        %th
+          =I18n.t("began")
+        %th
+          =I18n.t("completed")
+      - for log in @logs
+        - column_class=cycle('odd','even')
+        %tr
+          %td{ :class => column_class }
+            = log.id
+          %td{ :class => column_class }
+            = log.process_name
+          %td{ :class => column_class }
+            = log.began_at.mysql_timestamp
+          %td{ :class => column_class }
+            = log.completed_at ? log.completed_at.mysql_timestamp : '---'
+    %br
+    = will_paginate @logs, :params => {:date => @date}
+  - elsif @logs.nil? == false && @logs.size == 0
+    %br
+    %i
+      =I18n.t("no_harvesting_logs_for_this_da")

@@ -1,0 +1,1 @@
+page << "$('#row_#{params[:id]}').slideUp();"

@@ -1,0 +1,387 @@
+nl_NL:
+  discussion_templates:
+    blank:
+      process_name: Lege sjabloon
+      process_subtitle: Start voor welk doel dan ook een nieuw draadje
+      process_introduction: "<p>Start een gesprek in je groep over elk onderwerp dat je leuk vindt.</p><p> Standaard krijgt iedereen in de groep een melding wanneer u de thread start. Je kunt dit wijzigen door het veld 'uitnodigen' hieronder te bewerken.</p>"
+    discuss_a_topic:
+      title_placeholder: Wat is het onderwerp dat je wilt bespreken?
+      process_name: Bespreek een onderwerp
+      process_subtitle: Start een discussie met je groep
+      process_introduction: "<p>Is er een probleem, probleem of kans die u met uw groep wilt bespreken?</p><p> Introduceer het onderwerp, link naar eventuele achtergrondinformatie en vraag om commentaar, ideeën en hulp.</p><p> Nodig mensen uit om deel te nemen door hun gedachten en relevante informatie bij te dragen. Gebruik @mention om de aandacht van bepaalde mensen te trekken.</p><p> Werk de threadcontext bij naarmate de discussie vordert om deze naar een resultaat te vergemakkelijken.</p><p> Wacht niet tot je alle informatie hebt om een topic te starten. Gebruik de draad liever om mensen uit te nodigen om u te helpen het onderwerp te verkennen en een oplossing te vinden.</p>"
+      description: <h3 id="introduce-and-describe-the-topic">Introduceer en beschrijf het onderwerp</h3><p></p><h3 id="why-is-this-important"> Waarom is dit belangrijk?</h3><p></p><h3 id="how-would-you-like-people-to-respond"> Hoe wil je dat mensen reageren?</h3><p></p>
+    onboarding_to_loomio:
+      title: Loomio gebruiken voor onze groep
+      process_name: Onboarding naar Loomio
+      process_subtitle: Een draad om mensen die nieuw zijn bij Loomio te helpen oefenen met het schrijven van opmerkingen en stemmen.
+      process_introduction: "<p>Gebruik dit sjabloon om mensen kennis te laten maken met Loomio.</p><p> Een geweldige manier om Loomio te ervaren is door een discussie in Loomio te openen en een beslissing te nemen!</p><p> Breng de discussie op gang door de onderstaande tekstprompts te volgen of uw eigen woorden in te voegen.</p><p> Voer een Sense-check uit, zodat uw groep kan stemmen en de resultaten kan zien.</p><p> Ontgrendel de waarde van Loomio door mensen te betrekken bij hun eerste beslissing.</p>"
+      description: <h3 id="why-are-you-interested-in-using-loomio">Waarom ben je geïnteresseerd in het gebruik van Loomio?</h3><p> Wij zijn geïnteresseerd in het gebruik van Loomio om mensen te betrekken bij beslissingen over onze organisatie.</p><h3 id="what-are-you-asking-people-to-do"> Wat vraag je mensen om te doen?</h3><p> Ik hoor graag uw mening! Laat hieronder een reactie achter en stem op het voorstel.</p><p> U kunt op iemands reactie reageren door op het antwoordpictogram rechtsonder de reactie te klikken.</p><p> Gebruik @mention om mensen op de hoogte te stellen.</p>
+      onboarding: Aan boord
+    consent_process:
+      title_placeholder: Het ontwikkelen van ons gezondheids- en veiligheidsbeleid
+      process_name: Toestemmingsproces
+      process_subtitle: Neem een beslissing die 'veilig is om te proberen', zonder bezwaren.
+      process_introduction: '<p>Vraag toestemming voor een besluit dat u moet nemen, als er geen zinvolle bezwaren zijn tegen uw voorstel, zodat u snel een besluit kunt nemen dat u nu ''veilig kunt proberen''.</p><p> Typische rollen:</p><ul><li><p> Indiener: De persoon die een onderwerp aan de orde stelt waarover een besluit moet worden genomen.</p></li><li><p> Facilitator: Iemand die de indiener kan helpen zijn werk efficiënt te doen.</p></li></ul><p> Veel voorkomende processtappen:</p><p> Stap 1. Presenteer een voorstel met een Loomio-thread.</p><p> Stap 2. Faciliteer een ronde van vragen, reacties en eventuele opmerkingen om het voorstel te verbeteren met een Betekenischeck.</p><p> Stap 3. Pas het voorstel aan met suggesties en opmerkingen.</p><p> Stap 4. Vraag of iemand een zinvol bezwaar heeft tegen het gewijzigde voorstel met een Consent-voorstel.</p><p> Stap 5. Integreer geldige bezwaren om een gewijzigde versie van het voorstel te creëren waar iedereen mee instemt en die ''veilig is om te proberen'', en vermeld na voltooiing de uitkomst van de beslissing.</p><p> <a target="_blank" rel="noopener noreferrer nofollow" href="https://help.loomio.com/en/guides/consent_process/index.html">Lees meer: Toestemmingsproces.</a></p>'
+      description: <h3 id="what-is-the-decision-you-need-to-make">Wat is de beslissing die u moet nemen?</h3><h3 id=""></h3><h3 id="why-is-this-important-and-what-impact-does-it-have"> Waarom is dit belangrijk en welke impact heeft het?</h3><p></p><h3 id="what-information-do-people-need-for-context"> Welke informatie hebben mensen nodig voor context?</h3><p></p><h3 id="who-is-the-facilitator-for-this-process"> Wie is de facilitator van dit proces?</h3><p></p>
+      consent: Toestemming
+    advice_process:
+      title_placeholder: Advies gevraagd voor de aanschaf van een nieuwe computer
+      process_name: Adviesproces
+      process_subtitle: Vraag advies over een beslissing die u moet nemen.
+      process_introduction: '<p>Neem een beslissing op basis van het advies van mensen die erdoor getroffen zijn of die expertise hebben, zodat u een betere beslissing kunt nemen voor uw organisatie.</p><p> Typische rollen:</p><ul><li><p> Facilitator: De persoon die de beslissing neemt, of iemand vraagt om te faciliteren.</p></li><li><p> Adviseurs: Mensen die getroffen zijn of expertise hebben die u uitnodigt.</p></li></ul><p> Veel voorkomende processtappen:</p><p> Stap 1. Zoek input om perspectieven te peilen voordat u actie voorstelt.</p><p> Stap 2. Doe een voorstel en vraag advies - voer een adviesvoorstel uit.</p><p> Stap 3. Rekening houdend met de ontvangen adviezen neem je een besluit en informeer je de mensen die advies hebben gegeven - vermeld een uitkomst.</p><p> <a target="_blank" rel="noopener noreferrer nofollow" href="https://help.loomio.com/en/guides/advice_process/index.html">Lees meer: Adviestraject.</a></p>'
+      description: <h3 id="what-is-the-decision-you-need-to-make">Wat is de beslissing die u moet nemen?</h3><p></p><h3 id="why-is-this-important-and-what-impact-does-it-have"> Waarom is dit belangrijk en welke impact heeft het?</h3><p></p><h3 id="what-advice-are-you-asking-to-help-you-make-a-good-decision"> Welk advies vraagt u om u te helpen een goede beslissing te nemen?</h3><p></p><h3 id="who-is-the-facilitator-for-this-process"> Wie is de facilitator van dit proces?</h3><p></p>
+      advice: Advies
+    pass_a_resolution:
+      title_placeholder: Resolutie om de strategie goed te keuren
+      process_name: Neem een resolutie aan
+      process_subtitle: Introduceer een resolutie met context en achtergrondinformatie, beantwoord vragen en doe een voorstel om de resolutie aan te nemen.
+      process_introduction: '<p>Robert''s Rules is een raamwerk dat bestaat uit een reeks codes en ethische regels die groepen helpen ordelijke bijeenkomsten te houden waarin de meerderheid kan regeren en tegelijkertijd de stemmen van minderheden kunnen worden gehoord. <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.boardeffect.com/blog/roberts-rules-of-order-cheat-sheet/">https://www.boardeffect.com/blog/roberts-rules-of-order-cheat-sheet/</a> Een lid maakt een motie om een actie voor te stellen of een besluit te nemen door te zeggen: “Ik ga over naar….”. Een ander lid moet de motie steunen door te zeggen: “Ik steun de motie.” Zodra iemand de motie heeft goedgekeurd, stemt de groep over de motie. Het wordt aangenomen met een meerderheid van stemmen of een quorum, afhankelijk van de regels in de statuten.</p>'
+      description: "<p><strong>Geef aan welk besluit moet worden aangenomen</strong></p><p></p><p> <strong>Overzicht van context en achtergrondinformatie</strong></p><p></p><p> <strong>Nodig leden uit om vragen te stellen, opmerkingen te maken en informatie bij te dragen om gedeeld begrip op te bouwen</strong></p><p></p>"
+      resolution: Oplossing
+    decision_by_consensus:
+      title_placeholder: Herziening van de statuten van onze organisatie
+      process_name: Beslissing bij consensus
+      process_subtitle: Zorg voor een collectieve overeenkomst met alle betrokkenen.
+      process_introduction: '<p>Zorg voor consensus over een beslissing die u samen moet nemen, om tot overeenstemming te komen die voldoet aan de behoeften en zorgen van alle deelnemers.</p><p> Typische rollen:</p><ul><li><p> Stel een facilitator aan. (In bestuursvergaderingen is dit meestal de voorzitter.)</p></li><li><p> Een quorum of een supermeerderheid van leden om deel te nemen, zoals gespecificeerd in de statuten van uw organisatie.</p></li></ul><p> Veel voorkomende processtappen:</p><p> Stap 1. Creëer een open ruimte voor discussie over een kwestie of een voorgesteld besluit.</p><p> Stap 2. Test op consensus en breng bezwaren aan het licht met een Sensecheck-voorstel.</p><p> Stap 3. Verduidelijk eventuele punten, nodig constructieve wijzigingen uit en pas het voorstel aan.</p><p> Stap 4. Test de overeenstemming en eventuele resterende bezwaren met een consensusvoorstel.</p><p> Stap 5. Leg het besluit vast met een uitkomst en in de officiële notulen van de organisatie.</p><p> <a target="_blank" rel="noopener noreferrer nofollow" href="https://help.loomio.com/en/guides/consensus_process/index.html">Lees meer: Consensusproces.</a></p>'
+      description: <h3 id="what-is-the-decision-you-need-to-make">Wat is de beslissing die u moet nemen?</h3><p></p><h3 id="why-is-this-important-and-what-impact-does-it-have"> Waarom is dit belangrijk en welke impact heeft het?</h3><p></p><h3 id="what-information-do-people-need-for-context"> Welke informatie hebben mensen nodig voor context?</h3><p></p><h3 id="who-is-the-facilitator"> Wie is de facilitator?</h3><p></p><h3 id="what-conditions-need-to-be-met-for-a-decision"> Aan welke voorwaarden moet worden voldaan voor een besluit?</h3><h3 id=""></h3>
+      consensus: Overeenstemming
+    share_links_and_info:
+      title_placeholder: Deel links en informatie
+      process_name: Deel links en informatie
+      process_subtitle: Plaats informatie, links en rapporten om te delen voor commentaar en discussie.
+      process_introduction: "<p>Gebruik een draad als 'muur' of 'prikbord' voor uw groep om informatie, nieuwsberichten en ideeën te plaatsen die u met elkaar wilt delen.</p><p> Nodig mensen uit om de video-opmaaktools <strong>Invoegen</strong> en <strong>Insluiten</strong> te gebruiken om de groep toegang te geven tot informatie vanuit Loomio. Gebruik een <strong>kop</strong> bij opmerkingen om de opmerking vast te zetten op de tijdlijn van de discussie, zodat deze gemakkelijk kan worden gevonden.</p><p> <strong>Speld</strong> de draad zo vast dat deze blijft hangen en moedig <strong>Reactions</strong> aan om de draad energiek te houden, zodat mensen weten dat je hun item hebt gezien.</p><p> De standaardweergave van deze discussie is <strong>Nieuwste</strong> , dus de meest recente opmerkingen staan bovenaan de discussie.</p>"
+      description: <p>Gebruik deze draad om informatie, mededelingen en dingen die u wilt delen te posten - een plek waar u kunt zien wat er aan de hand is en waar u bij betrokken kunt raken.</p><p data-text-align="start"> Deel evenementen, rapporten, podcasts en andere interessante online informatie.</p><p data-text-align="start"> Gebruik de tools <strong>voor het invoegen van links</strong> en <strong>het insluiten van video-</strong> opmaak om mensen toegang te geven tot informatie binnen Loomio.</p>
+      information: Informatie
+    prepare_for_a_meeting:
+      title_placeholder: Voorbereidingen voor onze volgende bijeenkomst
+      process_name: Bereid je voor op een vergadering
+      process_subtitle: Stel een agenda op, post bestuurspapieren en organiseer administratieve zaken zodat iedereen op de hoogte is, in context en voorbereid is.
+      description: <p><strong>Focus van de bijeenkomst</strong></p><p></p><p data-text-align="start"> <strong>Overzicht agenda</strong></p><p data-text-align="start"></p><p data-text-align="start"> <strong>Acties van de laatste bijeenkomst</strong></p><p data-text-align="start"></p><p data-text-align="start"> <strong>Hoe moeten deelnemers zich voorbereiden op de bijeenkomst?</strong></p><p data-text-align="start"></p><p data-text-align="start"> <strong>Lijst met documenten voor de vergadering</strong></p><p data-text-align="start"></p>
+      process_introduction: <p>Plan een effectieve bijeenkomst door mensen vanaf het begin te betrekken, af te stemmen op de belangrijkste onderwerpen en uw kostbare tijd samen beter te gebruiken.</p><p> Gebruik een thread als container voor uw vergadering om een focus voor de vergadering vast te stellen, de agenda vast te stellen, een geschikte datum te vinden, belangrijke documenten en rapporten te posten, een discussie over agendapunten te starten, acties en notulen op te volgen.</p><p> Dit helpt iedereen zich voor te bereiden op de bijeenkomst, door het materiaal te lezen en na te denken over de gespreksonderwerpen en de te nemen beslissingen. De kans is dan groter dat de leden in de juiste context arriveren en klaar zijn voor de vergadering.</p><p> Lees meer over <a target="_blank" rel="noopener noreferrer nofollow" href="https://help.loomio.com/en/guides/board_processes/meeting.html"><u>het voorbereiden van een vergadering</u></a> in de Good Governance Guide to Loomio.</p>
+      meeting: Ontmoeting
+    build_a_policy:
+      title_placeholder: Herziening van ons aanwervingsbeleid
+      process_name: Bouw een beleid
+      process_subtitle: Werk samen met uw team aan het opstellen en overeenkomen van een beleids- of proceduredocument.
+      process_introduction: "<p><span>De thread is de container voor discussie over het beleid, waar u vereisten en principes kunt overeenkomen, en documentconcepten kunt posten voor commentaar.</span></p><p> <span>Gebruik de sjabloon om beleid te ontwikkelen met een kleine groep mensen, of maak het transparant voor de hele organisatie, door commentaar uit te nodigen op progressieve versies van het document.</span></p><p> <span>Gebruik een Sensecheck-voorstel om groepsleden op de hoogte te stellen dat een conceptdocument gereed is voor beoordeling, en nodig mensen uit om het document te lezen en te reageren met eventuele opmerkingen of vragen.</span></p><p> <span>Wanneer een 'definitief' concept klaar is, dien dan een Consent- of Consensusvoorstel in om het document goed te keuren.</span></p>"
+      description: "<p><strong><span>Wat is het beleid of document dat u moet opstellen?</span></strong></p><p></p><p> <strong><span>Waarom is dit belangrijk?</span></strong></p><p></p><p> <strong><span>Wat vraag je mensen om te doen?</span></strong></p><p></p>"
+      policy: Beleid
+    elect_a_governance_position:
+      title_placeholder: Benoeming en verkiezing Raad
+      process_name: Kies een bestuursfunctie
+      process_subtitle: Nomineer en kies iemand voor een bestuursrol in de raad, commissie of bestuur.
+      process_introduction: "<p>Introduceer de bestuursrol en criteria voor de functie om leden te helpen kandidaten te beoordelen.</p><p> Oproep voor nominaties met een opt-in-poll. Nodig genomineerden uit om een foto van de kandidaat te plaatsen, samen met hun biografie en referenties. Embed een videoboodschap van de kandidaat, zodat leden de kandidaat rechtstreeks kunnen zien en horen.</p><p> Als u klaar bent om een kandidaat te kiezen, gebruikt u een toestemmingsvoorstel.</p><p> Als u meerdere kandidaten voor een functie heeft, kunt u het Rated Choice-voorstel gebruiken, waarbij kiezers kandidaten op volgorde van voorkeur kunnen rangschikken.</p>"
+      description: '<h3 id="what-position-do-you-need-to-fill">Welke functie moet u invullen?</h3><p></p><h3 id="why-is-this-important"> Waarom is dit belangrijk?</h3><p></p><h3 id="what-qualifications-skills-and-experiences-make-a-good-cand"> Welke kwalificaties, vaardigheden en ervaringen maken een goede kandidaat?</h3><p></p><h3 id="what-is-the-election-process"> Wat is het verkiezingsproces?</h3><p> Fase 1: Nominaties - we nodigen nominaties uit voor geschikte kandidaten.</p><p> Fase 2: Kandidaten voorstellen - voeg voor elke kandidaat een foto, korte biografie en referentie toe.</p><p> Fase 3: Verkiezing - stem om een kandidaat voor de functie te benoemen.</p>'
+      election: Verkiezing
+    funding_decision:
+      title_placeholder: Financieringsaanvraag voor de Robotics Roadshow
+      process_name: Financieringsbesluit
+      process_subtitle: Verwerk een subsidie-, lening- of investeringsaanvraag en neem een financieringsbeslissing.
+      process_introduction: "<p>Dien een financieringsaanvraag in, voeg documenten en ander ondersteunend materiaal toe.</p><p> Vat de toepassing samen in de threadcontext.</p><p> Nodig geautoriseerde personen uit om de aanvraag te beoordelen en vragen te stellen. Zorg voor voldoende tijd voor discussie.</p><p> Een consensusvoorstel indienen om de financiering goed te keuren.</p><p> Als iemand het er niet mee eens is, vraag dan om een reden; er kan bijvoorbeeld meer informatie nodig zijn. Nodig de persoon die het er niet mee eens is uit om zijn stem te wijzigen als hij of zij tevreden is.</p><p> Wanneer u een duidelijke beslissing heeft over de financieringsaanvraag, vermeld dan een uitkomst om de beslissing vast te leggen.</p>"
+      description: <h3 id="introduce-and-summarize-the-funding-application">Introduceer en vat de financieringsaanvraag samen</h3><p></p><h3 id="how-does-this-application-fit-with-funding-criteria"> Hoe past deze aanvraag binnen de financieringscriteria?</h3><p></p><h3 id="who-is-authorized-to-approve-this-funding-decision"> Wie is bevoegd om dit financieringsbesluit goed te keuren?</h3><p></p><h3 id="invite-questions-from-decision-makers-to-process-the-applica"> Nodig vragen uit van beslissers om de aanvraag te verwerken</h3><p></p>
+      funding: Financiering
+    approve_a_document:
+      title_placeholder: Het ontwikkelen van onze merkstrategie
+      process_name: Een document goedkeuren
+      process_subtitle: Een belangrijk document, beleid of overeenkomst introduceren, bespreken en ontwikkelen.
+      process_introduction: "<p>Introduceer het document samen met eventuele achtergrondinformatie. Vermeld het doel van het document om gefocust te blijven.</p><p> Nodig mensen uit om informatie en hun expertise bij te dragen, en gebruik dit om het document te kaderen. Erken en overweeg feedback en bijdragen van mensen.</p><p> Integreer bijdragen in een eerste concept van het document en de daaropvolgende concepten totdat het klaar is om te worden goedgekeurd.</p><p> Gebruik een Sense-check-enquête om meningen te peilen en eventuele problemen met het concept op te helderen.</p><p> Zodra de feedback is overwogen en in het document is opgenomen, gaat u over tot goedkeuring of overeenstemming met een toestemmings- of consensusvoorstel.</p><p> De draad wordt een duidelijk overzicht van de voortgang van het maken van documenten en de genomen beslissingen.</p>"
+      description: <h3 id="what-is-the-purpose-of-the-document">Wat is het doel van het document?</h3><p></p><h3 id="why-is-this-important"> Waarom is dit belangrijk?</h3><p></p><h3 id="what-are-you-asking-people-to-do"> Wat vraag je mensen om te doen?</h3><p></p>
+      document: Document
+  explore:
+    header: Verken openbare groepen
+  activerecord:
+    errors:
+      messages:
+        blank: mag niet leeg gelaten worden
+        invalid: is geen geldige waarde
+  unauthorized:
+    manage:
+      all: "Niet geautoriseerd voor %{action} %{subject}."
+    add_guests:
+      all: "U moet uw Loomio-abonnement upgraden om gasten toe te voegen aan uw %{subject}. Als alternatief kunt u ze uitnodigen om lid te worden van uw groep."
+  errors:
+    clear_cache: "Laad probleem gedetecteerd. Houdt Shift ingedrukt en druk op Vernieuwen, of wis de browser cache."
+    400:
+      title: Bad request
+      body: Sorry, dat verzoek werd niet begrepen
+    401:
+      body: Je hebt geen toegang tot deze pagina. Misschien moet je inloggen.
+    403:
+      title: Verboden
+      body: Je hebt geen toegang tot deze pagina. Misschien moet je inloggen.
+    404:
+      title: Niet gevonden
+      body: Sorry, de pagina die je zocht bestaat niet. Misschien heb je het adres verkeerd getypt of de pagina kan verplaatst of verwijderd zijn.
+    410:
+      title: Weg
+      body: Deze pagina bestaat niet meer
+    417:
+      title: Browser is niet compatibel
+      body: |
+          Gebruik <a href="https://browser-update.org/update.html?force_outdated=true">een nieuwere browser</a> voor Loomio
+    422:
+      title: Niet verwerkbare entiteit
+      body: De verandering die je wilde werd verworpen. Misschien probeerde je iets te veranderen waar je geen toegang toe had.
+    429:
+      title: Te veel verzoeken
+      body: Sorry, je hebt het maximum aantal verzoeken per minuut overschreden voor deze actie. Wacht een tijdje en probeer het nog eens.
+    500:
+      title: Interne server fout
+      body: Sorry, er ging iets fout. We hebben melding van het probleem en we zullen er snel naar kijken.
+    noscript: Loomio vereist javascript! Zet aub javascript aan in je browser om door te gaan
+    upgrade_browser: |
+        Oh oh! Jouw browser is te oud en Loomio werkt hier waarschijnlijk niet goed op. <a href="https://browser-update.org/update.html">Upgrade je browser.</a>
+    return_home: Terug naar start pagina
+    not_found: 404 bestand niet gevonden
+    messages:
+      email: geen geldig e-mail adres
+      spoofed_media_type: De inhoud van dat bestand komt niet overeen met de bestandsnaam
+      pwned_password: Dit wachtwoord is eerder verschenen bij een datalek en mag nooit worden gebruikt
+  group:
+    error:
+      handle_must_begin_with_parent_handle: "Moet beginnen met %{parent_handle}-"
+      no_public_trials: "Upgrade van de proefversie om de privacyinstelling van de groep te wijzigen"
+    stats:
+      group_stats: Groep statistieken
+      org_stats: Organisatie statistieken (inclusief subgroepen)
+      visits: Bezoeken
+      members: Leden
+      subgroups: Subgroepen
+      threads: Borden
+      polls: Peilingen
+      votes: Stemmen
+      comments: Commentaren
+      general: Algemeen
+      poll_types:
+        proposal: Voorstel
+        count: Aantal
+        choose: Kies
+        allocate: Toekennen
+        score: Score
+        rank: Volgorde
+        time: Moment bevragen
+  user:
+    deleted_user: "Verwijderde gebruiker"
+    placeholder_name: "Uitgenodigde gebruiker (%{hostname})"
+    error:
+      sign_in_required_html: |
+          Je moet ingelogd zijn om door te gaan.
+          <a href="/dashboard" target="_blank">Log in</a> en ververs deze pagina.
+      recaptcha: "We waren niet in staat om te verifiëren dat je geen robot bent. Probeer het nog eens!"
+      bad_login: "Mijn excuses, het wachtwoord komt niet overeen met degene die we hebben"
+      username_must_be_alphanumeric: "Gebruikersnamen mogen alleen uit kleine letters en cijfers bestaan"
+  poll:
+    error:
+      cannot_add_options: Er kunnen geen opties aan deze peiling toegevoegd worden
+      cannot_remove_options: Er kunnen geen opties van deze peiling verwijderd worden
+      must_have_options: Er moet op zijn minst één optie voor een peiling zijn
+      must_be_in_the_future: Moet in de toekomst zijn
+      templates_cannot_close: Sjablonen kunnen niet worden gesloten
+    export:
+      percent_voted: "%{num}/%{denom} (%{percent}) leden hebben hun positie gegeven."
+      title: Titel
+      author: Auteur
+      email: E-mail
+      user_id: gebruikersnaam
+      created_at: Gemaakt op
+      closing_at: Sluit op
+      closed_at: Gesloten op
+      is_latest: Is meest recente
+      engagement: Betrokkenheid
+      stances: Standpunten
+      participants: Deelnemers
+      details: Details
+      group_name: Groepsnaam
+      discussion_title: Bordnaam
+      outcome_author: Resultaat auteur
+      outcome_created_at: Resultaat gemaakt op
+      outcome_statement: Resultaat verklaring
+      poll_url: Peiling URL
+      reason: Reden
+      participant: Deelnemer
+      also_available: Ook beschikbaar in
+      total: Totaal
+    waiting_for_votes_from: "Wachten op stemmen van"
+  stance:
+    error:
+      too_short: Gelieve een selectie te maken
+  invitation:
+    invitation_cancelled: Sorry, deze uitnodiging is door de groepscoördinator ingetrokken. Gelieve opnieuw een uitnoding aan te vragen bij je groep.
+    invitation_already_used: Deze uitnodiging is al gebruikt geweest. Gelieve rechtstreeks in te loggen op Loomio om verder te gaan naar je groep.
+  subscriptions:
+    active: Actief
+    inactive: Inactief
+  base_mailer:
+    via_loomio: "%{name} (via %{site_name})"
+  event_mailer:
+    received_email:
+      explaination_html: |-
+          <p>Je ontvangt deze e-mail omdat je beheerder bent van de Loomio-groep: %{group}.</p><p> De groep heeft een e-mail ontvangen van een onbekend e-mailadres.</p><p> Als het bericht afkomstig is van een lid van de groep, bekijk dan de e-mail en selecteer het lid.</p><p> Als het bericht ongewenst is, kunt u verdere e-mail van dat adres blokkeren.</p>
+  user_mailer:
+    group_export_ready:
+      subject: Groep data export voor %{group_name}
+      body_html: |
+          Download jouw groep data <a href="%{url}">hier</a>. Merk op dat deze link maar 1 week geldig is.
+    redacted:
+      subject: "Uw %{site_name} gebruikersaccount is verwijderd"
+      body_html: |-
+          <p>Uw %{site_name} gebruikersaccount is verwijderd.</p><p> Alle persoonlijk identificeerbare gegevens zijn verwijderd.</p><p> Als u dit niet heeft aangevraagd, neem dan contact op met %{support_email}</p>
+    accounts_merged:
+      subject: "Je gebruikersaccounts van %{site_name} werden samengevoegd."
+      body_html: |
+          Hallo %{name},
+          Je twee Loomio accounts zijn samengevoegd tot één account.
+          Gelieve vanaf nu <strong>%{email}</strong> te gebruiken om op Loomio in te loggen.
+    merge_verification:
+      subject: "Verifieer je %{site_name} e-mail adres voor het samenvoegen"
+      body_html: |
+          <p>Hoi %{name},</p>
+          <p>Er is een verzoek gedaan om jouw account met e-mailadres <strong>%{source_email}</strong> samen te voegen met het account dat het e-mailadres <strong>%{target_email}</strong> heeft,</p>
+          <p>Na het samenvoegen kun je niet meer inloggen met <strong>%{source_email}</strong>, en alleen met <strong>%{target_email}</strong>.</p>
+          <p>Bevestig aub dat dit de bedoeling is.</p>
+      verify: Controleer e-mail en ga door
+      confirm_page:
+        confirm: Bevestig samenvoegen
+        body_html: |
+            <p>Bevestig aub dat je het account met e-mailadres <strong>%{source_email}</strong> wil samenvoegen naar het account met e-mailadres <strong>%{target_email}</strong>.</p>
+            <p>Het account met <strong>%{source_email}</strong> zal worden verwijderd. Je kunt hierna alleen inloggen met <strong>%{target_email}</strong>.</p>
+            <p>Deze wijziging kan niet ongedaan worden gemaakt.</p>
+        merge: Accounts samenvoegen
+      complete_page:
+        title: Samenvoegen gelukt!
+        body_html: |
+            <p>Het samenvoegen van jouw accounts is gelukt. Je krijgt een bevestigingse-mail op <strong>%{target_email}</strong> .</p>
+            <p>Neem aub <a href="/contact" target="_blank">contact op</a> als je nog vragen hebt.</p>
+  email:
+    common:
+      or_enter_code: Of, voer de code hieronder in
+      resend: Deze vervalt binnen 24 uur en kan slechts één keer worden gebruikt
+    login:
+      subject: Log in op %{site_name}
+      intro: Dit is je link om in te loggen bij %{site_name}
+      intro_code: Dit is je code om in te loggen bij %{site_name}
+      login: Log in als %{name}
+    reactivate:
+      subject: Je account %{site_name} heractiveren
+      intro: Hallo %{name}, hier is een link om uw %{site_name}-account opnieuw te activeren
+      login: Heractiveer %{name}
+    contact_request:
+      subject: "%{name} zou graag in contact staan met jou op %{site_name}!"
+      intro: "%{name} (%{email}) heeft een verzoek gestuurd om met jou in contact te komen staan."
+      footer: "Je mag onmiddelijk reageren op %{name} door te antwoorden op deze mail."
+    reset_password:
+      greeting: |
+          Hoi %{name}
+          Hier is een link die je kunt gebruiken om je wachtwoord voor je Loomio account te herstellen:
+      link_text: Reset je wachtwoord
+      signoff: |
+          Je hebt dit ontvangen omdat je e-mailadres ingevoerd is in het "Wachtwoord vergeten" formulier op %{hostname}.
+          Je wachtwoord wordt echter niet veranderd totdat je de link hierboven volgt en het formulier invult.
+          Als je problemen blijft hebben met inloggen, reageer dan op deze e-mail om contact op te nemen met iemand van de helpdesk.
+    by_who: door %{person}
+    reply_to_this_discussion: Antwoord op deze discussie
+    loomio_app_description: "%{site_name} is een besluitvormingstool voor samenwerkende organisaties"
+    view_group: Bekijk groep
+    to_join_group:
+      subject: "%{member} heeft je uitgenodigd om lid te worden van %{group_name} op %{site_name}"
+      invitation_text: "%{member} heeft je uitgenodigd om lid te worden van hun groep %{group_name}."
+      invitation_text_html: "heeft je uitgenodigd om lid te worden van hun groep"
+      link_help: "Klik op onderstaande link om de uitnodiging te accepteren:"
+      accept_invitation: "Uitnodiging accepteren"
+      stop_emails: "Geen e-mail meer van %{site_name}"
+      accepting_is_important: Het is belangrijk dat u uw uitnodiging accepteert, anders ontvangt u geen meldingen over beslissingen waarbij u betrokken bent.
+    resend_to_join_group:
+      subject: "%{member} wacht op je om lid te worden van %{group_name} op%{site_name}"
+    user_added_to_group:
+      subject: "%{who} heeft je toegevoegd aan %{which_group} op%{site_name}"
+      content: "%{who} heeft je toegevoegd aan %{which_group}"
+      content_html: "<strong>%{who}</strong> heeft je toegevoegd aan <strong>%{which_group} </strong>."
+      link_help: "Klik op onderstaande link om naar de groep te gaan:"
+    unsubscribe: "Uitschrijven of je e-mailvoorkeuren aanpassen:"
+    unsubscribe_html: "<a href='%{link_path}'>%{link_text}</a> om je uit te schrijven of je e-mailvoorkeuren aan te passen."
+    catch_up:
+      daily_subject: Gisteren op %{site_name}
+      weekly_subject: Afgelopen week op %{site_name}
+      other_subject: Onlangs op %{site_name}
+      do_not_reply: Gelieve niet te antwoorden op deze e-mail.
+      mark_as_read: Markeer als gelezen
+      thanks_for_reading: Bedankt voor het lezen, een fijne dag toegewenst!
+      marked_as_read_success: Alles uit de e-mail werd gemarkeerd als gelezen
+      click_here: Klik hier
+    group_membership_approved:
+      intro: "Je verzoek om toegang tot de groep %{group_name} is goedgekeurd."
+      intro_html: "Je verzoek om toegang tot de groep <strong>%{group_name}</strong> is goedgekeurd."
+      link_help: "Klik op onderstaande link om lid te worden van %{group_name} en van start te gaan:"
+      subject: "Je verzoek om lid te worden van %{group_name} is goedgekeurd"
+      join_group: "Word lid van de groep"
+    membership_request:
+      intro_html: heeft toegang gevraagd tot een van jouw groepen.
+      subject: "%{who} heeft gevraagd om lid te worden van %{which_group}"
+      view_group: Je kan hier de aanvraag goed- of afkeuren
+      button_text: Verzoek bekijken
+  announcement_count_emails: "%{count} e-mails"
+  email_actions:
+    unfollowed_discussion: Je hebt de e-mails voor het bord afgezet.
+  discussion_mailer:
+    reply_or_view_online_html: "Beantwoord deze e-mail onmiddelijk of <a href='%{url}'>bekijk het op %{hostname}</a>."
+    turn_off_notifications_html: "<a href='%{url}'>Zet E-mails af</a> voor deze discussie."
+    change_email_preferences_html: "Verander je <a href='%{email_preferences_url}'>e-mailvoorkeuren</a>."
+    unsubscribe_from_discussion_announced_html: "<a href='%{url}'>Afmelden</a> van aankondigingen op dit bord."
+    unsubscribe_from_new_comment_html: "<a href='%{url}'>Afmelden</a> van reacties op dit bord."
+    unsubscribe_from_comment_replied_to_html: "Dit is een reactie melding."
+    unsubscribe_from_user_mentioned_html: "Dit is een vernoeming melding."
+    discussion_edited:
+      inline: "%{actor} heeft de threadcontext bewerkt"
+    discussion_closed:
+      inline: "%{actor} heeft de draad gesloten"
+  footer:
+    about: Over
+    blog: Blog
+    contact: Contact
+    help: Help
+    privacy: Privacy
+    pricing: Prijzen
+    public_groups: Openbare groepen
+    terms: Voorwaarden
+    independent_install_html: '%{hostname} voert een onafhankelijke kopie van Loomio uit: <a href="http://github.com/loomio/loomio">meer uitleg</a>.'
+  password_reset:
+    change_your_password: Verander je wachtwoord
+    change_my_password: Wachtwoord veranderen
+    confirm_new_password: Wachtwoord bevestigen
+    new_password: Nieuw wachtwoord
+    email_guidelines_html: |
+        <p>Voer je e-mailadres in om een wachtwoord reset link te krijgen.</p>
+        <p>Als je meestal via Facebook of Google inlogt, voer dan het e-mailadres van dat account in.</p>
+    reset_email_timeframe: Het kan tot 5 minuten duren voordat de e-mail binnenkomt. Als het niet in je postvak in verschijnt, controleer dan voor de zekerheid even je spammap.
+    length_restriction: Wachtwoorden moeten minimaal 8 tekens lang zijn.
+    forbidden_passwords: Veelvoorkomende wachtwoorden als "wachtwoord" zijn niet toegestaan om je account veilig te houden.
+  task_mailer:
+    task_due_reminder:
+      subject: "Taakherinnering: %{name}"
+      greeting: "Hallo %{name}, de volgende taak moet %{due} zijn:"
+      view_task: "Bekijk op %{site_name}"
+      update_or_comment: "Als je deze taak al hebt voltooid, vink deze dan af. Als het niet compleet is, deel dan een voortgangsupdate."
+      due_today: "Vandaag"
+      due_in_count_days: "over %{count} dagen"
+  group_mailer:
+    resend: "HERINNERING: %{member} wacht op jou om mee te doen met %{group_name}"
+    destroy_warning:
+      subject: Je Loomio-groep staat gepland voor verwijdering.
+      body: |-
+          Uw Loomio-groep: "%{group}" is gepland voor verwijdering door %{deletor}. Als u niet wilt dat uw groep wordt verwijderd, beantwoordt u deze e-mail. Als u zeker weet dat u de groep wilt verwijderen, hoeft u niets te doen. Bedankt.
+  poll_mailer:
+    common:
+      why_send_this: Je ontvangt deze e-mail omdat %{reason}
+      view_on_loomio: Bekijk het op %{site_name}
+      create_outcome: Deel uitkomst
+      your_response: "Jij stemde:"
+      you_voted: "Jij stemde!"
+      not_invited: "Niet uitgenodigd"
+      please_respond: Graag antwoorden
+      time_zone: (Tijden getoond in %{zone})
+      undecided_members: Leden die nog onbeslist zijn (%{count})
+      undecided_visitors: Onbesliste gasten (%{count})
+      more_undecided: "%{count} meer..."
+      vote_now: Stem nu
+      you_have_until: Je hebt tot %{when} om mee te doen.
+      people_have_voted: "%{nom} van %{dnom} mensen hebben deelgenomen (%{pct}%)"

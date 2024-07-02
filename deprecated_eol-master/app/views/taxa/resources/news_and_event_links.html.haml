@@ -1,0 +1,10 @@
+- content_for :social_sharing do
+  = render 'shared/social_sharing'
+#taxon_resources
+  = render 'menu'
+  #taxon_detail
+    #main.main_container
+      %h3= I18n.t(:news_and_event_links)
+      .section
+        - unless @news_and_event_links_contents.blank?
+          = render 'link_objects', { content: @news_and_event_links_contents }

@@ -1,0 +1,121 @@
+en:
+  app_name: 'Black Candy'
+
+  label:
+    users: 'Users'
+    playlists: 'Playlists'
+    favorites: 'Favorites'
+    albums: 'Albums'
+    artists: 'Artists'
+    songs: 'Songs'
+    settings: 'Settings'
+    tracks: 'Tracks'
+    integration: 'Integration'
+    appears_on: 'Appears On'
+    duration: 'Duration'
+    actions: 'Actions'
+    transcoding: 'Transcoding'
+    home: 'Home'
+    recently_added: 'Recently Added'
+    recently_played: 'Recently Played'
+    library: 'Library'
+    create_playlist: 'Create Playlist'
+    edit_playlist: 'Edit Playlist'
+    no_items: 'No Items'
+    add_to_playlist: 'Add to Playlist'
+    update_profile: 'Update Profile'
+    manage_users: 'Manage Users'
+    create_user: 'Create User'
+    no_repeat_mode: 'No repeat mode'
+    repeat_mode: 'Repeat mode'
+    single_mode: 'Single mode'
+    shuffle_mode: 'Shuffle mode'
+    previous_song: 'Previous song'
+    next_song: 'Next song'
+    play_song: 'Play song'
+    pause_song: 'Pause song'
+    toggle_favorite: 'Toggle favorite'
+    expand_player: 'Expand player'
+    collapse_player: 'Collapse player'
+    personal: 'Personal'
+    edit_album: 'Edit Album'
+    edit_artist: 'Edit Artist'
+    album: 'Album'
+    artist: 'Artist'
+    sort: 'Sort'
+    asc: 'Ascending'
+    desc: 'Descending'
+    search_results: 'Search Results'
+    disc: 'Disc %{number}'
+    more: 'More'
+    see_all: 'See All'
+    add: 'Add'
+    clear_filters: 'Clear Filters'
+    edit: 'Edit'
+    close: 'Close'
+    no_search_results: "No search results for \"%{query}\""
+    search_results_for: "Search results for \"%{query}\""
+    go_to_artist: 'Go to Artist'
+
+  button:
+    login: 'Login'
+    logout: 'Logout'
+    play: 'Play'
+    clear: 'Clear'
+    delete: 'Delete'
+    save: 'Save'
+    sync: 'Sync'
+    syncing: 'Syncing...'
+    play_now: 'Play Now'
+    play_next: 'Play Next'
+    play_last: 'Play Last'
+
+  field:
+    name: 'Name'
+    media_path: 'Media Path'
+    album_cover: 'Album Cover'
+    artist_cover: 'Artist Cover'
+    album_name: 'Album Name'
+    album_year: 'Album Year'
+    artist_name: 'Artist Name'
+    created_at: 'Created At'
+    year: 'Year'
+    genre: 'Genre'
+    email: 'Email'
+    password: 'Password'
+    theme: 'Theme'
+    enable_media_listener: 'Enable Media Listener'
+    discogs_token: 'Discogs Token'
+    allow_transcode_lossless: 'Allow Transcode Lossless'
+    transcode_bitrate: 'Transcode Bitrate'
+    password_confirmation: 'Password Confirmation'
+
+  error:
+    login: 'Wrong email or password'
+    forbidden: "Sorry, you do not have permission to visit that"
+    not_found: "The page you were looking for doesn't exist"
+    unprocessable_entity: 'The change you wanted was rejected'
+    internal_server_error: "We're sorry, but something went wrong"
+    already_in_playlist: "Add to playlist failed, song is already in playlist"
+    syncing_in_progress: "Syncing in progress, please wait"
+
+  notice:
+    deleted: 'Deleted successfully'
+    created: 'Created successfully'
+    updated: 'Updated successfully'
+    added_to_playlist: 'Added to playlist successfully'
+    deleted_from_playlist: 'Deleted from playlist successfully'
+    sync_completed: "Media sync completed"
+
+  text:
+    transcoding: "Black candy will transcode formats that are not supported by the browser by default."
+    allow_transcode_lossless: "Will transcode lossless format to mp3 to reduce bandwidth."
+    enable_media_listener: "Media listener can automatically sync with library changes."
+    media_listener_running: "Listener is running"
+
+  activerecord:
+    errors:
+      messages:
+        not_exist: 'does not exist'
+        unreadable: 'is unreadable'
+        invalid_content_type: "has an invalid content type"

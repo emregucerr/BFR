@@ -1,0 +1,20 @@
+- data_point_instance ||= @data_point_uri
+- if logged_in? || ! comments.empty?
+  .comments
+    - unless comments.empty?
+      - comments.each do |comment|
+        .comment
+          = sanitize comment.body.balance_tags.add_missing_hyperlinks
+          &ndash;
+          = link_to comment.user.full_name, comment.user
+          %small
+            = " ( #{I18n.t(:time_ago, :time_passed => time_ago_in_words(comment.updated_at))} )"
+- if logged_in?
+  = form_for(Comment.new(parent: data_point_instance), remote: true) do |f|
+    %fieldset
+      = f.hidden_field :user_id
+      = f.hidden_field :parent_type
+      = f.hidden_field :parent_id
+    %fieldset.annotation
+      = f.text_field :body, class: 'has_default', :placeholder => I18n.t(:annotation_body_default), style: "height: 25px; margin-left:8px;"
+      = submit_tag I18n.t(:annotation_submit), style: "float: right; margin-right: 8px;"

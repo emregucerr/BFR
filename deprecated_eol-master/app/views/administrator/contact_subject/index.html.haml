@@ -1,0 +1,29 @@
+%br
+= link_to I18n.t("add_a_new_topic_area"), :action => 'new'
+%br
+#contact_us_topics
+  - unless @translated_contact_subjects.nil?
+    =I18n.t(:topics_avilable_to_contact_us_info)
+    %br
+    %br
+    %table.results_table{ :cellspacing => "0" }
+      %tr
+        %th
+          =I18n.t(:topic_area)
+        %th
+          =I18n.t("recipients")
+        %th
+          =I18n.t("active")
+        %th
+          =I18n.t("action")
+      - for tcs in @translated_contact_subjects
+        - column_class = cycle('odd', 'even')
+        %tr
+          %td{ :class => column_class }
+            = h tcs.title
+          %td{ :class => column_class }
+            = h tcs.contact_subject.recipients
+          %td{ :class => column_class }
+            = h tcs.contact_subject.active
+          %td{ :class => column_class }
+            = link_to I18n.t(:edit), :action => 'edit', :id => tcs.contact_subject_id

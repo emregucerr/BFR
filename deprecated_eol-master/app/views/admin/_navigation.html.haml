@@ -1,0 +1,64 @@
+%ul#toc{ :style => "list-style:none;margin-left:-25px;padding-left:-25px;" }
+  %li
+    = link_to I18n.t("admin_home"), {:controller => '/admin', :action => 'index'}, {:class=>'toc_item active'}
+  %h3
+    =I18n.t("site_cms")
+  %li
+    = link_to I18n.t("edit_search_suggestions"),{:controller=>'administrator/search_suggestion', :action=>'index'}, {:class=>'toc_item active'}
+  %li
+    = link_to I18n.t("edit_table_of_contents"),{:controller=>'administrator/table_of_contents', :action=>'index'}, {:class=>'toc_item active'}
+  %h3
+    =I18n.t("comments_and_tags")
+  %li
+    = link_to I18n.t("view_user_comments"), {:controller => 'administrator/comment', :action => 'index'}, {:class=>'toc_item active'}
+  %li
+    = link_to I18n.t("view_added_text"), {:controller => 'administrator/user_data_object', :action => 'index'}, {:class=>'toc_item active'}
+  
+  %h3
+    =I18n.t("web_users")
+  %li
+    = link_to I18n.t("edit_web_users"),{:controller=>'administrator/user', :action=>'index'}, {:class=>'toc_item active'}
+  %li
+    = link_to I18n.t("view_curators"),{:controller=>'administrator/curator', :action=>'index'}, {:class=>'toc_item active'}
+  %li
+    = link_to I18n.t(:list_newsletter_emails),{:controller=>'administrator/user', :action=>'list_newsletter_emails'}, {:class=>'toc_item active'}
+
+  -# commented in V2, no final decision yet
+  -#%h3
+  -#  =I18n.t("contact_us_functions")
+  -#  = link_to I18n.t("edit_contact_us_topics"),{:controller=>'administrator/contact_subject', :action=>'index'}, {:class=>'toc_item active'}
+  -#  = link_to I18n.t("view_contact_us_submissions"), {:controller => 'administrator/contact', :action => 'index'}, {:class=>'toc_item active'}
+
+  %h3
+    =I18n.t("technical_functions")
+  %li
+    = link_to I18n.t("general_site_admin"), {:controller => 'administrator/site', :action => 'index'}, {:class=>'toc_item active'}
+  %li
+    = link_to I18n.t("view_error_log"), administrator_error_log_index_path, {:class=>'toc_item active'}
+  %h3
+    =I18n.t("content_partners_page_title")
+
+  %li
+    = link_to I18n.t("view_harvesting_log"), {:controller => 'administrator/harvesting_log', :action => 'index'}, {:class=>'toc_item active'}
+  %h3
+    =I18n.t("stats")
+  %li
+    = link_to I18n.t("page_statistics_and_tools"), {:controller => 'administrator/stats', :action => 'index'}, {:class=>'toc_item active'}
+  %li
+    = link_to I18n.t("taxonomic_summary_of_content"), {:controller => 'administrator/stats', :action => 'content_taxonomic'}, {:class => 'toc_item active'}
+  %li
+    = link_to I18n.t("table_of_contents_breakdown"), {:controller => 'administrator/stats', :action => 'toc_breakdown'}, {:class=>'toc_item active'}
+  %li
+    = link_to I18n.t("spm_category_objects_count"), {:controller => 'administrator/stats', :action => 'SPM_objects_count'}, {:class=>'toc_item active'}
+  %li
+    = link_to I18n.t("spm_category_partner_count"), {:controller => 'administrator/stats', :action => 'SPM_partners_count'}, {:class=>'toc_item active'}
+  %li
+    = link_to I18n.t(:translation_log), {:controller => 'administrator/translation_log', :action => 'index'}, {:class=>'toc_item active'}
+  %h3
+    =I18n.t("data_usage_reports")
+  %li
+    = link_to(I18n.t("google_analytics_google_account_and_access_required"),'https://www.google.com/analytics/settings/?et=reset&hl=en#scid=3298646',:target=>'_blank', :class=>'toc_item active' )
+  /
+    =I18n.t("disabled_for_now")
+    %li
+      = link_to I18n.t("all_changes"),{:controller=>'/administrator/reports', :action=>'admin_whole_report'}, {:class=>"toc_item active"}

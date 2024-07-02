@@ -1,0 +1,36 @@
+= form_tag(curate_associations_data_object_path(data_object), :method => :put) do
+  = hidden_field_tag 'id', data_object.id
+  %ul#associations
+    - data_object.data_object_taxa(published: true).each do |phe|
+      %li
+        -# NOTE: this is actually a link to the TC.  It ostensibily uses the name from the HE rather than
+        -# the TC, but in actuallity, that's what the TC does /anyway/, so this is fine (and faster):
+        - if current_user.min_curator_level?(:full) || phe.visibility_id == Visibility.visible.id
+          %ul.review_status
+            %li
+              %p{:class => phe.vetted.label == Vetted.unknown.label ? "unreviewed" : phe.vetted.label.downcase}
+                = phe.vetted.label == Vetted.unknown.label ? "Unreviewed" : phe.vetted.label
+              = link_to(phe.name.string, taxon_path(phe.taxon_concept_id))
+
+        - if current_user.min_curator_level?(:full)
+          - if phe.by_curated_association? && phe.associated_by_curator.id == current_user.id
+            = link_to I18n.t(:remove_data_object_association), remove_association_path(:id => data_object.id, :hierarchy_entry_id => phe.id), :id => "remove_association_#{phe.id}"
+          - vetted_selected = phe.vetted_id.to_i
+          - options = [ Vetted.trusted, Vetted.unknown, Vetted.untrusted ].collect{|v| [ (v.label == 'Unknown') ? 'Unreviewed' : v.label, v.id ] }
+          = select_tag "vetted_id_#{phe.id}", options_for_select(options, vetted_selected)
+          - visibility_selected = phe.visibility_id.to_i
+          - options = [ Visibility.visible, Visibility.invisible].collect{|v| [ v.label, v.id ] }.delete_if { |x| x == [ Visibility.preview.label, Visibility.preview.id ] }
+          = select_tag "visibility_id_#{phe.id}", options_for_select(options, visibility_selected)
+          %br
+          - untrusted_reasons = (vetted_selected == Vetted.untrusted.id.to_i) ? data_object.untrust_reasons(phe) : []
+          .reason{ :id => "reason_#{phe.id}" }
+            %b=I18n.t(:please_indicate_curation_reason)
+            - UntrustReason.all.each do |reason|
+              .option
+
+                = check_box_tag "untrust_reasons_#{phe.id}[]", reason.id, untrusted_reasons.include?(reason.id), {:id => "#{phe.id}_untrust_reason_#{reason.class_name}", :class => "untrust_reason #{reason.class_name}"}
+                %label{ :for => "#{phe.id}_untrust_reason_#{reason.class_name}"}= reason.label
+          = I18n.t(:curation_comment)
+          = text_area_tag "curation_comment_#{phe.id}", nil, :rows => 3, :cols => 30
+          %hr.thin
+    = submit_tag I18n.t(:save_curated_association_submit_button) if current_user.min_curator_level?(:full)

@@ -1,0 +1,26 @@
+= link_to I18n.t("admin_home"),:controller=>'/admin',:action=>'index'
+= form_tag({:action=>'index'}, :method=>'get') do
+  =I18n.t("please_note_that_some_of_these")
+  %br
+  =I18n.t(:select_tool_and_go)
+  = select_tag(:report_url, options_for_select(@reports_list,@report_url))
+  = submit_tag I18n.t("go")
+.divider
+- unless @report_url.blank?
+
+  %br
+  - if @report_url == "http://services.eol.org/eol_php_code/applications/google_stats/index.php"
+    = I18n.t("external_report_click_year_to_proceed")
+    %br
+    %br
+    - @google_stat_year_list.each do |year|
+      = link_to year, "http://services.eol.org/eol_php_code/applications/google_stats/process.php?report=year2date&year=#{year}", :target=>'_blank'
+      %br
+      %br
+  - else
+    = I18n.t("external_report_click_url_to_proceed")
+    %br
+    %br
+    = link_to " #{@report_url}", @report_url, :target=>'_blank'
+
+

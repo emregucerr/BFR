@@ -1,0 +1,31 @@
+#report_from_eol
+  %h2
+    = @page_header
+  =I18n.t("this_is_the_breakdown_of_chapt")
+  %br
+    =I18n.t(:please_note_wiki_etc_are_not_spm)
+  %table.results_table
+    %thead{ :align => "center" }
+      %tr{ :align => "center" }
+        %th
+          =I18n.t("major_heading")
+        %th
+          =I18n.t("sub_heading")
+        %th
+          =I18n.t("spm_category")
+    %tbody
+      - @all_toc_items.each do |toc|
+        - row_class = cycle('odd','even')
+        %tr
+          %td{ :class => row_class }
+            = (toc.parent.blank?) ? toc.label : toc.parent.label
+          %td{ :class => row_class }
+            = (toc.parent.blank?) ? " --- " : toc.label
+          %td{ :class => row_class }
+            = raw toc.info_items.collect{ |ii| ii.label }.join('<br/>')
+
+    %tr
+      %td{ :colspan => "5" }
+        /= will_paginate @partner_harvest_events
+
+

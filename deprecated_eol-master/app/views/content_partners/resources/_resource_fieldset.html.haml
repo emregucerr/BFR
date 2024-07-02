@@ -1,0 +1,105 @@
+%fieldset
+  %p.tip= raw(I18n.t(:content_partner_resource_new_edit_form_tip,
+    :more_url => cms_page_path('cp_plan_export')))
+  %dl
+    %dt.required
+      = resource_form.label :title
+    %dd
+      = resource_form.text_field :title, :maxlength => 255
+
+  %dl
+    %dt
+      = resource_form.label :dataset_source_url
+      %small= I18n.t(:resource_hint_dataset_source_url)
+    %dd= resource_form.text_field :dataset_source_url, :maxlength => 255
+
+  %fieldset.dataset
+    %legend.required= raw(I18n.t('helpers.label.resource.resource_url_or_file'))
+    %dl.resources
+      %dt
+        = radio_button_tag :resource_url_or_file, :url, !@resource.accesspoint_url.blank?, :class => 'required'
+        = label_tag :resource_url_or_file, I18n.t('helpers.label.resource.resource_url_or_file_url')
+      %dd
+        %dl
+          %dt.required
+            = resource_form.label :accesspoint_url
+          %dd
+            - unless @resource.dataset_file_name.blank?
+              %p= raw(I18n.t('helpers.label.resource.dataset_existing_remove', :file_name => @resource.dataset_file_name))
+            = resource_form.text_field :accesspoint_url, :maxlength => 255
+          %dt.required
+            = resource_form.label :refresh_period_hours
+          %dd
+            = resource_form.select :refresh_period_hours, options_for_select(@import_frequencies, @resource.refresh_period_hours)
+      %dt
+        = radio_button_tag :resource_url_or_file, :upload, @resource.accesspoint_url.blank? && @resource.dataset?
+        = label_tag :resource_url_or_file, I18n.t('helpers.label.resource.resource_url_or_file_upload')
+      %dd
+        %dl
+          %dt.required
+            = resource_form.label :dataset
+          %dd
+            - # resources should have either a URL or a file, not both, however if some have slipped through with both
+            - # we only want to show one message here lest we confuse the user - URL takes precedence.
+            - if @resource.accesspoint_url.blank?
+              - unless @resource.dataset_file_name.blank?
+                %p= raw(I18n.t('helpers.label.resource.dataset_existing_replace', :file_name => @resource.dataset_file_name))
+            - else
+              %p= raw(I18n.t('helpers.label.resource.accesspoint_url_existing_remove', :accesspoint_url => @resource.accesspoint_url.sub(/^.*\//, '')))
+            = resource_form.file_field :dataset
+  %dl
+    %dt
+      = resource_form.label :dataset_license_id
+      %small= I18n.t(:resource_hint_dataset_rights).html_safe
+    %dd
+      = resource_form.select :dataset_license_id, options_from_collection_for_select(@licenses, :id, :title, @resource.dataset_license_id)
+    %dt
+      = resource_form.label :dataset_rights_holder
+      %small= I18n.t(:resource_hint_dataset_rights).html_safe
+    %dd
+      = resource_form.text_field :dataset_rights_holder
+    %dt
+      = resource_form.label :dataset_rights_statement
+      %small= I18n.t(:resource_hint_dataset_rights).html_safe
+    %dd
+      = resource_form.text_field :dataset_rights_statement, { :maxlength => 300 }
+    %dt.required
+      = resource_form.label :license_id
+      %small= I18n.t(:resource_hint_default_rights).html_safe
+    %dd
+      = resource_form.select :license_id, options_from_collection_for_select(@licenses, :id, :title, @resource.license_id)
+    %dt
+      = resource_form.label :rights_holder
+      %small= I18n.t(:resource_hint_default_rights).html_safe
+    %dd
+      = resource_form.text_field :rights_holder
+    %dt
+      = resource_form.label :rights_statement
+      %small= I18n.t(:resource_hint_default_rights).html_safe
+    %dd
+      = resource_form.text_field :rights_statement, { :maxlength => 300 }
+    %dt
+      = resource_form.label :bibliographic_citation
+    %dd
+      = resource_form.text_area :bibliographic_citation
+      %p= resource_form.allowed_html_help_tip
+    %dt.required
+      = resource_form.label :language_id
+    %dd
+      = resource_form.select :language_id, options_from_collection_for_select(@languages, :id, :source_form, @resource.language_id)
+    %dt
+      = resource_form.label :description
+    %dd
+      = resource_form.text_area :description
+      %p= resource_form.allowed_html_help_tip
+    - if current_user.is_admin?
+      %dt
+        %strong
+          = raw(I18n.t('helpers.label.resource.administration_settings'))
+      %dd
+        = resource_form.label :auto_publish do
+          = resource_form.check_box :auto_publish
+          = I18n.t('activerecord.attributes.resource.auto_publish')
+        = resource_form.label :vetted do
+          = resource_form.check_box :vetted, { :disabled => @resource.vetted? }
+          = I18n.t('activerecord.attributes.resource.vetted')

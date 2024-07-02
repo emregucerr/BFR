@@ -1,0 +1,119 @@
+# Messages for Afrikaans (Afrikaans)
+# Exported from translatewiki.net
+# Export driver: spyc
+# Author: Naudefj
+# Author: Winstonza
+---
+af:
+  activerecord:
+    attributes:
+      known_uri:
+        value_is_text: "Waardes sal nie URL's wees nie, net teks"
+  account_information: Gebruikersgegewens
+  actions: Aksies
+  activity: Aktiwiteit
+  already_a_member_question: "Reeds 'n lid?"
+  and: en
+  and_between_form_items: en
+  application_version_advisory_information: Programweergawe
+  are_you_sure: Is u seker?
+  article_from: artikel van
+  article_more_about: Leer meer oor hierdie artikel
+  assistive_overview_header: Oorsig
+  assistive_media_header: Media
+  assistive_details_header: Details
+  assistive_literature_header: Letterkunde
+  assistive_names_common_header: Algemene name
+  assistive_names_related_header: Verwante name
+  assistive_names_synonyms_header: Sinonieme
+  assistive_maps_header: Kaarte
+  assistive_updates_header: Bywerkings
+  back_to_profile: Terug na profiel
+  build_communities: Bou gemeenskappe
+  cancel: Kanselleer
+  cannot_be_empty: kan nie leeg wees nie.
+  citation: Verwysing
+  classification_tree_header: Klassifikasie
+  collection_image: Kolleksie-beeld
+  collection_name_label: Kolleksienaam
+  comment: Reaksie
+  comment_body_label: U opmerking
+  communities_index_header: Aktiewe gemeenskappe
+  community: Gemeenskap
+  community_focus: Gemeenskapsfokus
+  community_members: Lede van die gemeenskap
+  contact_us_link: Kontak ons
+  content_partner_resource_resource_status_new: Geskep
+  content_summary_table_count_column_header: Aantal
+  create_a_community: "Skep 'n gemeenskap"
+  create_a_collection: "Skep 'n versameling"
+  created: Geskep
+  curated_association_update_button: Stoor wysigings
+  curators_summary_header_with_count:
+    one: '%{count} kurator'
+    other: '%{count} kuratore'
+  dato_create_cancel: Kanselleer
+  dato_edit_text_title: Wysig artikel
+  delete: skrap
+  description: Beskrywing
+  detail: Detail
+  details_title: Details
+  edit: Wysig
+  edit_my_profile: Verander my profiel
+  eol_glossary: EOL-woordelys
+  eol_news: EOL-nuus
+  explore: Verken
+  global_navigation: Globale navigasie
+  go: OK
+  has_colon: 'Het:'
+  help: Hulp
+  home: Tuisblad
+  images: Beelde
+  indexed: Geïndekseer
+  join_community_button: Sluit aan by hierdie gemeenskap
+  license: Lisensie
+  literature_header: Verwysings
+  location: Ligging
+  login_required_button: Aanmelding is verpligtend
+  login_or_create_account: Meld aan of registreer
+  media: Media
+  move: Skuif
+  my_activity: My aktiwiteit
+  my_info: My inligting
+  curator_colon: 'Kurator:'
+  moderator_colon: 'Moderator:'
+  newsfeed: Nuusvoer
+  none: geen
+  not_evaluated: Nie geëvalueer nie
+  overview: Oorsig
+  pages_title: Bladsye
+  pages_curator_section_link: Kuratore
+  profile: Profiel
+  punctuation_comma: ","
+  recent_updates: Onlangse bywerkings
+  rights: Regte
+  rights_holder: Houer van regte
+  search_field_label: Deursoek EOL
+  search_placeholder: Deursoek EOL...
+  search_the_site: Deursoek die webwerf
+  see_all_media_link: Wys alle media
+  select_topic: "Kies 'n onderwerp"
+  sign_in: Meld aan
+  sign_out: Teken af
+  site_information: Inligting oor die webwerf
+  skip_to_content: Slaan oor na inhoud
+  source_url: Bron-URL
+  text_summary_more_link: Lees volledige inskrywing
+  total_items_with_count:
+    one: '%{count} item'
+    other: '%{count} items totaal'
+  twitter: Twitter
+  unknown: Onbekend
+  updated: Opgedateer
+  updates: Bywerkings
+  user: Gebruiker
+  users_about_me_header: Oor my
+  users_my_info_header: My info
+  what_is_eol: Wat is EOL?
+  year: Jaar
+  your_preferences: U voorkeure

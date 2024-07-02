@@ -1,0 +1,21 @@
+<% page_title_tag t("label.home") %>
+
+<% if [@recently_added_albums, @recently_played_albums].any?(&:present?) %>
+  <% if @recently_played_albums.present? %>
+    <h1><%= t("label.recently_played") %></h1>
+    <div class='o-grid o-grid--shelf u-mb-large'>
+      <%= render partial: "albums/album", collection: @recently_played_albums %>
+    </div>
+  <% end %>
+
+  <% if @recently_added_albums.present? %>
+    <h1><%= t("label.recently_added") %></h1>
+    <div class='o-grid o-grid--shelf u-mb-large'>
+      <%= render partial: "albums/album", collection: @recently_added_albums %>
+    </div>
+  <% end %>
+<% else %>
+  <div class='u-mt-wide'>
+    <%= empty_alert_tag has_icon: true, has_overlay: false %>
+  </div>
+<% end %>

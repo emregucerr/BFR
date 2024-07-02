@@ -1,0 +1,32 @@
+- search_result = nil unless local_assigns.has_key?(:search_result)
+- if image = item.exemplar_or_best_image_from_solr && image && image.thumb_or_object('88_88')
+  = link_to image_tag(image.thumb_or_object('88_88')), taxon_overview_path(item)
+- else
+  = link_to image_tag("v2/icon_taxon.png"), taxon_overview_path(item)
+.details
+  %h4= link_to item.title_canonical, taxon_overview_path(item)
+  - subtitle = item.preferred_common_name_in_language(current_language)
+  - unless subtitle.blank?
+    %p= subtitle.firstcap
+  - unless item.entries.blank?
+    %ul
+      - item.entries.each do |he|
+        %li
+          - if data_object.associated_with_entry?(he)
+            %form{ :action => data_object_path(data_object) }
+              %input.button.associated(type="submit" value="#{I18n.t(:associated_submit_button)}")
+          - else
+            = form_tag("/data_objects/#{data_object.id}/save_association/#{he.id}",  :method => "post") do
+              = submit_tag I18n.t(:add_association_submit_button), :class => "button", data: { disable_with: I18n.t(:submitting) }
+          - if he.hierarchy.agent.homepage.blank?
+            - if he.hierarchy.content_partner.homepage.blank?
+              = he.hierarchy.content_partner.name
+            - else
+              = link_to he.hierarchy.content_partner.name, he.hierarchy.content_partner.homepage
+          - else
+            = link_to he.hierarchy.agent.full_name, he.hierarchy.agent.homepage
+          - classification_summary = item.entry.preferred_classification_summary
+          - unless classification_summary.blank?
+            %span
+              &bull;
+            = classification_summary

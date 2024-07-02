@@ -1,0 +1,36 @@
+- data_object ||= @data_object
+- link_object ||= false
+-# NOTE on cache ... These never need to expire.  If ANYTHING changes in a data object, we create a new version of it
+-# and link it to the previous version with a GUID... so the "raw" ID will always always be the same.  This is also
+-# true of user-submitted text.  memcached should handle deleting the keys that don't get used, as part of its own GC
+-# routines.  ...So we're going to try this out for articles for a while... it should speed up some of the common
+-# text-heavy details tabs and overviews.
+- cache "article/#{I18n.locale}/#{data_object.id}" do
+  - if data_object.content_partner
+    - if data_object.content_partner.stylesheet
+      = stylesheet_link_tag(data_object.content_partner.stylesheet)
+    - if data_object.content_partner.javascript
+      = javascript_include_tag(data_object.content_partner.javascript)
+  - data_object.description = data_object.description_linked unless data_object.description_linked.blank? rescue nil
+  - show_view_source ||= 'true'
+  - unless data_object.nil? || data_object.description.empty? || data_object.description.blank?
+    - show_references = true if show_references.nil?
+    .copy
+      - if link_object
+        %p= auto_link(data_object.source_url)
+      - if data_object.added_by_user?
+        -# NOTE - Submitted text is now being sanitized before being saved. 
+        -# TODO - Once we make/run a migration to sanitize/balance_tags existing UDO is done then we don't need to run
+        -# Sanitize/balance_tags here anymore
+        -# We will only need: data_object.description.fix_old_user_added_text_linebreaks instead.
+        = raw(Sanitize.clean(auto_link(data_object.description).balance_tags, Sanitize::Config::RELAXED).fix_old_user_added_text_linebreaks(:wrap_in_paragraph => true))
+      - else
+        = raw data_object.description.balance_tags
+    - tr_source = data_object.translation_source
+    - if tr_source && show_view_source=='true'
+      = link_to I18n.t(:view_translation_source_link), set_language_url(:language => tr_source.language.iso_639_1)+"&return_to=/data_objects/#{tr_source.id}"
+    - if show_references && ! data_object.published_refs.blank?
+      .references
+        %ul                   
+          - sort_refs(data_object.published_refs).each do |ref|            
+            = render "refs/show_as_list_item", { :ref => ref }

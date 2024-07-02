@@ -1,0 +1,7 @@
+- content_for :social_sharing do
+  = render 'shared/social_sharing'
+#content.newsfeed
+  .site_column
+    .nav
+      = render 'menu'
+    = render 'news_items/index', {:translated_news_items => @translated_news_items}

@@ -1,0 +1,22 @@
+<% page_title_tag @artist.name %>
+
+<div class='o-container o-container--wide'>
+  <div class='c-card c-card--horizontal c-card--center@narrow u-my-large'>
+    <%= cover_image_tag @artist, class: "c-card__image u-image-medium", data: {"test-id" => "artist_image"} %>
+    <div class='c-card__body'>
+      <h1 class='c-card__body__title'><%= @artist.name %></h1>
+      <div class='c-card__body__text'>
+        <span><%= @artist.all_albums.size %> <%= t("label.albums") %></span>
+        <span>,</span>
+        <span><%= @artist.songs.size %> <%= t("label.songs") %></span>
+      </div>
+      <% if is_admin? %>
+        <div class='u-mt-large'>
+          <%= link_to t("label.edit"), edit_dialog_artist_path(@artist), data: {"turbo-frame" => ("turbo-dialog" unless native_app?)}, class: "c-button c-button--secondary u-mt-large" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%= render partial: "artists/albums", locals: {title: t("label.albums"), albums: @albums} %>
+  <%= render partial: "artists/albums", locals: {title: t("label.appears_on"), albums: @appears_on_albums} %>
+</div>

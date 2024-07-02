@@ -1,0 +1,20 @@
+default: &default
+  dispatchers:
+    - polling_interval: 1
+      batch_size: 500
+      concurrency_maintenance_interval: 30
+  workers:
+    - queues: [critical, high, default, low]
+      # 2 more threads are used by worker and heartbeat task in solid queue
+      threads: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } - 2 %>
+      processes: 1
+      polling_interval: 0.1
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

@@ -1,0 +1,21 @@
+- ancestors ||= nil
+- expand ||= false
+- if ancestors.blank?
+  - node_class = ancestors.nil? ? nil : 'current'
+  %li.node
+    = render('navigation/node_name_stats', { :hierarchy_entry => hierarchy_entry, :node_class => node_class})
+    - children = HierarchyEntry.sort_by_name(hierarchy_entry.children)
+    - unless children.blank?
+      %ul.branch
+        - for child in children
+          - if expand && !child.is_leaf?
+            = render('navigation/node_with_ancestry_stats', { :expand => expand, :hierarchy_entry => child, :expanded => true})
+          - else
+            %li.node
+              = render('navigation/node_name_stats', { :hierarchy_entry => child})
+- else
+  - ancestor = ancestors.shift
+  %li.node
+    = render('navigation/node_name_stats', { :hierarchy_entry => ancestor})
+    %ul.branch
+      = render('navigation/node_with_ancestry_stats', { :expand => expand, :ancestors => ancestors, :hierarchy_entry => hierarchy_entry})

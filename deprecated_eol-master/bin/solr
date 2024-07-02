@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+using_gems = false
+begin
+  require 'fileutils'
+  require 'tmpdir'
+  require 'daemons'
+  require 'optiflag'
+rescue LoadError => e
+  if using_gems
+    raise(e)
+  else
+    using_gems = true
+    require 'rubygems'
+    retry
+  end
+end
+
+working_directory = FileUtils.pwd
+solr_home = File.join(File.dirname(__FILE__), '..', 'solr')
+
+module SolrFlags extend OptiFlagSet
+  optional_flag 'p' do
+    description 'Port on which to run Solr (default 8983)'
+    long_form 'port'
+  end
+
+  optional_flag 'd' do
+    description 'Solr data directory'
+  end
+
+  optional_flag 's' do
+    description 'Solr home (should contain conf/ directory)'
+  end
+
+  optional_flag 'pd' do
+    long_form 'pid-dir'
+    description 'Directory for pid files'
+  end
+  
+  optional_flag 'r' do
+    long_form 'extra_ram'
+    description 'Wether or not to assign more than the default RAM allocation'
+  end
+
+  and_process!
+end
+
+port     = ARGV.flags.p || '8983'
+home     = File.expand_path(ARGV.flags.s) if ARGV.flags.s
+extra_ram = true if ARGV.flags.r
+pid_dir  = File.expand_path(ARGV.flags.pd || working_directory)
+
+options = { :dir_mode => :normal, :dir => pid_dir }
+
+Daemons.run_proc('eol-solr', options) do
+  FileUtils.cd(working_directory) do
+    FileUtils.cd(solr_home) do
+      args = ['java']
+      args << "-Xms512m" if extra_ram
+      args << "-Xmx1024m" if extra_ram
+      args << "-Djetty.port=#{port}" if port
+      args << "-Dsolr.solr.home=#{home}" if home
+      args << '-jar' << 'start.jar'
+      STDERR.puts(args * ' ')
+      Kernel.exec(*args)
+    end
+  end
+end

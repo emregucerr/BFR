@@ -1,0 +1,22 @@
+sqlite_default: &sqlite_default
+  adapter: litecable
+
+pg_default: &pg_default
+  adapter: postgresql
+
+test:
+  adapter: test
+
+<% if BlackCandy::Config.db_adapter == "postgresql" %>
+development:
+  <<: *pg_default
+
+production:
+  <<: *pg_default
+<% else %>
+development:
+  <<: *sqlite_default
+
+production:
+  <<: *sqlite_default
+<% end %>

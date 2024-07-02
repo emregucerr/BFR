@@ -1,0 +1,38 @@
+- thumbnail ||= false
+- en_mime_type ||= data_object.mime_type.label('en')
+- unless data_object.blank? || data_object.sound_url.blank?
+  - if thumbnail
+    .player{:id => "player_#{data_object.id}"}
+    .player_interface{:id => "player_interface_#{data_object.id}"}
+      %a{:class => 'play', :data => {:mime_type => en_mime_type}, :href => data_object.sound_url}
+        = image_tag('v2/icon_play_mini.png', :alt => I18n.t(:audio_play))
+      - # TODO: I18nize Javascript so we can move the pause and stop links to JS so that users without JS don't have to deal with them
+      = link_to image_tag('v2/icon_pause_mini.png', :alt => I18n.t(:audio_pause)), '#', { :class => 'pause', :title => I18n.t(:audio_pause_assistive) }
+      = link_to image_tag('v2/icon_stop_mini.png', :alt => I18n.t(:audio_stop)), '#', { :class => 'stop', :title => I18n.t(:audio_stop_assistive) }
+      %span.current_time{:title => I18n.t(:audio_current_time_assistive)}
+      = "/"
+      %span.duration{:title => I18n.t(:audio_duration_assistive)}
+  - else
+    .jp-jplayer{:id => "player"}
+    .jp-audio
+      .jp-type-single
+        .jp-interface{:id => "player_interface"}
+          - # TODO: I18nize Javascript so we can move redundant tags to JS so that users without JS don't have to deal with them
+          %ul.jp-controls
+            %li
+              %a{:class => 'jp-play', :alt => I18n.t(:audio_play), :data => {:mime_type => en_mime_type}, :href => data_object.sound_url}
+            %li
+              = link_to I18n.t(:audio_pause), '#', { :class => "jp-pause", :title => I18n.t(:audio_pause_assistive) }
+            %li
+              = link_to I18n.t(:audio_stop), '#', { :class => "jp-stop", :title => I18n.t(:audio_stop_assistive) }
+            %li
+              = link_to I18n.t(:audio_mute), '#', :class => "jp-mute"
+            %li
+              = link_to I18n.t(:audio_unmute), '#', :class => "jp-unmute"
+          .jp-progress
+            .jp-seek-bar
+              .jp-play-bar
+          .jp-volume-bar
+            .jp-volume-bar-value
+          .jp-current-time
+          .jp-duration

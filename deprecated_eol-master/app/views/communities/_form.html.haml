@@ -1,0 +1,31 @@
+= form_for @community, :builder => ApplicationHelper::EolFormBuilder, :html => { :multipart => true } do |f|
+  - if @collection
+    = hidden_field_tag :collection_id, @collection.id
+  %fieldset
+    = validation_errors_for(@community)
+    %dl
+      %dt
+        = f.label :name
+      %dd
+        = f.text_field(:name, :disabled => @community.is_curator_community?)
+      %dt
+        = f.label :description
+      %dd
+        = f.text_area :description
+        %p= f.allowed_html_help_tip
+      %dt
+        = f.label :logo
+        %p= I18n.t(:upload_logo_help_text)
+      %dd
+        = f.file_field :logo, :size=>25
+      %dt
+        %label= I18n.t(:invite_members_label)
+        %p= I18n.t(:invite_members_help_text)
+      %dd.invite
+        - # NOTE: We need both of the following form fields for spotlite jquery.
+        - # TODO: Refactor this. This is not accessible.
+        = text_area_tag :invitations
+        = text_field_tag :invitations
+  %fieldset.actions
+    - submit_label ||= I18n.t(:save)
+    = submit_tag(submit_label)

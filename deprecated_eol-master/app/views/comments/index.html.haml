@@ -1,0 +1,11 @@
+#page_heading
+  .site_column
+    .hgroup
+      .main_container#data_comments
+        %table.standard.data
+          %tbody
+            %tr.comments
+              %td
+                - if logged_in? || ! @parent.comments.empty?
+                  = render 'comments/for_data', { comments: @parent.comments,
+                    parent: @parent }

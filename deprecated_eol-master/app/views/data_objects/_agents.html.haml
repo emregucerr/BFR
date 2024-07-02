@@ -1,0 +1,13 @@
+- data_object ||= @data_object
+- unless data_object.blank?
+  - data_object.agents_data_objects.each do |ado|
+    - role_label = (ado.agent_role && ado.agent_role.label) ? ado.agent_role.label + ': ' : ''
+    - if ado.agent
+      %p
+        = role_label
+        - if ado.agent.homepage.blank?
+          = raw(ado.agent.full_name)
+        - else
+          - unless ado.agent.homepage.start_with?('http://')
+            - ado.agent.homepage = "http://" + ado.agent.homepage
+          = raw(link_to ado.agent.full_name, ado.agent.homepage, :rel => :nofollow)

@@ -1,0 +1,39 @@
+#report_from_eol
+  %h2
+    = @page_header
+  =I18n.t("the_count_represents_the_total")
+  %br
+  =I18n.t(:please_note_wiki_etc_are_not_spm)
+  %table.results_table
+    %tr
+      %td{ :colspan => "5" }
+        /= will_paginate @partner_curated_objects
+    %thead{ :align => "center" }
+      %tr{ :align => "center" }
+        %th
+
+        %th
+          =I18n.t("species_profile_model")
+        %th
+          =I18n.t(:num_data_objects)
+
+    %tbody
+      - count = @cur_page.to_i
+      - InfoItem.all.each do |ii|
+        - column_class=cycle('odd','even')
+        - count += 1
+        %tr
+          %td{ :class => column_class, :align => "right" }
+            = count
+            = "."
+          %td{ :class => column_class }
+            = ii.schema_value
+          %td{ :class => column_class, :align => "right" }
+            = number_with_delimiter(@arr_count[ii.id], :delimiter => ",")
+
+
+    %tr
+      %td{ :colspan => "5" }
+        /= will_paginate @partner_curated_objects
+
+

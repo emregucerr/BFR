@@ -1,0 +1,29 @@
+- @taxon_concept.hierarchy_entries.each do |he|
+  .entry_details{:hierarchy_entry_id => he.id, :taxon_concept_id => he.taxon_concept_id}
+    %h3
+      = he.hierarchy.label
+    .metadata
+      = "hierarchy_id: #{he.hierarchy_id}"
+      %br
+      = "taxon_concept_id: #{he.taxon_concept_id}"
+      %br
+      = "hierarchy_entry_id: #{he.id}"
+    %br
+    - indent = ''
+    - ancestors = he.ancestors
+    - for ancestor in ancestors
+      = indent + ancestor.name.string
+      - indent << "&nbsp;&nbsp;"
+      %br
+    
+    %strong
+      = indent + he.name.string
+    - indent << "&nbsp;&nbsp;"
+    %br
+    
+    .children
+      - children = he.children
+      - for child in children
+        = indent + child.name.string
+        %br
+  %br

@@ -1,0 +1,8 @@
+- # TODO: is this page obsolete? If so delete it?
+#content
+  .site_column
+    .article.copy
+      %h2= I18n.t(:thank_you)
+      %p= I18n.t(:thanks_for_donation)
+      %p= I18n.t("please_return_to_eol_homepage", :return_link =>link_to(I18n.t(:return), :controller => 'content', :action=>'index'))
+

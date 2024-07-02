@@ -1,0 +1,68 @@
+- content_for :social_sharing do
+  = render 'shared/social_sharing'
+#profile_info.main_container
+  - unless @user.bio.blank?
+    .article
+      .header
+        %h3= I18n.t(:users_about_me_header)
+      .copy
+        %p= raw(allow_some_html @user.bio)
+  .section.half
+    .article
+      .header
+        %h3= I18n.t(:users_my_info_header)
+      %dl.info
+        %dt= I18n.t('activerecord.attributes.user.full_name')
+        %dd= h @user.full_name
+        %dt= I18n.t('activerecord.attributes.user.username')
+        %dd= h @user.username
+        - unless @user.user_identities.blank?
+          %dt= I18n.t('helpers.label.user.user_identities')
+          %dd= @user.user_identities.collect{|ui| ui.label}.join(', ')
+
+        - if @user.curator_level
+          %dt= I18n.t('activerecord.attributes.user.curator_level')
+          %dd= @user.curator_level.translated_label
+        - if current_user.can?(:edit_permissions)
+          %dt= I18n.t('activerecord.attributes.user.permissions')
+          %ul#permissions
+            - Permission.all.sort.each do |permission|
+              - can = @user.can?(permission) ? 'can' : 'cannot'
+              %dd{:id => "permission_#{permission.id}", :class => can}
+                = permission.name
+                = link_to(I18n.t(:grant_permission), grant_permission_user_path(@user, :permission_id => permission.id, 'data-type' => :json), :remote => true, :class => 'grant')
+                = link_to(I18n.t(:revoke_permission), revoke_permission_user_path(@user, :permission_id => permission.id, 'data-type' => :json), :remote => true, :class => 'revoke')
+  .section.half
+    .article
+      .header
+        %h3= I18n.t(:user_activity_stats_header)
+      %dl
+        - if @user.is_curator?
+          - if !@user.assistant_curator?
+            %dt= link_to I18n.t(:user_activity_stats_objects_curated, :count => @user.total_user_objects_curated), user_activity_path(@user, :filter => "data_object_curation")
+          %dt= I18n.t(:user_activity_stats_taxa_curated, :count => @user.total_species_curated)
+          %dt= link_to I18n.t(:user_activity_stats_set_exemplar, :count => @user.total_user_exemplar_images), user_activity_path(@user, :filter => "data_object_curation")
+          %dt= link_to I18n.t(:user_activity_stats_selected_articles_for_overview, :count => @user.total_user_overview_articles), user_activity_path(@user, :filter => "data_object_curation")
+          %dt= I18n.t(:user_activity_stats_preferred_classifications_selected, :count => @user.total_user_preferred_classifications)
+          %br
+          %dt= link_to I18n.t(:user_activity_stats_common_names_added, :count => @common_names_added), user_activity_path(@user, :filter => "names")
+          %dt= link_to I18n.t(:user_activity_stats_common_names_removed, :count => @common_names_removed), user_activity_path(@user, :filter => "names")
+          %dt= link_to I18n.t(:user_activity_stats_common_names_curated, :count => @common_names_curated), user_activity_path(@user, :filter => "names")
+          - if @user.total_wikipedia_nominated > 0
+            %dt= I18n.t(:user_activity_stats_wikipedia_nominated, :count => @user.wikipedia_queues_count)
+          %br
+        %dt= link_to I18n.t(:user_activity_stats_taxa_commented, :count => @user.count_taxa_commented), user_activity_path(@user, :filter => "taxa_comments")
+        %dt= link_to I18n.t(:user_activity_stats_comment_submitted, :count => @user.total_comment_submitted), user_activity_path(@user, :filter => "comments")
+        %dt= link_to I18n.t(:user_activity_stats_articles_added, :count => @user_submitted_text_count), user_activity_path(@user, :filter => "added_data_objects")
+        - if EolConfig.data?
+          %dt= link_to I18n.t(:user_activity_stats_data_added, :count => @user.count_total_data_records), user_activity_path(@user, :filter => "added_data")
+        %dt= I18n.t(:user_counts_refresh_daily)
+    - if @user.is_curator?
+      .article
+        .header
+          %h3= I18n.t(:users_curation_header)
+        %dl
+          %dt= I18n.t('activerecord.attributes.user.credentials')
+          %dd= raw(@user.credentials)
+          %dt= I18n.t('activerecord.attributes.user.curator_scope')
+          %dd= h @user.curator_scope

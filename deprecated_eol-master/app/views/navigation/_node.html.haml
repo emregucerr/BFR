@@ -1,0 +1,25 @@
+-# This is cheating, avoiding rendering a view for each node, so there's a little redundancy. Sorry! Saves a LOT of time.
+-# NOTE - this LOOKS like it's doing a lot... and if you allow it to, it will.  But if you're just trying to render a
+-# simple node, you're _probably_ much better off just rendering an %li yourself, like so:
+-#   %li= navigation_node(hierarchy_entry, :link_to_taxa => false)
+-# Think about doing so before you use this (somewhat expensive) .
+- show_siblings ||= false
+- expand ||= false
+- link_to_taxa ||= false # Only when a preferred classification is being rendered.
+- max_children ||= 10    # NOTE - this ALSO applies to siblings, not just children.
+- show_hierarchy_label ||= false
+
+- if hierarchy_entry
+  - if show_hierarchy_label
+    - hierarchy_label = hierarchy_display_title(hierarchy_entry.hierarchy)
+    %h4= raw(I18n.t(:rank_recognized_by_agent_colon, :rank => hierarchy_entry.rank_label, :agent => hierarchy_label))
+  -# preloading the name information for ancestors and current node at the same time
+  - HierarchyEntry.preload_associations(hierarchy_entry.ancestors + [hierarchy_entry], :name)
+  - siblings = nil
+  - if show_siblings
+    -# querying for the first $max_children siblings, ordered by name, and preloading the name strings all at once
+    - siblings = hierarchy_entry.siblings.includes(:name).order('names.string').limit(max_children).reject{ |s| s == hierarchy_entry }[0...max_children-1]
+  = raw(show_full_tree(hierarchy_entry, :show_siblings => show_siblings, :siblings => siblings, :expand => expand, :link_to_taxa => link_to_taxa, :max_children => max_children, :show_hierarchy_label => show_hierarchy_label))
+- else
+  %li
+    = I18n.t(:hierarchy_node_missing)

@@ -1,0 +1,17 @@
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title
+      =I18n.t("eol_api_colon")
+      - if details_hash.blank?
+        =I18n.t("page_not_found")
+      - else
+        = details_hash['scientific_name'] || 'page not found'
+    = stylesheet_include_i18n_merged 'api'
+  %body
+    - unless details_hash.blank?
+      %h2{:align => "center"}
+        %a{:href => url_for(:controller => 'taxa', :action => 'show', :id => details_hash['id'], :only_path => false), :target => "_blank"}
+          = details_hash['scientific_name']
+      - for object in details_hash["data_objects"]
+        - if data_object_details
+          = render('data_object', :layout => false, { :object_hash => object } )
